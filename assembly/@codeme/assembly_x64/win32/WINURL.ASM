@@ -17,23 +17,23 @@
 ;  wlink file winurl.obj form windows nt
 ;
 
-include	shell32.inc
-include	kernel32.inc
+include   shell32.inc
+include   kernel32.inc
 
-	.386
-	.model flat
-	.const
-URL db	'http://www.lionking.org/~cubbi/',0
-	.code
-_start:			; метка точки входа должна начинаться с подчёркивания
-	xor	ebx,ebx
-	push	ebx		; для исполнимых файлов - способ показа
-	push	ebx		; рабочая директория
-	push	ebx		; командная строка
-	push	offset URL	; имя файла с путём
-	push	ebx		; операция open или print (если NULL - open)
-	push	ebx		; идентификатор окна, которое получит сообщения
-	call	ShellExecute	; ShellExecute(NULL,NULL,url,NULL,NULL,NULL)
-	push	ebx		; код выхода 
-	call	ExitProcess	; ExitProcess(0)
-end	_start
+   .386
+   .model   flat
+   .const
+URL db      'http://www.lionking.org/~cubbi/',0
+   .code
+_start:         ; метка точки входа должна начинаться с подчёркивания
+   xor   ebx, ebx
+   push  ebx      ; для исполнимых файлов - способ показа
+   push  ebx      ; рабочая директория
+   push  ebx      ; командная строка
+   push  offset URL   ; имя файла с путём
+   push  ebx      ; операция open или print (если NULL - open)
+   push  ebx      ; идентификатор окна, которое получит сообщения
+   call  ShellExecute   ; ShellExecute(NULL,NULL,url,NULL,NULL,NULL)
+   push  ebx      ; код выхода 
+   call  ExitProcess   ; ExitProcess(0)
+end   _start
