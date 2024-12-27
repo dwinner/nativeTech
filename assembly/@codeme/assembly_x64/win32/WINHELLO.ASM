@@ -18,21 +18,21 @@ include def32.inc
 include kernel32.inc
 include user32.inc
 
-	.386
-	.model flat
-	.const
+   .386
+   .model flat
+   .const
 ; заголовок окна
-hello_title	db 'First win32 GUI program',0
+hello_title    db 'First win32 GUI program',0
 ; сообщение
-hello_message	db 'Hello world!',0
-	.code
+hello_message  db 'Hello world!',0
+   .code
 _start:
-	push	MB_ICONINFORMATION	; стиль окна
-	push	offset hello_title	; адрес строки с заголовком
-	push	offset hello_message	; адрес строки с сообщением
-	push	0			; идентификатор предка
-	call	MessageBox
+   push  MB_ICONINFORMATION   ; стиль окна
+   push  offset hello_title   ; адрес строки с заголовком
+   push  offset hello_message   ; адрес строки с сообщением
+   push  0         ; идентификатор предка
+   call  MessageBox
 
-	push	0		; код выхода 
-	call	ExitProcess	; завершение программы
-end	_start
+   push  0      ; код выхода 
+   call  ExitProcess   ; завершение программы
+end   _start

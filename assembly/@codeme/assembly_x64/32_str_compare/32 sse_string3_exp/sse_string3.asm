@@ -65,12 +65,12 @@ mov   rbp, rsp
 ; now print the result of the comparison
    pop   rax     ;recall the return value
    mov   rdi, fmt1
-   cmp   rax,0
+   cmp   rax, 0
    je    eql1
    mov   rdi, fmt11
  eql1:
    mov   rsi, rax
-   xor   rax,rax
+   xor   rax, rax
    call  printf
 ; -------------------------------------------------------------
 ; -------------------------------------------------------------
