@@ -2,7 +2,7 @@
 extern printf
    section .data
 msg   db    'Hello, Windows World!',0
-fmt   db    "Windows 10 says: %s",10,0
+fmt   db    "Windows 11 says: %s",10,0
    section .text
    global main
 main:
