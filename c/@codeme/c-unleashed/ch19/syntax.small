@@ -1,3 +1,0 @@
-expression ::= this that #
-this ::= "a" | "b" | "c" | "x" #
-that ::= "+" [genlt] #

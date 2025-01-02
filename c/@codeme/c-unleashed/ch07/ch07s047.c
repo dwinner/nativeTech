@@ -1,1 +1,0 @@
-  strcpy(p, q);
