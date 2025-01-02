@@ -35,7 +35,7 @@ mov   rbp, rsp
 ;);   
    sub   rsp, 8
    lea   rcx, [filename]                       ;filename
-   mov   rdx, GENERIC_READ|GENERIC_WRITE      ;desired access
+   mov   rdx, GENERIC_READ|GENERIC_WRITE       ;desired access
    mov   r8, 0                                 ;no sharing
    mov   r9, 0                                 ;default security
    ; push in reverse order
