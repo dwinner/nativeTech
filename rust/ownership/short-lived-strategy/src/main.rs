@@ -57,9 +57,7 @@ fn fetch_sat_ids() -> Vec<u64> {
 
 fn main() {
     let mut mail = Mailbox { messages: vec![] };
-
     let base = GroundStation {};
-
     let sat_ids = fetch_sat_ids();
 
     for sat_id in sat_ids {
@@ -68,14 +66,13 @@ fn main() {
             to: sat_id,
             content: String::from("hello"),
         };
+
         base.send(&mut mail, msg);
     }
 
     let sat_ids = fetch_sat_ids();
-
     for sat_id in sat_ids {
         let sat = base.connect(sat_id);
-
         let msg = sat.recv(&mut mail);
         println!("{:?}: {:?}", sat, msg);
     }

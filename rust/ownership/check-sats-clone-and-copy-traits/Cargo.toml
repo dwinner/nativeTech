@@ -1,0 +1,6 @@
+[package]
+name = "check-sats-clone-and-copy-traits"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
