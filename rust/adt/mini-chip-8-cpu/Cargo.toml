@@ -1,0 +1,6 @@
+[package]
+name = "mini-chip-8-cpu"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
