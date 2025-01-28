@@ -1,0 +1,9 @@
+[package]
+name = "dns-resolve"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rand = "0.6"
+clap = "2.33"
+trust-dns = { version = "0.16", default-features = false }
