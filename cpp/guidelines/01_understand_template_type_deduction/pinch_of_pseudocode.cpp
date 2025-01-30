@@ -12,10 +12,12 @@
  */
 
 template<typename T>
-void f(const T& param) {}  // ParamType is const T&
+void f(const T &param)
+{
+} // ParamType is const T&
 
 int main()
 {
-  int x = 0;
-  f(x);                    // call f with an int
+   int x = 0;
+   f(x); // call f with an int
 }

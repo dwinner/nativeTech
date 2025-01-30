@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.28)
+project("explicitly_typed_initializers")
+set(CMAKE_CXX_STANDARD 23)
+
+add_executable(invisible_proxy_types invisible_proxy_types.cpp)
+add_executable(explicitly_typed_initializer_idiom explicitly_typed_initializer_idiom.cpp)

@@ -18,22 +18,24 @@
  */
 
 template<typename T>
-void f(T param) {}          // param is now passed by value
+void f(T param)
+{
+} // param is now passed by value
 
 int main()
 {
-  int x = 27;               // as before
-  const int cx = x;         // as before
-  const int& rx = x;        // as before
-  f(x);                     // T's and param's types are both int
+   int x = 27; // as before
+   const int cx = x; // as before
+   const int &rx = x; // as before
+   f(x); // T's and param's types are both int
 
-  f(cx);                    // T's and param's types are again both int
+   f(cx); // T's and param's types are again both int
 
-  f(rx);                    // T's and param's types are still both int
+   f(rx); // T's and param's types are still both int
 
 
-  const char* const ptr =   // ptr is const pointer to const object
-    "Fun with pointers";
+   const char *const ptr = // ptr is const pointer to const object
+         "Fun with pointers";
 
-  f(ptr);                   // pass arg of type const char * const
+   f(ptr); // pass arg of type const char * const
 }

@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.28)
+project("prefer_nullptr")
+set(CMAKE_CXX_STANDARD 23)
+
+set_source_files_properties(template_example_templatized_cpp14.cpp PROPERTIES COMPILE_FLAGS -std=c++23)
+
+add_executable(pointer_overload pointer_overload.cpp)
+add_executable(code_clarity code_clarity.cpp)
+add_executable(template_example_flat template_example_flat.cpp)
+add_executable(template_example_templatized template_example_templatized.cpp)
+add_executable(template_example_templatized_cpp14 template_example_templatized_cpp14.cpp)
