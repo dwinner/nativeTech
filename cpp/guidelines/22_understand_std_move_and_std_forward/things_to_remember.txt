@@ -1,0 +1,10 @@
+                               Things to Remember
+                               ------------------
+
+* std::move performs an unconditional cast to a rvalue. In and of itself, it
+  doesn't move anything.
+
+* std::forward casts it argument to a rvalue only if that argument is bound to
+  a rvalue.
+
+* Neither std::move nor std::forward do anything at runtime.

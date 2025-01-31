@@ -7,22 +7,22 @@
  *   Deleted functions can be outside the class (in namespace scope).
  */
 
-class Widget {
+class Widget
+{
 public:
+   // ...
 
-  // ...
-
-  template<typename T>
-  void processPointer(T* ptr)
-  { }
+   template<typename T>
+   void processPointer(T *ptr)
+   {
+   }
 
 private:
-  // template<>                                    // error!
-  // void processPointer<void>(void*);
-
+   // template<>                                    // error!
+   // void processPointer<void>(void*);
 };
 
-template<>                                         // still
-void Widget::processPointer<void>(void*) = delete; // public,
-                                                   // but
-                                                   // deleted
+template<> // still
+void Widget::processPointer<void>(void *) = delete; // public,
+// but
+// deleted

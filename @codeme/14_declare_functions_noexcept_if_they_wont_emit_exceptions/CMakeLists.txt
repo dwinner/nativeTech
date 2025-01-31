@@ -1,4 +1,0 @@
-add_library(never_throw_exception never_throw_exception.cpp)
-add_library(example_with_move example_with_move.cpp)
-
-add_executable(inconsistencies inconsistencies.cpp)
