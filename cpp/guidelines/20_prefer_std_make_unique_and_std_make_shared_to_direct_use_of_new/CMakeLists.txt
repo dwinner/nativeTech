@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.28)
+project("using_make_templates")
+set(CMAKE_CXX_STANDARD 23)
+
+set_source_files_properties(reasons_for_preferring_make_functions.cpp PROPERTIES COMPILE_FLAGS -std=c++23)
+set_source_files_properties(limitations_of_make_functions.cpp PROPERTIES COMPILE_FLAGS -std=c++23)
+
+add_executable(reasons_for_preferring_make_functions reasons_for_preferring_make_functions.cpp)
+add_executable(limitations_of_make_functions limitations_of_make_functions.cpp)
