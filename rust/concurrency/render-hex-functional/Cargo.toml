@@ -1,0 +1,8 @@
+[package]
+name = "render-hex-functional"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+turtle = "^1.0.0-rc.2"
+svg = "0.6.0"
