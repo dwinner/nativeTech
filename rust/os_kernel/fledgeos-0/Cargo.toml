@@ -1,0 +1,15 @@
+[package]
+name = "fledgeos-0"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bootloader = "0.9"
+x86_64 = "0.13"
+
+[package.metadata.bootimage]
+build-command = ["build"]
+
+run-command = [
+  "qemu-system-x86_64", "-drive", "format=raw,file={}"
+]

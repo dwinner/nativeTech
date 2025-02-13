@@ -1,0 +1,10 @@
+[package]
+name = "render-hex-threadpool"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+svg = "0.6"
+crossbeam = "0.7"
+crossbeam-utils = "0.7"
+rayon = "1"

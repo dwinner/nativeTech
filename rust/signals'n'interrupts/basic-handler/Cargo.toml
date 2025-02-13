@@ -1,0 +1,10 @@
+[package]
+name = "basic-handler"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+libc = "0.2.169"
+
+[target.'cfg(not(windows))'.dependencies]
+libc = "0.2"
