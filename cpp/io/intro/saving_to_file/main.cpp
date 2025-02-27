@@ -2,7 +2,7 @@
  * Saving to a file
  */
 
-#include <iostream> // not needed for many systems
+#include <iostream>
 #include <fstream>
 #include <string>
 
