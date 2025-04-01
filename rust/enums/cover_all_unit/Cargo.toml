@@ -1,0 +1,6 @@
+[package]
+name = "cover_all_unit"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
