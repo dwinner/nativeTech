@@ -1,7 +1,0 @@
-[package]
-name = "write123"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]
-byteorder = "1.2"
