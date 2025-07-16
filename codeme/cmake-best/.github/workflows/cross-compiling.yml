@@ -1,0 +1,94 @@
+name: cross-compilation
+
+on:
+  push:
+  pull_request:
+  release:
+    types: [published]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+    
+
+jobs:
+  ios:
+    name: ios
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: cmake-configure
+        run: |
+          cmake -S . -B build -GXcode --toolchain ios.toolchain.cmake
+        working-directory: ./chapter12/iOS_example/
+        shell: bash
+
+      - name: build
+        run: |
+          cmake --build ./build --config Release
+        shell: bash
+        working-directory: ./chapter12/iOS_example/
+
+  android:
+    name: android
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: nttld/setup-ndk@v1
+        id: setup-ndk
+        with:
+          ndk-version: r23b
+          add-to-path: false
+
+      - uses: actions/checkout@v4
+      
+      - name: cmake-configure
+        run: |
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release --toolchain=${ANDROID_NDK_HOME}/build/cmake/android.toolchain.cmake
+        working-directory: ./chapter12/android-example/
+        shell: bash
+        env:
+          ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
+
+      - name: build
+        run: |
+          cmake --build ./build --config Release
+        shell: bash
+        working-directory: ./chapter12/android-example/
+  arm:
+    name: arm-crosscompiling
+    runs-on: ubuntu-22.04
+    defaults:
+      run:
+        working-directory: ./chapter12/emulator-example/
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: install dependencies
+        run: |
+          sudo apt -y update
+          sudo apt -y install qemu qemu-system-arm gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf libc6-dev-armhf-cross qemu-user ninja-build
+
+      - name: cmake-configure
+        run: |
+          cmake --preset ninja-arm64-build-debug
+
+      - name: cmake-build
+        run: |
+          cmake --build ./build
+
+      - name: run-emulator-test
+        run: |
+          cd build
+          ctest --verbose
+        
+
+      - name: run-emulator-bare
+        run: |
+          cd build
+          qemu-arm -L /usr/arm-linux-gnueabihf ./ch12_emulator_example
+        
+
+          
+

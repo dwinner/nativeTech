@@ -1,0 +1,125 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  release:
+    types: [published]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+    
+
+jobs:
+  ci:
+    name: ${{ matrix.os }}-${{ matrix.configurePreset}}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: true
+      matrix:
+        name:
+          [ubuntu-gcc, ubuntu-clang, macos-appleclang, windows-msvc-22, windows-clang]
+        include:
+          - name: ubuntu-gcc
+            os: ubuntu-22.04
+            compiler: g++
+            configurePreset: ci-ninja-debug
+
+          - name: ubuntu-clang
+            os: ubuntu-22.04
+            compiler: clang++
+            configurePreset: ci-ninja-debug
+
+          - name: macos-appleclang
+            os: macos-14
+            configurePreset: ci-ninja-debug
+
+          - name: windows-msvc-22
+            os: windows-2022
+            configurePreset: ci-msvc-22
+            buildPreset: ci-msvc-debug
+            testPreset: ci-unit-tests-debug
+
+          - name: windows-clang
+            os: windows-2022
+            configurePreset: ci-ninja-windows-debug
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: install-python-3
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12.1
+
+      - name: install-python-deps
+        run: |
+          python3 -m pip install --upgrade pip
+          pip3 install pytest pytest-depends conan cpplint 
+
+      - name: set-compiler-env
+        run: |
+          if [ "${{ matrix.compiler }}" != "" ]; then
+            echo "CXX=${{ matrix.compiler }}" >> $GITHUB_ENV
+          fi
+          cmake --version
+        shell: bash
+
+      - name: dependecies (macos)
+        if: runner.os == 'macOS'
+        run: |
+          brew update
+          brew install plantuml ninja clang-format llvm
+          brew install --cask doxygen
+          
+          ln -s "/usr/local/opt/llvm/bin/clang-tidy" "/usr/local/bin/clang-tidy"
+
+      - name: dependencies (windows)
+        if: runner.os == 'Windows'
+        run: |
+          choco install -y --limit-output plantuml ninja opencppcoverage
+          choco install -y --limit-output doxygen.install --version="1.9.2"
+          choco install openssl --version 3.1.1 -y
+          echo "OPENSSL_ROOT_DIR=C:/Program Files/OpenSSL/" >> $GITHUB_ENV
+                            
+        shell: bash
+
+      - name: dependencies (debian-like)
+        if: contains(matrix.os, 'ubuntu') || contains(matrix.os, 'debian')
+        run: |
+          sudo apt -y update
+          sudo apt -y install doxygen plantuml gcovr ninja-build cppcheck clang-tidy iwyu ccache
+
+      - name: correct-tmp-dir (win)
+        if: runner.os == 'Windows'
+        run: |
+          echo "TEMP=$env:USERPROFILE\AppData\Local\Temp" >> $env:GITHUB_ENV
+          echo "TMP=$env:USERPROFILE\AppData\Local\Temp" >> $env:GITHUB_ENV
+        shell: pwsh
+
+      - name: cmake-configure
+        run: |
+          cmake --preset=${{ matrix.configurePreset }}
+
+      - name: build
+        run: |
+          if [ "${{ matrix.buildPreset }}" == "" ]; then
+            cmake --build ./build 
+          else
+            cmake --build --preset=${{ matrix.buildPreset }}
+          fi
+        shell: bash
+
+      - name: ctest
+        run: |
+          if [ "${{ matrix.testPreset }}" == "" ]; then
+            ctest --test-dir build
+          else
+            ctest --preset=${{ matrix.testPreset }}
+          fi
+        shell: bash
+
+      - name: pytest
+        run: python3 -m pytest -x -v

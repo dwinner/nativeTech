@@ -1,0 +1,115 @@
+name: Coverage
+
+on:
+  push:
+  pull_request:
+  release:
+    types: [published]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+    
+
+jobs:
+  linux-coverage:
+    name: linux-coverage
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: install-python-3
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+
+      - name: install-python-deps
+        run: |
+          python3 -m pip install --upgrade pip
+          pip3 install conan
+
+      - name: dependencies (debian-like)
+        run: |
+          sudo apt -y update
+          sudo apt -y install gcovr ninja-build clang-tidy doxygen plantuml lcov
+
+      - name: cmake-configure
+        run: |
+          cmake --preset=ci-ninja-coverage
+
+      - name: build
+        run: |
+          cmake --build ./build 
+        shell: bash
+
+      - name: ctest
+        run: |
+          ctest --test-dir build
+        shell: bash
+
+      # Note in order for ctest -T Coverage to work the tests have to be executed first
+      # with ctest. Moving this before the test step breaks coverage
+      - name: coverage gcov
+        run: |
+          mkdir -p gcov-coverage
+          gcovr -r ../ . -e '_deps' -e '(.+/)bertrand.hpp' -e '(.+/)CMakeCXXCompilerId.cpp' --html-details -o gcov-coverage/coverage.html
+          lcov -c -d . -o lcov.info
+          genhtml -o lcov-coverage lcov.info
+        working-directory: ./build
+
+      - name: archive coverage results
+        uses: actions/upload-artifact@v4
+        with:
+          name: code-coverage-report
+          path: |
+            ./build/gcov-coverage/
+            ./build/lcov-coverage/
+  
+  windows-coverage:
+    name: windows-coverage
+    runs-on: windows-2022
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: install-python-3
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+
+      - name: install-python-deps
+        run: |
+          python3 -m pip install --upgrade pip
+          pip3 install conan
+
+      - name: dependencies (windows)
+        run: |
+          choco install -y --limit-output ninja opencppcoverage
+          choco install -y --limit-output openssl --version="3.1.1"
+
+      - name: correct-tmp-dir (win)
+        run: |
+          echo "TEMP=$env:USERPROFILE\AppData\Local\Temp" >> $env:GITHUB_ENV
+          echo "TMP=$env:USERPROFILE\AppData\Local\Temp" >> $env:GITHUB_ENV
+        shell: pwsh
+
+      - name: cmake-configure
+        run: |
+          cmake --preset=ci-msvc-22
+
+      - name: build
+        run: |
+          cmake --build --preset=ci-msvc-debug
+
+      - name: coverage openCppCoverage
+        run: |
+          "C:\\Program Files\\OpenCppCoverage\\OpenCppCoverage.exe" --modules ${{github.workspace}} --sources ${{ github.workspace }} --cover_children --export_type html:opencppcoverage/opencppcoverage --excluded_modules=*ctest* -- "C:\\Program Files\\CMake\\bin\\ctest.exe" --build-config Debug
+        shell: cmd
+        working-directory: ./build
+
+      - name: archive coverage results
+        uses: actions/upload-artifact@v4
+        with:
+          name: code-coverage-report
+          path: |
+            ./build/opencppcoverage
