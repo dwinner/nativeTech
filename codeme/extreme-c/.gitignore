@@ -1,0 +1,7 @@
+build
+*.s
+*.o
+*.obj
+*.out
+*.swp
+.DS_Store
