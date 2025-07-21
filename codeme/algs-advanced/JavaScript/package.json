@@ -1,0 +1,32 @@
+{
+  "name": "js-datastruct",
+  "version": "0.0.1",
+  "description": "Code for js-datastruct book",
+  "scripts": {
+    "test": "node --experimental-modules --es-module-specifier-resolution=node",
+    "lint": "jslint --max-warnings 0 --fix --ext .js,.ts src/"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sitepoint/book-jsdatastruct1.git"
+  },
+  "author": "Marcello La Rocca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sitepoint/book-jsdatastruct1/issues"
+  },
+  "homepage": "https://github.com/sitepoint/book-jsdatastruct1#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "jshint": "^2.13.5",
+    "mjs-mocha": "^3.0.0",
+    "mocha": "10.2.0",
+    "should": "^13.2.3"
+  },
+  "dependencies": {
+    "@std/esm": "^0.26.0",
+    "esm": "^3.2.25",
+    "minimist": ">=1.2.6"
+  }
+}
