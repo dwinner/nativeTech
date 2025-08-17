@@ -2,6 +2,7 @@
 
 #include "tui.h"
 
-int main(int argc, char **argv) {
-  ftxui::ScreenInteractive::FitComponent().Loop(getTui());
+int main(int argc, char **argv)
+{
+   ftxui::ScreenInteractive::FitComponent().Loop(getTui());
 }
