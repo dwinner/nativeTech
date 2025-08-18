@@ -1,0 +1,29 @@
+type: edu
+files:
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 513
+        length: 165
+        placeholder_text: |-
+          /* TODO */
+                  socket.set_nonblocking(false)?;
+                  let mut buffer = Vec::new();
+                  socket.read_to_end(&mut buffer)?;
+                  socket.write_all(&buffer)?;
+        initial_state:
+          length: 165
+          offset: 513
+        initialized_from_dependency: false
+        encrypted_possible_answer: dTjux5qA9w5RIm3pvVoT/dimhM3CVBk7HElGYBk0N2hzFMUqLxwnVfsbk5Z5mJJy2yplfigwY0Em8yhHmjLp/WP0QaceZdi0o1mUP3a4Q2qB5/RzmaPOz1nRnGNF1KISUh/6NwrC3BGzUYfAat+7EY5Ce3qdWBnaQl+GDwmMW24pdPevCL7gVGtyFkf1bga4IFotXSMUp3QsL0YbtEGhA7hsn3S0B0JLWniCHxhAn9xgPXKFFjqnpHB/LVCE6ciFFohh+H0ixtdNsZVbfeDP+4eWjdWwZonWOvjnLtLWzKwt7FynIRgOig6ZMlKG3MzE3wp3Y/SxaraA7a1JE7tt/A==
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/tests.rs
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

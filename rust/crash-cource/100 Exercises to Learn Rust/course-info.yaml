@@ -1,0 +1,33 @@
+type: marketplace
+title: 100 Exercises to Learn Rust
+language: English
+summary: "Master Rust with Mainmatter's Luca Palmieri <a href=\"https://rust-exercises.com/?utm_source=jetbrains&amp;utm_medium=partner&amp;utm_campaign=jetbrains-plugins\"\
+  >100 expert-designed exercises</a>, now powered by RustRover. Learn ownership, lifetimes,\
+  \ and traits while building production-ready IDE skills for real-world development."
+programming_language: Rust
+content:
+  - Introduction
+  - ABasicCalculator
+  - TicketV1
+  - Traits
+  - TicketV2
+  - TicketManagement
+  - Threads
+  - Futures
+  - GoingFurther
+additional_files:
+  - name: Cargo.toml
+  - name: README.md
+  - name: helpers/common/src/lib.rs
+  - name: helpers/common/Cargo.toml
+  - name: helpers/ticket_fields/src/lib.rs
+  - name: helpers/ticket_fields/src/title.rs
+  - name: helpers/ticket_fields/src/description.rs
+  - name: helpers/ticket_fields/src/test_helpers.rs
+  - name: helpers/ticket_fields/Cargo.toml
+  - name: CODE_OF_CONDUCT.md
+  - name: CONTRIBUTING.md
+  - name: LICENSE
+mode: Study
+feedback_link: https://plugins.jetbrains.com/plugin/27805-100-exercises-to-learn-rust/reviews
+yaml_version: 4

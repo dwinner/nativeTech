@@ -1,0 +1,24 @@
+type: edu
+files:
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 980
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 980
+        initialized_from_dependency: false
+        encrypted_possible_answer: FS0+3HzB/3at+DQPNkQzDHE1FyNleQVT+XDY1iiMMIWC0idXx27uEIk8d4NWW+uh
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/tests.rs
+    visible: true
+    learner_created: false
+status: Unchecked
+record: -1

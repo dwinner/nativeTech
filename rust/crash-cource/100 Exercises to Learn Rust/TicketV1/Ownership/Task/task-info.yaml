@@ -1,0 +1,56 @@
+type: edu
+files:
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 1144
+        length: 68
+        placeholder_text: |-
+          // TODO:
+              pub fn title(self) -> String {
+                  self.title
+              }
+        initial_state:
+          length: 68
+          offset: 1144
+        initialized_from_dependency: false
+        encrypted_possible_answer: Uy9qYUlCExHYSxtw26o/mm7FsfGRZpsgH0YUqDaHaeSJrw3QW2aVpXVDNPjlBu0Othzzt/ClBXQI8GfOO8E1dQ==
+        selected: false
+        status: Unchecked
+      - offset: 1218
+        length: 80
+        placeholder_text: |-
+          // TODO:
+              pub fn description(self) -> String {
+                  self.description
+              }
+        initial_state:
+          length: 80
+          offset: 1218
+        initialized_from_dependency: false
+        encrypted_possible_answer: jTLVaA9PYLlBxa7lRgQ61VYTKPgnHQ9gEjN+ir4wIcYJjLJndMwPqfZCqm8mZgMzGEXz17flNw/JDmWujxzLU7mHWbHEbskY1ZGVhF7MMUw=
+        selected: false
+        status: Unchecked
+      - offset: 1304
+        length: 70
+        placeholder_text: |-
+          // TODO:
+              pub fn status(self) -> String {
+                  self.status
+              }
+        initial_state:
+          length: 70
+          offset: 1304
+        initialized_from_dependency: false
+        encrypted_possible_answer: 4tzUqNxeBLPVaBBkXIL+4d1y17c13dhpYCMel7bRSv7s5mNtfMarEHCZ2FQhOxWAQVOPX+ndiC7QO6RTCGUFbw==
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/tests.rs
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

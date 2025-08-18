@@ -1,0 +1,34 @@
+type: edu
+files:
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 359
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 359
+        initialized_from_dependency: false
+        encrypted_possible_answer: xp8d2blojAobmZawXHX3hslX5KnkT2SrY04Xe2iYpufI1X8PF0W/cRMylm++egslolIuk8K3xmrg3P2hs+2QMzJtT/oE7mHwmumpnQOqjcDIihFMrOvFN+vZ48Nke+qeHRaUNLipRPWnqDBL6fLO0n4tJk6g+TU/J1SLTbrG86YbGfEf36XFgESz3Nmt4h65MEofjUm3N9OLMh9fTldL06+13+DkUkzw1xtv2q/G9qLtvZij1k4xtUvGGyBpeiznb7Qu2pzGkAEdAwCfhdNEZg==
+        selected: false
+        status: Unchecked
+      - offset: 373
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 373
+        initialized_from_dependency: false
+        encrypted_possible_answer: MYh030X2aUtZSf3GQyjfyqcABaYj1QhTTGNEcDbCxgv5WTF4tMzhyLL6tHu6tP9dMpWQh8HmFiukikej82kMCwtAhJbbGQLUHZ7OvERbB8anv4IzCbG+RQ6pCput3odpWM4PR+c8cv8e/So9025woVxg063Yz+0L6hgIo+zye8BzVnD2OO2LZftDtSPj6E7IntTa28Mj3C1s/I5B7/RYSmNgsxl8ZZnwlw7MvJTzKuomDdGsdm0QUwZEx9DXjISATg52nT6EKPU43rXJBp1we5FLb1aCrkN4il0OTC2d6s5PIDJD6iWjg16yU5VqkDKrYXKCXvyS+PdwKbf1plXM9y56rJL09yNU2zOwX1Yb03jEjRl5PWAIKkBojjiq0blqiuNIn4fJodOLihygxPH4T9mCclapvKeNXH7MiKN4irQ=
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/tests.rs
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

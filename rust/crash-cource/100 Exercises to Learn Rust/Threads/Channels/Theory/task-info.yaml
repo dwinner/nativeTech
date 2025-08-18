@@ -1,0 +1,11 @@
+type: theory
+files:
+  - name: src/main.rs
+    visible: true
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1
+post_submission_on_open: true

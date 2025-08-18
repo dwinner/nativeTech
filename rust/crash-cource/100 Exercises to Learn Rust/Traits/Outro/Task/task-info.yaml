@@ -1,0 +1,24 @@
+type: edu
+files:
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 471
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 471
+        initialized_from_dependency: false
+        encrypted_possible_answer: rI2CgUVE9RtmedI5+2w1dm809YPz4ASuygPakJqtEpEhnE6/r96E15EqP40I7KjDCYIE6HcbQjVszUltcYB7uJniAr2QkVt7BVV1jZwTF9DPGqw/RtN5C1zANlSGVgB4Qyc5umLrHs1MIpg72wxPaNqENO1JszHh6t+QIOH9wscFgLHhTM2qw9SSb2aFf29MmXthDkKBmQgLSis6dvFpxMYkJyFjfaq1HUTr+mlllGsso68iHScJyHE5bFFol4Va4pvbPbUEZPBDYfd68KY3gBor7j09wHnGQe2P/u3eNWavjVVrFmjZbM/21sF+cBxTz7xpzXwH3WhkbghVmGKd7/RiiXHg5cz+ClsvqEzeNyG/M4dL4RSBZLu9c985oa0d6yI7Uoom4CzzLFUSlAWQtKz2DZhaea/8xa2AO3XjijnUpV4bcNN/LiGYDylEljnI+WNdLflZ1t3R4SKIuYhgq0BQbtrQ8m25A/SrxBIJuhDwJAtKpLjlliI3jv6Fiq5jwikmRCTWJra+lv6KqXUs8NJywYHF+Y5SfiN+uJLLl9JYWktTvbzqa2rfDJqitZJ4tx24sUjPzRafMQA+S8FVctQgJDmzAifRNnU6XKX8ERQEpNX7bHqYhr5Ko+LtOuEIJwhIwOyHWvr23P6rXwrZugRQGqPs6wrIit4KgpRcJjTl699GMDRMar7Sd+Nhaix32cvAbU6ZdP57MpNF+8/2UxkFXWPCzhV39S15V24TuujTYCws/5vpfViHfYkrRFCZ6Wzda9Oj1NfrRlym/QokMdxyDLUMOlErgIv1RsxN4S3RQtT0Yly+B9+xqfcG6emjoCHARC+5D42/gJZ4olZmhS+RG4wx6WoI0DoMBgFSJghUzACGPq72ni6ZdyxVPgJVp7OO+/b/AQE/WKDHfzBphSBNg6Bkbi4csM+8RBglsfMfGav4Vd7w0MMJ1GgFEN/5CYbL37hdB7wPu1QLfzGRGMezSSw0rjgnKy18FxeA1pVcpw2v8lyHQhL62hRGMk6ZacbJZMAeB6x1NPLY6P0JiPNykmwrCjx0eDlTpiZLNlvZQtHK9zjRagKc67x2qJweaEZRzYw05/q9fAfv6OvH0Qgpoko1Z917bScO5CZnAikX7c9Fna2rjIPhS6ckl7MjgG1eHBYphda7P2yS4pkHxld67RuUxJea22V/VY0NLm2kJqRJrGq7AUsWvKD4xy09616pY9QGRRsxygcLSQDim8MinZv5T9hXfdihObzYOTsAfMhl/ueIQhsw/LYwJH1Da45DicWZNTjXazRSTfmLHR57bm2Hv4fG6/8ghQJxn36YYWY1LAQlkYvmlQVJLOESNc8khvZzhx8/Upnc47U26OhbShmDvG0RO8nkDjhrl/u8IxPFjakwcilz+raEMdYS2XSlBLTxcg8vqAqWuwdOq5frHKukWNwIv3+XXwyVtBfc4RF8kevWjzeRv8RVxozsMDrYwe7OVGg0fI6ntbcqemlYOm4kWTlLciHpYuVxNzYNmjkP3fQRaCOoDFGzVsjnmHVFK8vW54bcrYvXOgMBKxiC9b8BYNPx0Fsu6pbhg/GESTs4MQjvsAkB7DHyVxRw3DpDHu9+gVj/X0txLy2n2/jqj+BBBdSusbFLUgQPMFni+qRuT4dPH+odf969k2CtvgrcdMm0auv6rt7trHk7VXJboeX+PgapWHfegNjtQa0kKhcKO51+/KuWmvYE+uFLZ9Gwlxdws9ggvCJHBtek91tCBGaCFOjT8qA6disrunc=
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/integration.rs
+    visible: true
+    learner_created: false
+status: Unchecked
+record: -1

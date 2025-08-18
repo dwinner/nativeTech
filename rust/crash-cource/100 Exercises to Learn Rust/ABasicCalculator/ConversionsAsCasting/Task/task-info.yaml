@@ -1,0 +1,44 @@
+type: edu
+files:
+  - name: src/lib.rs
+    visible: false
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/tests.rs
+    visible: true
+    placeholders:
+      - offset: 81
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 81
+        initialized_from_dependency: false
+        encrypted_possible_answer: 4w33P5f+Ces/HqPWq0IorA==
+        selected: false
+        status: Unchecked
+      - offset: 920
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 920
+        initialized_from_dependency: false
+        encrypted_possible_answer: RESya3fqSV1DFqjsTgSSYQ==
+        selected: false
+        status: Unchecked
+      - offset: 1020
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 1020
+        initialized_from_dependency: false
+        encrypted_possible_answer: oa+nVSRiKi7L3SNrfCrSCA==
+        selected: false
+        status: Unchecked
+    learner_created: false
+status: Unchecked
+record: -1

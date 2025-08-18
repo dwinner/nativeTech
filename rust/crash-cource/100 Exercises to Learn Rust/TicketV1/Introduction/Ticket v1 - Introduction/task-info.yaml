@@ -1,0 +1,24 @@
+type: edu
+files:
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 51
+        length: 24
+        placeholder_text: insert here missing part
+        initial_state:
+          length: 24
+          offset: 51
+        initialized_from_dependency: false
+        encrypted_possible_answer: BU0FrdTHOIY2PxfRxZQVJusEUsCnwdkhRd/wp8YD+3/99iugx33litBCyLTHD7+X
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/tests.rs
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

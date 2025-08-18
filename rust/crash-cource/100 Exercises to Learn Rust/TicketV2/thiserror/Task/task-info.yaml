@@ -1,0 +1,75 @@
+type: edu
+files:
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 295
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 295
+        initialized_from_dependency: false
+        encrypted_possible_answer: rI2CgUVE9RtmedI5+2w1drKzY15KF7RR4nu2ikw4yWkpUjR34JZ2IwMHcXZQ7EHi
+        selected: false
+        status: Unchecked
+      - offset: 336
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 336
+        initialized_from_dependency: false
+        encrypted_possible_answer: lVih2tsEJCYuU1WivjojQiHBVjAP8ioHWfcoAxfypau07Sbh4S1K7UbJ9REuiC9D
+        selected: false
+        status: Unchecked
+      - offset: 375
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 375
+        initialized_from_dependency: false
+        encrypted_possible_answer: lVih2tsEJCYuU1WivjojQoiintVjCBp5uh2P/UxCRgu0rbIVXWIdCMxg1aGQkLqw94W/De0D0H7GyCniNN9CFA==
+        selected: false
+        status: Unchecked
+      - offset: 408
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 408
+        initialized_from_dependency: false
+        encrypted_possible_answer: hXWspPyU8B8uDyU9AuK9BT5kIRGCAS/Vq/i+IDMPFUa1curQjJeJPEj17pheJpUy
+        selected: false
+        status: Unchecked
+      - offset: 453
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 453
+        initialized_from_dependency: false
+        encrypted_possible_answer: hXWspPyU8B8uDyU9AuK9BbR2hq2vRZ8ngnc42Bu/i6lqFkiUF6M0gtSa5Oe5+zQ1d+RPbgboqkMjb0KV8fhSjQ==
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: Cargo.toml
+    visible: true
+    placeholders:
+      - offset: 151
+        length: 6
+        placeholder_text: "# TODO"
+        initial_state:
+          length: 6
+          offset: 151
+        initialized_from_dependency: false
+        encrypted_possible_answer: W3Rv+JgF6kxm+3Z8Oqcak3wfJjFPXHyenB/YPXojm44=
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: tests/tests.rs
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

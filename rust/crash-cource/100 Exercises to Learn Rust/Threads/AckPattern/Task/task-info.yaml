@@ -1,0 +1,80 @@
+type: edu
+files:
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 252
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 252
+        initialized_from_dependency: false
+        encrypted_possible_answer: enSc4rHASRZRbXbRx5r4K6c8dNYt/OUoEQyoeklFv7Gm5B75LaTQnHRjk01gNy1KW8Woaq/LlfAKbx6onGrVcA==
+        selected: false
+        status: Unchecked
+      - offset: 288
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 288
+        initialized_from_dependency: false
+        encrypted_possible_answer: Xgb8ep7axG3QJtODRAhDBi51LieBbkf3tze1wucmfX+QBJkGzhNRVRxZClytyqUG8n1Ex1JbCIrspYUUA2q76w==
+        selected: false
+        status: Unchecked
+      - offset: 691
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 691
+        initialized_from_dependency: false
+        encrypted_possible_answer: nn7/gSi8+6DN9WgO5069b7Nfe//Q1KGaR3rn4caM2nE=
+        selected: false
+        status: Unchecked
+      - offset: 741
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 741
+        initialized_from_dependency: false
+        encrypted_possible_answer: 8lJftk16zFMuE4z03qfhBkkeDe2pl9xsDwN5IX/kEsWeyXF2GuCM3ITit+5cTgeaOk2u1R5cuGYjKdVZHqBlp4KQAb7oxNDHqYorTUWy23AnASzBOm6iAMO99p0Dfgbw
+        selected: false
+        status: Unchecked
+      - offset: 815
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 815
+        initialized_from_dependency: false
+        encrypted_possible_answer: 7LJtIXh8suH7XaiH5LXFoKyJfuyg9OIYHK3PQeJTZxWJJAd7QsVWBjvJqEzAK9dq
+        selected: false
+        status: Unchecked
+      - offset: 865
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 865
+        initialized_from_dependency: false
+        encrypted_possible_answer: L8I/oiMKE4BIolXQwnMtt9Q8eLk6wloj8VQbJ0p69bF84QNqQtjHynAOmqfOW3qAa1U30KSZmBrvkP3YQZDEqT/G1/zUvQYkOT9Uqoz1ky9TS7dQnt9yoBgRNr2ij4zS
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/tests.rs
+    visible: true
+    learner_created: false
+  - name: src/store.rs
+    visible: true
+    learner_created: false
+  - name: src/data.rs
+    visible: true
+    learner_created: false
+status: Unchecked
+record: -1

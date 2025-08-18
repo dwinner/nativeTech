@@ -1,0 +1,31 @@
+type: edu
+custom_name: "Task: Hello World"
+files:
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 16
+        length: 34
+        placeholder_text: // put your code here to launch it
+        initial_state:
+          length: 34
+          offset: 16
+        initialized_from_dependency: false
+        encrypted_possible_answer: Ru/F09ZLSjpRk8JyOzlg3zy/K9iooZ3oix6M1X32A/s=
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/tests.rs
+    visible: false
+    learner_created: false
+  - name: images/run_dark.svg
+    visible: false
+    learner_created: false
+  - name: images/run.svg
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

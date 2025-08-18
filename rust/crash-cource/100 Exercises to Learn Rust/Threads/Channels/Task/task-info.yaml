@@ -1,0 +1,51 @@
+type: edu
+files:
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 163
+        length: 7
+        placeholder_text: todo!()
+        initial_state:
+          length: 7
+          offset: 163
+        initialized_from_dependency: false
+        encrypted_possible_answer: dVRuzv0eJbZnwJC+3heh+g==
+        selected: false
+        status: Unchecked
+      - offset: 724
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 724
+        initialized_from_dependency: false
+        encrypted_possible_answer: 9NCGRuy85/yEzv4xcZeSoaHPUNjCs/tQ65xbWDzsfO640mdK7HH5GuTOdVe/hXHFdnOQyEc7c4c9llcyqxvJMh/3OH6ZVVwJ5YjL/n0TqIlP+eKS40cekTCVaaDX55Nx1MEeXyE5QEX7Sf4RdQ/TZC6gLBQuzInysCsgMToM6FPY1bhukGgbmKQhge5Hu1jVeE3mO1KysYqK7UNY0JCmXvOXvFsRLJKku+MoZU0FGHBSHzN6DUYuVWsZ99QnqX+bCiT0juwQYrCj4wtvabx4hy2RmvT6XRsvq0hPXesAtU/NAh6pRMB+0YtffyImBjwH
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/tests.rs
+    visible: true
+    placeholders:
+      - offset: 1075
+        length: 14
+        placeholder_text: false; // TODO
+        initial_state:
+          length: 14
+          offset: 1075
+        initialized_from_dependency: false
+        encrypted_possible_answer: znjhjx98cbzBvX5RiW9Cuw==
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: src/data.rs
+    visible: true
+    learner_created: false
+  - name: src/store.rs
+    visible: true
+    learner_created: false
+status: Unchecked
+record: -1

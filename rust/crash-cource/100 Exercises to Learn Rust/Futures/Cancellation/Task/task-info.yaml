@@ -1,0 +1,24 @@
+type: edu
+files:
+  - name: src/lib.rs
+    visible: true
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/tests.rs
+    visible: true
+    placeholders:
+      - offset: 1295
+        length: 33
+        placeholder_text: "assert_eq!(buffered, \"\"); // TODO"
+        initial_state:
+          length: 33
+          offset: 1295
+        initialized_from_dependency: false
+        encrypted_possible_answer: FJfR8sp2U5qcnwDLRxeQgP3NSrA4iY3dg2gOAyR9rFdu/hw0dAx/AgQ6Uwz73c5I
+        selected: false
+        status: Unchecked
+    learner_created: false
+status: Unchecked
+record: -1

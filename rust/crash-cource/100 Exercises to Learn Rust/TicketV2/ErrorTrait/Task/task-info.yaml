@@ -1,0 +1,44 @@
+type: edu
+files:
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 426
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 426
+        initialized_from_dependency: false
+        encrypted_possible_answer: QXr3keH3qRpVIaE0AWbYy4B2uO/n0wdFHUEYX6rdq6PvohwaNR8v0YRhXz7DYt3B95BYo2tMyQRNs7ZXudi2MvfiNIDh4GcGWaqlFZxn5gRyfNc3awn28F3Ze0TdP/CQZjJ4PRqdWW4plxCv7I71VAiXLoCSZs1h3FB1XWHfVERDaUOG9suU+Vfpr0xpSn3cOVFOV2bPMARP9UYKZX9Ukk50azsNa4gZNm0p2KIyfFmi1KPD7WKT1RKkB+jisRzGUI5WtlEUMsOK+m5vK5PyW70LOdBWwNYj1gmX+uTqefvTXAtaH70QH4fEBUNmb/b4zybGbJZtBA530gsOUae8qOXuIwdBQJOWM5q/JXVpPkvDVtqqg9PbqWNOWxvy+HXNS/ryk0JAqOhudkG4q9DujQ==
+        selected: false
+        status: Unchecked
+      - offset: 438
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 438
+        initialized_from_dependency: false
+        encrypted_possible_answer: dCIwvlzOirfxZl0oECxdocHpQs/AsyRZ7RNhCug/7zR3mTeE+Kz+TMn+Y0x1GNBH
+        selected: false
+        status: Unchecked
+      - offset: 811
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 811
+        initialized_from_dependency: false
+        encrypted_possible_answer: ygNJC0LTOVr4xKBEWTFIy6qXGYimeVoAVVHnjmAQQ5MuW+fsJzwcAKwHkWPA1b347WOOMAnlxFeBYoWOr7smr5Or7zTgutojhZSyf78xRnI6HX9q9kDEZbdTmDKfxbqx6iNRHToZj8bHEl3kMKqWWCGBJiLIhjHqQk3lEScVnKQna0itVWxahwEZih2OdReFKOhHCBPBRLkp162TO0Bkzc5T2qPlsUBKl4h/P8/xEDX6Buqt0Cm/Lqwwv8/aJ6crCzfTuHd58sikpxmIZoLShZwXyGmmZj4Tq+Wtcp/aUajMIicKb0sydG/ZgzCCZVExFEQXypTplbaW5+6Iks5bW1V4Xv+4sL9y9/1h7+MrYTHhvWIeEX8+lCf3p2V5Mkq9XvGK+GP6YgZDlbVKrf9HOkN5KBY69GiQ79q/0gruQPQh/CCDBNcdwM72n2pSaE2uOpeJNov9LZQoxLEVq9F/JEVe9gnIndT1l5qqghBc+IM=
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/tests.rs
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

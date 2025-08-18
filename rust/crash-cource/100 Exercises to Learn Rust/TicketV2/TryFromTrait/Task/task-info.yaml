@@ -1,0 +1,44 @@
+type: edu
+files:
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 208
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 208
+        initialized_from_dependency: false
+        encrypted_possible_answer: rI2CgUVE9RtmedI5+2w1drKzY15KF7RR4nu2ikw4yWlIp3rtPctgrv+Y41B7DZoTd098jZHyrLFO7J0AfkP6JlYPpKHIHVeWiP6LmXBeYXWwElh6sLhJX++I9MAfQFlNNHpYcmmhxCggUIsNLhDQh4vDea5sm3XDf10B5B+fub8qPmKt7GAiW/AItyBOPcD3SUKlETmKjZIyB1UhgOMBRA==
+        selected: false
+        status: Unchecked
+      - offset: 220
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 220
+        initialized_from_dependency: false
+        encrypted_possible_answer: yhyeSV3mlKHzgpCtmnMiin3/UNBfk3Zji5ssnKyoiZysd6sU7MW+Dx1E3mKFVNfYRL6F45CoHFhF6IXP0OSENNC51fxxh9g3xBCWl6zbxuGWn7t6dsaf2slWrBkX9aCk3zXiucZheGPbMCUGyhIV5LVBNOUyHbzphiSFDIO2dCNIDxHqr+9z5p1lWmmf9mPz5/zwGmrdesIM3E5ofYfsqvfP5JVPiOT1n3nGZ+roVGQ=
+        selected: false
+        status: Unchecked
+      - offset: 232
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 232
+        initialized_from_dependency: false
+        encrypted_possible_answer: wL1FqNBJWLfrsEHcBCbezcT2fSdejfNnwDzWE919DnWwgEWPIXso1JyTo1tZJb15DlPv7q9aO3VuSxIeUlpYWBeKSkTDNMGIN2occ6PdF25hoHJzG0ue6O/NPUiMfI5qqYhUFYVGdRJ0e5q44fd5gIvcyYjHIbynbDD62gE9WrfSXkI1ylr/17J7cHqNiYPpgEbDjp0O8mr1Jwl8PbFlPCyu58t4jf/6KOE1neayBf5gNySiFaZd0OXgOHTAj1BrAeFGJbuXfY8RXWC0nybQ4aSEphTfj7IAOShBbyIRiYyVlP3SMWdij+2NZ4BWHjHkIKyYySBEAipzURm5tWfsqSoyn6LlRjteYYjQkimYLuL8OFqaNKY5NmK3SSqIjr1+gYAoNB5aPKVtVtEE2S0iAPKA+wsmaQ2vXEqYN3WYXXAEB5CdHVLFLYerxVnExEQC6ZkIb3bRoyI90hr6ePgpyGoXeaee4NRwyDoD1iAiEfwqknDN4inY0i5Zu/ZO1QT9zC1Udsiy3hsaHG856Mx8p6cwRTdKbmyLlOzBDIsyANlho3j1m7B1S4RJCjbTUbLm
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/tests.rs
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

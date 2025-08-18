@@ -1,0 +1,98 @@
+type: edu
+files:
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 616
+        length: 25
+        placeholder_text: "/* TODO: Ticket struct */"
+        initial_state:
+          length: 25
+          offset: 616
+        initialized_from_dependency: false
+        encrypted_possible_answer: cDOea20Tx5yuVpHqft535Yhx9XltFSyta8cF0qvvu7uMyJ26CncAG3g2TDSTBpCV6+8rwCoyogjMdLcNW9oSA+mt2aWPvebImyFZk62kt40bQMiUHyQFfcH31G/1UtAYD6uOHEW6QWGuJsfvBujlRwXFxBfMmM/MDbvapu1JCD/rMrkBRu+DTTbUy0+wJLPvaE3vOMGsRPhjAc11flYk2J7nsz6MgFknCQEtg/lZZ7Iwgba7W9N3OB5SmB+h4bjBSHnmFwLUThbXRFBuSmZLKy4QXJMBOiy7ahcAU2ACg713whv7pjp96gbic7e7J4G3lZTYlnkEdjwTGcYM3d2t0BL5TVxRhdammY7UY4KwJffbBRNJHPK4YZlcvlIWzqVs8R+Ka1U0PFyR6ArR5b4KStsDsmuTYvj/K+nCad/sa29BC7VjbtsWiI7iBrqMcfXf2jQIAawxyftUwPZMLdCicSO0mu/QB3knowYxrfDqvez2dGI6mZsz3PFzBgR/ND8rRzINAK4vkHLm5s5H2wh4GTIrRiiHzSuDgyCRFf84xhJGKNLDgp0qHESlRrot63qp
+        selected: false
+        status: Unchecked
+      - offset: 643
+        length: 31
+        placeholder_text: "/* TODO: TicketStatus struct */"
+        initial_state:
+          length: 31
+          offset: 643
+        initialized_from_dependency: false
+        encrypted_possible_answer: cDOea20Tx5yuVpHqft535Yhx9XltFSyta8cF0qvvu7tK+IJczmdFJGzrWyyM9JmS5MSTkjTsDs2SSoIwfq6vg5QGosmBtDY9iRTHHSBQHk7PadF7updHMfjAxClyaenr+L21Ry27YYJh5Vm6Y+fkoA==
+        selected: false
+        status: Unchecked
+      - offset: 676
+        length: 27
+        placeholder_text: "/* TODO: Request structs */"
+        initial_state:
+          length: 27
+          offset: 676
+        initialized_from_dependency: false
+        encrypted_possible_answer: r3lynlaSAj7zBsfLmjadajHmuLgxwf9LlBlNiwYyIIxqLUDfwpeDpIzLb41hMlqhsom8hB7VES1ycswWqVYjHHtXmQ4v40ralzRk6KNddBYZ+rgvUCxduup7QS0relKVmtEgVvt5pcB5O35ZFoi4ux0Vbj7oB6KJweObIM0ajPlyUgp43nZsmKSm5E8cvT3NR/q/cOBmVLtlI//y+hACvQt/tsRZoUyYCJcflnHp74fJEjRhHc3FnsF20LRBWI4vUio9CkuLyVXVMKxxc3ZrexKzj1mrHb+0hMFffbWB4WSXhC5vJ79feotew+5UKagxVCw+dJ+yaxKB9AfByRU/Bg==
+        selected: false
+        status: Unchecked
+      - offset: 705
+        length: 27
+        placeholder_text: "/* TODO: AppState struct */"
+        initial_state:
+          length: 27
+          offset: 705
+        initialized_from_dependency: false
+        encrypted_possible_answer: eOJd++/NdYBOXfYvL/P4Bf9Y6YxLzjfL2sjO1wVxc9ZeoBKjBTzXDrHNSbF2xMQWVmwVLa4QzkE3+by1bUVQZNVfwMS7/FjA+8RQ/Gv9+rFEpP4y/mTUmlXlhR7Tj4q2UZIhBXP/+CqhgBBbUjRDWsfN2sV8wDxNfWJ/p39s3Zg/74RCn09KTUTKGfQqJJHyQnADAAicjNtyUXKmSQLElfXM9B2qxBwcDCOWNDX4sTUsNPxqqejNwzu9MZXWyffnD0LINSdorMXDRFdIXlQYhqZEy+m5mXlKlGYU/XEMD3k=
+        selected: false
+        status: Unchecked
+      - offset: 734
+        length: 34
+        placeholder_text: "/* TODO: Create ticket function */"
+        initial_state:
+          length: 34
+          offset: 734
+        initialized_from_dependency: false
+        encrypted_possible_answer: JI6NKoyHNdXNIWk9D79ZcPw8QamIeWMqOP8gXxaaj4NznoPk03CLzSHs9O3JpSR40igdK+i4AT+2F7rqwb6hrfPUVvxV67ziKQ+O/Gjh8K2cvTzLGxkftHeYEhU1VKsorT7zcq69K+cLqCFkenEJYZe2GVztE8HvM4Nx9mBXXqkRtL+oFbcpNsN0Gzxp10/HotyOB9yy4NzcmDcVglO2FCMeswPO7nkH4KbLVVOBO/RjN+hRkf0p7eKpuXwCf6Webne+d/FIA2xmKevh08ZYvoJNNPpiKUzP4TwriNYlC1sHdjkUNGJi2zBo41vdvrnxaHEP2FdjQB/dZ9RT10VkZVMLuJWLC92HsYQAXiolL+k4WFBnUV+kSjakSFDQSsELupD4bGdROPaULyxRjzhK65K5yPPtMosxV24frdrg52hM4I3tE69zG1q6l8bRJrDyfRAa83yWqwiY7UV9jJE4Uv3wjBg9BBnk7tVNJOk6qiQyoNbqFXRrMgZSVPTLbh5UjEiZDR10nbujuCe2rIlIwAJzYhMgsKuYA6zuGdMUfKfywbiNZn+A//4QUmEi9J+lAp2xJgqBuYF9HBei0CkaRgG19CutiU1AuhXIr+0wEljeOeDE0SI5G5jUmYcuFa1ltMb3cdpD8PRFX7LJuyeHcfgqfleH205xFzT2FwJPGOg=
+        selected: false
+        status: Unchecked
+      - offset: 770
+        length: 31
+        placeholder_text: "/* TODO: Get ticket function */"
+        initial_state:
+          length: 31
+          offset: 770
+        initialized_from_dependency: false
+        encrypted_possible_answer: 9MaidxsGH+Phxpty8geYxaWCb08V2rsQpny1ci12NKMBARSKXbEdby00SdDe8mfK8+zp8/S9XSfVhRqoFjwq1xCBOxaK+2rj9tAXs5Y77BEiUnKpc3M6EN5137GaZHzOn6riEZ7egpC4Wcau4P780XsmPhDbA9r/++myrCqG40rNGmxcYgz9AtUhxSHuwd2IirY3VmAZyNjGMPcyhykCnRfxUj43QefSxp98cbJ4ds+PAOjj+neeBXw4M1Gn8egNpcAEc2Rbo24IiI45Ie9P6legiH1Wh1lupfyxJDt3wCkWLoqlFGoGUBOAIf3qytxLsB5P6WrEQX7LVzZSi7xh97PI2mjR6XrlBlrIXuE1oOCtQJLfeXtiV5EJEcHMCWmUbnejHcBCsOzIPNxzP4SUfouEZiFJCu5822lE1dQYopM=
+        selected: false
+        status: Unchecked
+      - offset: 803
+        length: 33
+        placeholder_text: "/* TODO: Patch ticket function */"
+        initial_state:
+          length: 33
+          offset: 803
+        initialized_from_dependency: false
+        encrypted_possible_answer: lFxT64CKQVgofpBFepxY8w7b3Bk3lbxmgUPXwS1Wx4+mPwuiv4JFI8deRcZJnZbn/aGuvIPVUiYnFu2KEuLXOBHACHxANI8GEdDGjYJR4lUq+JVsPoCD2dncpjadZTNvL0vaGeT1mT+lXEIXasoHLOkGtAv38ZQW3KWTK+dJ2a7bwgiFPbOo1fMRUQZOpCIV7Vs+wxJwTDBV5CX2QoOmkER+YoecHutHP3hyU7CU1Ei6oBmf3qXFfZAZvKR9w5dIm7h5TYW+Gp2Kslgg56RVbd7lP7+Gn9GaP0EN8ksog8SUb6+Og4zIOvjm4+cEETbSj6S/KxAbbX0WIT9A3FQ/QcMoQIS9MwOTUbGovz0/A/RvpsdHKMPtLQmF/O7Sp28RnjJfYsmwfLPRY08KpQ0hpEwQN23VIP8Aw2hvAB5r+EIfLT6/6Yv2f87LFl/O9iOwSejQCesjyugI4OTvhIRCLsHN+JZcGjx2yBYz1zNABo3cVOqh2FopZAilVfbo+2dbShKtY8PiIJQnYYk/4dWuAfkK85HKqQRKoBlRcFOVFrFOmgyhFqSC1Ob4wx4sYdidWUN1b+SZR5SmyXJJNzu5qn+wyAR9mQetCT9VKxAmIfYE1Z6KhdnFSi4DXlK5qshSDCZ/+dI6oBY64k1pNB4nOWEgkR+/D/UPHpchOlmG3YBKFV9b7ahZkG5Aw4KFa4lFdysvFsxgoIRDyfbwMx9RbikZ9w8+ExQ6tWJLSKyLKUq2Hp+2qAoahqEg99ExF+AG1f/E9qP78qGvt7jdZ1ZlLC86JJJJhLr39PHS04O3XlmG/83JiR3a2ByvfU/oldBeqnWOeYHgQskp0m9pPBwg43N57YgCCyBHZynKYeS9aFPIBQ1GGJK3QzIXz3c1Lw6Baz5A5+Jzom2F27tTx00jQA==
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/tests.rs
+    visible: false
+    learner_created: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 216
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 216
+        initialized_from_dependency: false
+        encrypted_possible_answer: kB9VmUU9rmrHgIhkbO0OXeE3PPuT5tqzA9aLyYLGEsYdG2Cwh4KVgtxQbojpca9ieIomZpBIZ2ystaWCl0BGzMbbtHOjBj0Wtaa0R4eVIeSFLcbMwxZsu7dNOlMXTrY1q5clgkV/6Om0qh4wngs4eLGCcxr+8pRG6A1ACxpytO1w6pIlukifbEqntQ5qljemY3SKck3L1Ck/T7AD77UhulOBeUTZRnHcc5u/sC1R/HUYjVTC1B2dIIcpKNRtoMd4I443yf2XUiIQTKBjU6z9IiWksPsM4w8rGuY2A89+5ZGduaruOHVgD+AJ3NmYAi7B3KqaqFR+l5g++yo3iGjHzl4M8mihDmqy2u5ud+Dj2/nDlzT/p21eMnJ/9WryYnv8tT6+0Sh1Q9vCGVExrYu1Wmox3hHfqYSOZah6qPdrdAeTdunO8f4AsI4YoveDjfKoivVDer6d9sz1SSPmhiB2h82ouTdYfZWCGa5YIZz4SlCRanBN1fQ9FFqh8Fh3DVuRUHRh2h+9Uytau8R64isMBMuKf7a9H3TqXAqSW2C/w6moRxB9VvtkIItVsD/QMXd4kA3hdU6lwghfEnlPX1EUTzRnHG/MuE+RJpCbZ4zBJaCibNAmNItMXgrtAf8X1+6mlv3y7t32uzyHPHpC24wTcw==
+        selected: false
+        status: Unchecked
+    learner_created: false
+status: Unchecked
+record: -1

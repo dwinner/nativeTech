@@ -1,0 +1,31 @@
+type: output
+files:
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 378
+        length: 94
+        placeholder_text: |-
+          /* TODO */
+              let non_send = Rc::new(1);
+              yield_now().await;
+              println!("{}", non_send);
+        initial_state:
+          length: 94
+          offset: 378
+        initialized_from_dependency: false
+        encrypted_possible_answer: 73g84K5gPda8HpVbnoXuP59zudqjn5IM+lMerfG5trdJTzrlbV9D4fhYE/+qKkyfRB/FJ3aHTfJfs79iFEEygY6dnOrpEwScXVPqMSL40MKre3sFqKbL4Rh+TBoC4YVAoD9mLLtGWsnffIF93x9Egg==
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: tests/input.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

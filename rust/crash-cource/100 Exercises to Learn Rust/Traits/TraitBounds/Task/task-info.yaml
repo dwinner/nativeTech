@@ -1,0 +1,27 @@
+type: output
+files:
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 494
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 494
+        initialized_from_dependency: false
+        encrypted_possible_answer: 2ulBQCp0wpZ063qKtGuwSQ==
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: tests/input.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

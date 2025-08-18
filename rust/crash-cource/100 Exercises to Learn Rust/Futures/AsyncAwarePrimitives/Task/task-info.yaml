@@ -1,0 +1,105 @@
+type: edu
+files:
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 292
+        length: 28
+        placeholder_text: use std::sync::mpsc; // TODO
+        initial_state:
+          length: 28
+          offset: 292
+        initialized_from_dependency: false
+        encrypted_possible_answer: HL4/ERx0wIYKxJKmMBVe104E1BSjlsMwvEU1PPrJqFw=
+        selected: false
+        status: Unchecked
+      - offset: 881
+        length: 42
+        placeholder_text: "if let Ok(msg) = receiver.recv() { // TODO"
+        initial_state:
+          length: 42
+          offset: 881
+        initialized_from_dependency: false
+        encrypted_possible_answer: fzUXtdcHXiG21O4aeBB+WYCY3xO108IiUOrc1N6RZ+LGIkEmh5uULuPzxtjqiY8K
+        selected: false
+        status: Unchecked
+      - offset: 1035
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 1035
+        initialized_from_dependency: false
+        encrypted_possible_answer: oa+nVSRiKi7L3SNrfCrSCA==
+        selected: false
+        status: Unchecked
+      - offset: 1238
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 1238
+        initialized_from_dependency: false
+        encrypted_possible_answer: rsyyBbFDi9ec1hljwMva6w==
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/tests.rs
+    visible: true
+    placeholders:
+      - offset: 83
+        length: 28
+        placeholder_text: use std::sync::mpsc; // TODO
+        initial_state:
+          length: 28
+          offset: 83
+        initialized_from_dependency: false
+        encrypted_possible_answer: HL4/ERx0wIYKxJKmMBVe104E1BSjlsMwvEU1PPrJqFw=
+        selected: false
+        status: Unchecked
+      - offset: 187
+        length: 24
+        placeholder_text: mpsc::channel(); // TODO
+        initial_state:
+          length: 24
+          offset: 187
+        initialized_from_dependency: false
+        encrypted_possible_answer: 0/5wfKKZH5/ALMoQFgWGeW7rRk4F13Nq6vfQEhuna20=
+        selected: false
+        status: Unchecked
+      - offset: 267
+        length: 24
+        placeholder_text: mpsc::channel(); // TODO
+        initial_state:
+          length: 24
+          offset: 267
+        initialized_from_dependency: false
+        encrypted_possible_answer: 0/5wfKKZH5/ALMoQFgWGeW7rRk4F13Nq6vfQEhuna20=
+        selected: false
+        status: Unchecked
+      - offset: 384
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 384
+        initialized_from_dependency: false
+        encrypted_possible_answer: rsyyBbFDi9ec1hljwMva6w==
+        selected: false
+        status: Unchecked
+      - offset: 504
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 504
+        initialized_from_dependency: false
+        encrypted_possible_answer: wWSoaWk+fvCpD0ttxX0XTQ==
+        selected: false
+        status: Unchecked
+    learner_created: false
+status: Unchecked
+record: -1

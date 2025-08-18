@@ -1,0 +1,25 @@
+type: edu
+files:
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 92
+        length: 78
+        placeholder_text: "/* TODO: Use wrapping_mul to ensure multiplication wraps around\
+      \ on overflow */"
+        initial_state:
+          length: 78
+          offset: 92
+        initialized_from_dependency: false
+        encrypted_possible_answer: zfLqC5JecSQrCUqhJOpCYXzRrrFwjAUqLYWmi8ftlzbNFqwi8fYglAnuG8NTy6M+
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/tests.rs
+    visible: true
+    learner_created: false
+status: Unchecked
+record: -1

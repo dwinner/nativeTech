@@ -1,0 +1,27 @@
+type: output
+files:
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 267
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 267
+        initialized_from_dependency: false
+        encrypted_possible_answer: zQ8jKTBI7rwj0jdUFnVcPVZ2C2sel/Xd64wuJu71nV99tXlZQyK4ZalXrNtQiBnGs9qzox5nGmec3RdJDAL6J7a4yO/KQRzAql8wDS3XYRbOO0FN8HeO/ETL0aDEpDapylhRfKg7jJoj2jLHcQKPNKJUAT/5syT2afnn++LQ18UD2W1Q9KZEEuq1Fgsfod88
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/input.txt
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

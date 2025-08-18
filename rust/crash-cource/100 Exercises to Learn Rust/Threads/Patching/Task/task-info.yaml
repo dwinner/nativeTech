@@ -1,0 +1,40 @@
+type: edu
+files:
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 1223
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 1223
+        initialized_from_dependency: false
+        encrypted_possible_answer: +9rTitUBsLdg1Nl+WGow/o12gGqrunfwM7SgYE9pigMLc980NsxL6ZnoKlR43PV+vEuSQ9qtdmU+4BOGQhU7tVGa5E3nae+bfpdBJ3p6IHQfUpW36uADfIFqxq3IQ1Qutr1awzJfCJCaVW8pWYGK+nFAbA1g+9VpWpQDURX6UH0bQmDuFpBnza30iZIEH0IdRCG22H9HWvowjKmr/gfR7MJEWaqdUzf8HKEr7RF8lPBzchNAa61b8fLxTUudmK4NrNiKxNcCKPK+RclAUkkka/6KOtdxP6IpPLGisXScijsm0sQrYWy0vImGyLTCG4nJRebmOsg4xkWcE2423sOYtiKimBuZA2RihyITdCL9NbmZmwn9Rbyr8SnwHJlzX9rq7FhTx6OE5yLsjsfz552r313ZnST7+3ObJQ7PZZ4nRrE=
+        selected: false
+        status: Unchecked
+      - offset: 2539
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 2539
+        initialized_from_dependency: false
+        encrypted_possible_answer: D0MSE23nbt+e/8f16JOHTjWd4KHmeptHxWl0hcB6x4AcsT5AhgSTuhw4SqSYQtVe6TwHbgh+DhaGAJNTEoYoQd50dWtpZHGJGJ8exmP/R4QnBHYE7Xn4ot6Qy0HQFqSB4rMwXH2fi3hWwx/fPPkA64H6Uu7mHn4QsCfGXZJwrm/IjCFmLb7jVY8gCiqdUs3OMHIt7OnvUfMNeBXzUa6fVNnPofKF1sFgLyE4mj9al/pehgOD6Z5ZxP+hJAIUupXlrWaFPrP96+w2kH5gXflXvfxAOLXdivSsGVbamaVpE3UP16kLMyVY42Tu4gOTGySKz37q28rZWXfBs/xvLDLKvBqT2Hivb3zZincALXatNBqUfkniztKqM880YFCthU9KV4yEFc9xYax5a06HOsl8VbeFzORgFo/DKz/lgx5y8NZuaahEyhITzQCb9p/QO9rcBRtiURW4IUFtpdn5xe2q5CM/mp01HdNnIfG+Wh0aWTgbGpt5DsTkKL7XXsEaakZ07qH1O98JKUa9uaEuUHwdtD0Xbwd27p1UGEdWlUFpJhQdaNT2+I9Ot9eMsS3ENqD2wIfhLzmtDetE0Vqg3Cn2anKhi9XFmUoVhHcSfOWvvx2sc/xodkwEUdh5s7rQ4LlX4MN6qOGt8RajfRBItL4k2N4wk8MjpvBKQNnNAPluaxrqr7wO9j3W71r5sTlyIATy
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/tests.rs
+    visible: false
+    learner_created: false
+  - name: src/store.rs
+    visible: true
+    learner_created: false
+  - name: src/data.rs
+    visible: true
+    learner_created: false
+status: Unchecked
+record: -1

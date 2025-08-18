@@ -1,0 +1,24 @@
+type: edu
+files:
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 831
+        length: 10
+        placeholder_text: /* TODO */
+        initial_state:
+          length: 10
+          offset: 831
+        initialized_from_dependency: false
+        encrypted_possible_answer: KBIn8N4NhIoBkjqK5wWkmtPK7WsGWGdvCceVD3s51kV0+PivqjI4qJwH9yiGe7byXH/SF17/f+H0Ckpkbffmtlv3eoc/cDs0I3dwj2Q50ahpkZ3z2nBGvWUui1wQAqu6oN5APh6P9ilg3zmOhDI8tIbVTpBaJysoWnFXkPxSjZ4wfzWiXLIhPRGTuLstRbNoBRyqDn2r3U276kr6Ykl4EFwKaM8Lhb36x3DMi3wEtwCN3nb58oUL2SmivrgtPr9tpAgQElGkou2QahpWqBqKf91Q1tEo1kKnQ0+uZGaNwe+x4iG8kGAKEjpLAgPW00+v+YRrnty4r3/lEiRJPeP2ys4wVxepO09K1+Ojtk6NBQQZ0xWsLoEK0QytBBSWE+uHBhw7GmO+Y0WdVY/IIie/70kYC4X/lIqpYzn8/ntzsCNilF8v01t/Sr7dyfDDkywrtmKmOaKv4prls6Fm5iyY5wpMh4jWmxeaZ1SjaE+yUOEcnkkvcv3oDo9cwwsNiv7gl203458yBPuLNTOsOV3Qb2a018IuEuwPMrwo1GUk7gVnSePHi3DwOM7hMOzyrebbwL3ZeOO2hQdrgfZ3PWs6pB1cR8VPgVk4qf1U8M1229GvJ4fiFHdygU5/b7k0+nFXzGHkJ5C50OEzwpgVK7I/nA==
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/tests.rs
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

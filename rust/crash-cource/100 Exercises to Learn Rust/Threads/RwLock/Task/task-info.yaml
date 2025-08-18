@@ -1,0 +1,73 @@
+type: edu
+files:
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 890
+        length: 96
+        placeholder_text: "pub fn get(&self, id: TicketId) -> Result<Option<Arc<Mutex<Ticket>>>,\
+      \ OverloadedError> { // TODO"
+        initial_state:
+          length: 96
+          offset: 890
+        initialized_from_dependency: false
+        encrypted_possible_answer: FAoCkwyi2JRZbR03R8AmhZqrlRA+G2gN0yPtDkDM1gJhSSVMvmHxnp3B60VJ7o4DCaC6IrmTmF7/h76ZpQRSH/IKQ+PXIhKYrdXfI38um8H4fTFGVX5z3AchLVFobDuZ
+        selected: false
+        status: Unchecked
+      - offset: 1741
+        length: 65
+        placeholder_text: "response_channel: SyncSender<Option<Arc<Mutex<Ticket>>>>, //\
+      \ TODO"
+        initial_state:
+          length: 65
+          offset: 1741
+        initialized_from_dependency: false
+        encrypted_possible_answer: FsSom85t+wDpgu7fOxtso72XAtUe+pRxQeA4hh/0lRxLycSn4k0FM12giw/BdCSPzf/9HS6FX6tHXuRKhDWcAg==
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: Cargo.toml
+    visible: false
+    learner_created: false
+  - name: tests/tests.rs
+    visible: false
+    learner_created: false
+  - name: src/store.rs
+    visible: true
+    placeholders:
+      - offset: 281
+        length: 28
+        placeholder_text: "Arc<Mutex<Ticket>>>, // TODO"
+        initial_state:
+          length: 28
+          offset: 281
+        initialized_from_dependency: false
+        encrypted_possible_answer: QIM51UqLXSUnraE/rUQzsUNDWsBtvSumhew6AePHDK8=
+        selected: false
+        status: Unchecked
+      - offset: 797
+        length: 37
+        placeholder_text: Arc::new(Mutex::new(ticket)); // TODO
+        initial_state:
+          length: 37
+          offset: 797
+        initialized_from_dependency: false
+        encrypted_possible_answer: oJtOeUxOJpYtpRX3nyigvX70OOfZYN9bexe7XHoKwWs=
+        selected: false
+        status: Unchecked
+      - offset: 1062
+        length: 36
+        placeholder_text: "Option<Arc<Mutex<Ticket>>> { // TODO"
+        initial_state:
+          length: 36
+          offset: 1062
+        initialized_from_dependency: false
+        encrypted_possible_answer: 8hq+z3n4YWr6E29npDnK1B4/cAcZ2gIiKYwZAh/LGIo=
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: src/data.rs
+    visible: true
+    learner_created: false
+status: Unchecked
+record: -1
