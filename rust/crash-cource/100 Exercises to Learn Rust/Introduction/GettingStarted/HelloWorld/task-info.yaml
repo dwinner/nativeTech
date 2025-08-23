@@ -5,15 +5,15 @@ files:
     visible: true
     placeholders:
       - offset: 16
-        length: 34
+        length: 26
         placeholder_text: // put your code here to launch it
         initial_state:
           length: 34
           offset: 16
         initialized_from_dependency: false
         encrypted_possible_answer: Ru/F09ZLSjpRk8JyOzlg3zy/K9iooZ3oix6M1X32A/s=
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: Cargo.toml
     visible: false
@@ -27,5 +27,8 @@ files:
   - name: images/run.svg
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 21 Aug 2025 17:40:47 UTC"
 record: -1
