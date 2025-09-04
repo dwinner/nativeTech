@@ -1,0 +1,6 @@
+[package]
+name = "dsl_dev"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
