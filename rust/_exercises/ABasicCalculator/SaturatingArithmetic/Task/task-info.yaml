@@ -3,8 +3,8 @@ files:
   - name: src/lib.rs
     visible: true
     placeholders:
-      - offset: 224
-        length: 10
+      - offset: 216
+        length: 95
         placeholder_text: /* TODO */
         initial_state:
           length: 10
@@ -12,7 +12,7 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: zfLqC5JecSQrCUqhJOpCYbCfH4a/DaKxosv4m5tUynx2dPB5Ev2ugFl7vbsjUPNa
         selected: false
-        status: Unchecked
+        status: Solved
     learner_created: false
   - name: Cargo.toml
     visible: false
@@ -20,5 +20,8 @@ files:
   - name: tests/tests.rs
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 27 Oct 2025 10:58:39 UTC"
 record: -1

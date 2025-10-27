@@ -1,3 +1,3 @@
 pub fn intro() -> &'static str {
-    "I'm ready to insert here missing part"
+    "I'm ready to start modelling a software ticket!"
 }
