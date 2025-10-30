@@ -3,16 +3,16 @@ files:
   - name: src/main.rs
     visible: true
     placeholders:
-      - offset: 165
-        length: 10
+      - offset: 17
+        length: 15
         placeholder_text: /* TODO */
         initial_state:
           length: 10
           offset: 165
         initialized_from_dependency: false
         encrypted_possible_answer: 8QvmVOz+nKBsmL2fej/cNdcVH9+XVTyzHaP5qR09pk0=
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: Cargo.toml
     visible: false
@@ -23,5 +23,8 @@ files:
   - name: tests/output.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 28 Oct 2025 06:44:46 UTC"
 record: -1
