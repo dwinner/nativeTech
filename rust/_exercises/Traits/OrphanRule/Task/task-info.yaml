@@ -3,8 +3,8 @@ files:
   - name: src/lib.rs
     visible: true
     placeholders:
-      - offset: 303
-        length: 83
+      - offset: 344
+        length: 108
         placeholder_text: "impl PartialEq for u32 {\n    fn eq(&self, _other: &Self) ->\
       \ bool {\n        \n    }\n}"
         initial_state:
@@ -12,8 +12,8 @@ files:
           offset: 303
         initialized_from_dependency: false
         encrypted_possible_answer: hQCTqfy6FM/3bbJROGfI6w==
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: Cargo.toml
     visible: false
@@ -21,5 +21,8 @@ files:
   - name: tests/tests.rs
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sat, 01 Nov 2025 07:09:19 UTC"
 record: -1

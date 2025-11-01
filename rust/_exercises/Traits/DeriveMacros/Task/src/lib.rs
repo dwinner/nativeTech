@@ -8,19 +8,22 @@
 // print both sides of the comparison to the terminal.
 // If the compared type doesn't implement `Debug`, it doesn't know how to represent them!
 
-#[derive(/* TODO */PartialEq)]
-pub struct Ticket {
-    title: String,
-    description: String,
-    status: String,
+#[derive(PartialEq, Debug)]
+pub struct Ticket
+{
+   title: String,
+   description: String,
+   status: String,
 }
 
-impl Ticket {
-    pub fn new(title: String, description: String, status: String) -> Ticket {
-        Ticket {
-            title,
-            description,
-            status,
-        }
-    }
+impl Ticket
+{
+   pub fn new(title: String, description: String, status: String) -> Ticket
+   {
+      Ticket {
+         title,
+         description,
+         status,
+      }
+   }
 }
