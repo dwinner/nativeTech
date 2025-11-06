@@ -5,17 +5,13 @@
 // different _semantics_. We'll cover those differences later in the course when we talk about ordered
 // collections (e.g. BTreeMap).
 
-use std::cmp::max;
-
 /// Return the minimum of two values.
-pub fn min<T/* TODO */>(left: T, right: T) -> T {
-    if left <= right {
-        left
-    } else {
-        right
-    }
+pub fn min<T: Ord>(left: T, right: T) -> T
+{
+   if left <= right { left } else { right }
 }
 
-fn main() {
-    assert_eq!(min(17, 15), 15);
+fn main()
+{
+   assert_eq!(min(17, 15), 15);
 }

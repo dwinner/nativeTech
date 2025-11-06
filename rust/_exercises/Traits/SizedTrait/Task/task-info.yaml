@@ -4,15 +4,15 @@ files:
     visible: true
     placeholders:
       - offset: 227
-        length: 27
+        length: 31
         placeholder_text: std::mem::size_of::<str>();
         initial_state:
           length: 27
           offset: 227
         initialized_from_dependency: false
         encrypted_possible_answer: XNqJtMQ/PVCsbAM71fqJfYY5tIqNfKHRDYPe0wNRcLg=
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: Cargo.toml
     visible: false
@@ -23,5 +23,8 @@ files:
   - name: tests/input.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 06 Nov 2025 10:50:18 UTC"
 record: -1

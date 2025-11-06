@@ -4,24 +4,33 @@
 //   find it in the documentation for `String`.
 //   Can you figure out where it is defined and how to use it?
 
-pub struct Ticket {
-    title: String,
-    description: String,
-    status: String,
+pub struct Ticket
+{
+   title: String,
+   description: String,
+   status: String,
 }
 
-impl Ticket {
-    pub fn new(title: String, description: String, status: String) -> Ticket {
-        Ticket {
-            title,
-            description,
-            status,
-        }
-    }
+impl Ticket
+{
+   pub fn new(title: String, description: String, status: String) -> Ticket
+   {
+      Ticket {
+         title,
+         description,
+         status,
+      }
+   }
 
-    pub fn title(&self) -> &str {
-        s/* TODO */    }
+   pub fn title(&self) -> &str
+   {
+      let title_slice: &str = &self.title;
+      title_slice.trim()
+   }
 
-    pub fn description(&self) -> &str {
-        s/* TODO */    }
+   pub fn description(&self) -> &str
+   {
+      let desc_slice: &str = &self.description;
+      desc_slice.trim()
+   }
 }
