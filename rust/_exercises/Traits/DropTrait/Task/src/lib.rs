@@ -2,3 +2,36 @@
 //  unless a certain operation has been performed on it.
 //  You can see the expected API in the tests
 /* TODO */
+pub struct DropBomb
+{
+   defused: bool,
+}
+
+impl DropBomb
+{
+   pub fn new() -> Self
+   {
+      Self { defused: false }
+   }
+
+   pub fn defuse(&mut self)
+   {
+      if self.defused
+      {
+         return;
+      }
+
+      self.defused = true;
+   }
+}
+
+impl Drop for DropBomb
+{
+   fn drop(&mut self)
+   {
+      if !self.defused
+      {
+         panic!("Bomb isn't defused");
+      }
+   }
+}

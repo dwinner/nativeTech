@@ -7,3 +7,4 @@
 - [Async Rust (official)](https://rust-lang.github.io/async-book/).
 - [Embedded Rust](https://docs.rust-embedded.org/book/).
 - [Rust by example](https://doc.rust-lang.org/rust-by-example/).
+- [Testing masterclass](https://github.com/mainmatter/rust-advanced-testing-workshop).

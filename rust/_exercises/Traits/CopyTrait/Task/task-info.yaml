@@ -3,8 +3,8 @@ files:
   - name: src/lib.rs
     visible: true
     placeholders:
-      - offset: 75
-        length: 10
+      - offset: 18
+        length: 2
         placeholder_text: /* TODO */
         initial_state:
           length: 10
@@ -12,17 +12,17 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: rI2CgUVE9RtmedI5+2w1dm809YPz4ASuygPakJqtEpF1FtMdj8DT80n8AkWA++Km
         selected: false
-        status: Unchecked
-      - offset: 218
-        length: 10
+        status: Solved
+      - offset: 201
+        length: 154
         placeholder_text: /* TODO */
         initial_state:
           length: 10
           offset: 218
         initialized_from_dependency: false
         encrypted_possible_answer: 0Ow8EwpTPu1SgXm3CodYNGYg83egQG7J2IlGXpoQcEImkWsinTH+8+xu72LgXY1inRjQ/OEfIwVImqO9OsAGAq9/qz+XRfcrfuexwsjpNaQEwxzqb1xEys1GckVgPlSFwSfZrw9XheS5tBvsvvVLQQaBERO4sQpy/oMWQuvZA/Dk+Fuil7PixXmmCpGYH1BLgLkRxBy353+ofK/i8zOaxMJbxfUv3kUWv3/Q9DCvs6g=
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: Cargo.toml
     visible: false
@@ -30,5 +30,8 @@ files:
   - name: tests/tests.rs
     visible: true
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 07 Nov 2025 06:54:05 UTC"
 record: -1
