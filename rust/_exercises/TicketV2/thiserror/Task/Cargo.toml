@@ -7,4 +7,4 @@ edition = "2021"
 common = { path = "../../../helpers/common" }
 
 [dependencies]
-# TODO
+thiserror = "2.*"

@@ -14,47 +14,58 @@ mod status;
 //   When calling `source` on an error of that variant, it should return a `ParseStatusError` rather than `None`.
 
 #[derive(Debug, thiserror::Error)]
-pub enum TicketNewError {
-    #[error("Title cannot be empty")]
-    TitleCannotBeEmpty,
-    #[error("Title cannot be longer than 50 bytes")]
-    TitleTooLong,
-    #[error("Description cannot be empty")]
-    DescriptionCannotBeEmpty,
-    #[error("Description cannot be longer than 500 bytes")]
-    DescriptionTooLong,
-    /* TODO */,
+pub enum TicketNewError
+{
+   #[error("Title cannot be empty")]
+   TitleCannotBeEmpty,
+   #[error("Title cannot be longer than 50 bytes")]
+   TitleTooLong,
+   #[error("Description cannot be empty")]
+   DescriptionCannotBeEmpty,
+   #[error("Description cannot be longer than 500 bytes")]
+   DescriptionTooLong,
+   #[error("{0}")]
+   InvalidStatus(#[from] ParseStatusError),
 }
 
 #[derive(Debug, PartialEq, Clone)]
-pub struct Ticket {
-    title: String,
-    description: String,
-    status: Status,
+pub struct Ticket
+{
+   title: String,
+   description: String,
+   status: Status,
 }
 
-impl Ticket {
-    pub fn new(title: String, description: String, status: String) -> Result<Self, TicketNewError> {
-        if title.is_empty() {
-            return Err(TicketNewError::TitleCannotBeEmpty);
-        }
-        if title.len() > 50 {
-            return Err(TicketNewError::TitleTooLong);
-        }
-        if description.is_empty() {
-            return Err(TicketNewError::DescriptionCannotBeEmpty);
-        }
-        if description.len() > 500 {
-            return Err(TicketNewError::DescriptionTooLong);
-        }
+impl Ticket
+{
+   pub fn new(title: String, description: String, status: String) -> Result<Self, TicketNewError>
+   {
+      if title.is_empty()
+      {
+         return Err(TicketNewError::TitleCannotBeEmpty);
+      }
 
-        // TODO: Parse the status string into a `Status` enum.
-       /* TODO */;
+      if title.len() > 50
+      {
+         return Err(TicketNewError::TitleTooLong);
+      }
 
-        Ok(Ticket {
-            title,
-            description,
-            status,
-        })
-    }
+      if description.is_empty()
+      {
+         return Err(TicketNewError::DescriptionCannotBeEmpty);
+      }
+
+      if description.len() > 500
+      {
+         return Err(TicketNewError::DescriptionTooLong);
+      }
+
+      let status = Status::try_from(status)?;
+
+      Ok(Ticket {
+         title,
+         description,
+         status,
+      })
+   }
 }
