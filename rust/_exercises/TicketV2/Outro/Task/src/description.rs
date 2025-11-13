@@ -3,6 +3,7 @@
 //   Implement the traits required to make the tests pass too.
 
 /* TODO */
+#[derive(Debug, PartialEq, Clone)]
 pub struct TicketDescription(String);
 
 impl TicketDescription {

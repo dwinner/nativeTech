@@ -22,7 +22,7 @@ files:
         encrypted_possible_answer: rI2CgUVE9RtmedI5+2w1dp5JrifSb9ynjUuYRqfJtDAuvcHaJr2xMQ0dzvWP9OkO
         selected: false
         status: Unchecked
-      - offset: 372
+      - offset: 407
         length: 10
         placeholder_text: /* TODO */
         initial_state:
@@ -46,7 +46,7 @@ files:
         encrypted_possible_answer: rI2CgUVE9RtmedI5+2w1dp5JrifSb9ynjUuYRqfJtDAuvcHaJr2xMQ0dzvWP9OkO
         selected: false
         status: Unchecked
-      - offset: 192
+      - offset: 227
         length: 10
         placeholder_text: /* TODO */
         initial_state:
@@ -60,7 +60,7 @@ files:
   - name: src/title.rs
     visible: true
     placeholders:
-      - offset: 225
+      - offset: 431
         length: 10
         placeholder_text: /* TODO */
         initial_state:
@@ -70,7 +70,7 @@ files:
         encrypted_possible_answer: rI2CgUVE9RtmedI5+2w1dp5JrifSb9ynjUuYRqfJtDAuvcHaJr2xMQ0dzvWP9OkO
         selected: false
         status: Unchecked
-      - offset: 347
+      - offset: 606
         length: 10
         placeholder_text: /* TODO */
         initial_state:
