@@ -1,5 +1,5 @@
 # CppAppDev
-C/C++ examples for real based projects
+C, C++, Rust, Zig, Assembly.
 
 **See also for C programming language**
 - [CURL](https://curl.haxx.se/libcurl/c/libcurl-tutorial.html);
@@ -9,11 +9,12 @@ C/C++ examples for real based projects
 - [The Windows socket 2](https://www.winsocketdotnetworkprogramming.com/winsock2programming/winsock2advancedmulticast9chap.html);
 - [GStreamer](https://gstreamer.freedesktop.org/data/doc/gstreamer/head/manual/manual.pdf);
 - [Serialization via TPL](http://troydhanson.github.io/tpl/index.html);
+- [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Ri-raw);
 
 **See also for C++ programming language**
 - [C++ Reference](https://en.cppreference.com/w/);
 - [Dependency injection via Boost](https://habr.com/ru/company/infopulse/blog/248879/);
-- CMake: [Shortest tutorial](https://riptutorial.com/Download/cmake.pdf), [Mastering CMake](https://lrita.github.io/images/posts/cplusplus/mastering-cmake.pdf);
+- [CMake tutorial](https://riptutorial.com/Download/cmake.pdf), [Mastering CMake](https://lrita.github.io/images/posts/cplusplus/mastering-cmake.pdf);
 - [CMake in Visual Studio](https://github.com/MicrosoftDocs/cpp-docs/blob/master/docs/build/cmake-projects-in-visual-studio.md);
 - [C/C++ linkage](https://habr.com/ru/company/jugru/blog/506104/);
 
@@ -21,3 +22,20 @@ C/C++ examples for real based projects
 - [Protobuf on GitHub](https://github.com/protocolbuffers/protobuf);
 - [Protobuf manual for C++](https://developers.google.com/protocol-buffers/docs/cpptutorial);
 - [How to manually build C++ Protobuf via CMake](https://www.youtube.com/watch?v=ZKMCe3DNXh4);
+
+**Ecosystem**
+- [Xmake](https://xmake.io/).
+- [vcpkg](https://learn.microsoft.com/en-us/vcpkg/get_started/overview).
+
+**Zig**
+- [Introduction to Zig](https://pedropark99.github.io/zig-book/)
+
+**Rust**
+- [Rust Documentation](https://doc.rust-lang.org/stable/).
+- [Macros](https://lukaswirth.dev/tlborm/).
+- [The Rust PL (official)](https://doc.rust-lang.org/stable/book/).
+- [Cargo (official)](https://doc.rust-lang.org/stable/cargo/).
+- [Async Rust (official)](https://rust-lang.github.io/async-book/).
+- [Embedded Rust](https://docs.rust-embedded.org/book/).
+- [Rust by example](https://doc.rust-lang.org/rust-by-example/).
+- [Testing masterclass](https://github.com/mainmatter/rust-advanced-testing-workshop).

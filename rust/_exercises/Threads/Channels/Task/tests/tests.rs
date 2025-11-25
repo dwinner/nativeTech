@@ -6,27 +6,29 @@ use task_channels::{launch, Command};
 use ticket_fields::test_helpers::{ticket_description, ticket_title};
 
 #[test]
-fn a_thread_is_spawned() {
-    let sender = launch();
-    std::thread::sleep(Duration::from_millis(200));
+fn a_thread_is_spawned()
+{
+   let sender = launch();
+   std::thread::sleep(Duration::from_millis(200));
 
-    sender
-        .send(Command::Insert(TicketDraft {
-            title: ticket_title(),
-            description: ticket_description(),
-        }))
-        // If the thread is no longer running, this will panic
-        // because the channel will be closed.
-        .expect("Did you actually spawn a thread? The channel is closed!");
+   sender
+      .send(Command::Insert(TicketDraft {
+         title: ticket_title(),
+         description: ticket_description(),
+      }))
+      // If the thread is no longer running, this will panic
+      // because the channel will be closed.
+      .expect("Did you actually spawn a thread? The channel is closed!");
 }
 
 #[test]
-fn ready() {
-    // There's very little that we can check automatically in this exercise,
-    // since our server doesn't expose any **read** actions.
-    // We have no way to know if the inserts are actually happening and if they
-    // are happening correctly.
-    let move_forward = false; // TODO
+fn ready()
+{
+   // There's very little that we can check automatically in this exercise,
+   // since our server doesn't expose any **read** actions.
+   // We have no way to know if the inserts are actually happening and if they
+   // are happening correctly.
+   let move_forward = true; // TODO
 
-    assert!(move_forward);
+   assert!(move_forward);
 }

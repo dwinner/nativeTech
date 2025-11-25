@@ -3,7 +3,7 @@ files:
   - name: src/lib.rs
     visible: true
     placeholders:
-      - offset: 378
+      - offset: 400
         length: 10
         placeholder_text: /* TODO */
         initial_state:
@@ -12,9 +12,9 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: 1RG7v3da+X+NCtVHlZ9GgA==
         selected: false
-        status: Unchecked
-      - offset: 909
-        length: 7
+        status: Solved
+      - offset: 930
+        length: 1
         placeholder_text: todo!()
         initial_state:
           length: 7
@@ -22,9 +22,9 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: 678vbfgubFa0V3scZ/AW2A==
         selected: false
-        status: Unchecked
-      - offset: 1271
-        length: 7
+        status: Solved
+      - offset: 1257
+        length: 33
         placeholder_text: todo!()
         initial_state:
           length: 7
@@ -32,27 +32,27 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: /5aJTE33XfW+80vJM2nJHX86HufteieR/NwHGeeT7CEKnYBoh7VK6lzhjW0B0noO
         selected: false
-        status: Unchecked
-      - offset: 1362
-        length: 7
+        status: Solved
+      - offset: 1389
+        length: 0
         placeholder_text: todo!()
         initial_state:
           length: 7
           offset: 1362
         initialized_from_dependency: false
         encrypted_possible_answer: NE/y/HzUK3Sukc9Eaeatv8SwiHr0kA0Zr5h0gSPEr7A=
-        selected: false
-        status: Unchecked
-      - offset: 1454
-        length: 7
+        selected: true
+        status: Solved
+      - offset: 1482
+        length: 13
         placeholder_text: todo!()
         initial_state:
           length: 7
           offset: 1454
         initialized_from_dependency: false
         encrypted_possible_answer: NE/y/HzUK3Sukc9EaeatvyLzfPvRPTFcdWeQrDoVpyc=
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: Cargo.toml
     visible: false
@@ -60,5 +60,8 @@ files:
   - name: tests/tests.rs
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 21 Nov 2025 08:43:47 UTC"
 record: -1

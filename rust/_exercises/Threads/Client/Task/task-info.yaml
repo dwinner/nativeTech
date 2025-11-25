@@ -3,18 +3,18 @@ files:
   - name: src/lib.rs
     visible: true
     placeholders:
-      - offset: 430
-        length: 10
+      - offset: 694
+        length: 0
         placeholder_text: /* TODO */
         initial_state:
           length: 10
           offset: 430
         initialized_from_dependency: false
         encrypted_possible_answer: +9rTitUBsLdg1Nl+WGow/o12gGqrunfwM7SgYE9pigNYE3BgNrkS5ZH6NeTieRrnphtAmLfajwARjWUDeKVmmCaET7KIbKkdEjgZW27toHuZRdYe3ljn0fh6I25LnsNl0h6ZDlBfo3duYuY/kr8atmj7Jyd9b+VenXVQQUnutoiRRnhQ8h0wKr1I6pccDwkxMUkCoWE3HCGHBAiCkKVk/Otk8VP7BAmr5RAs5DlKYnAaRpxExVc+AihRPcrXkZQ15CPUSroMGxC+PsIxMfKRKc9MHH/mJ68JVGvrAWFOrlZiJLb9f85YRpuGhWrlIhnP/ta/Ft/uRMBoAPksqgnJB1Rn2TscwppXVlIXDxcq7ji0q93gG0eOOS4uswaivire
-        selected: false
-        status: Unchecked
-      - offset: 512
-        length: 10
+        selected: true
+        status: Solved
+      - offset: 762
+        length: 189
         placeholder_text: /* TODO */
         initial_state:
           length: 10
@@ -22,17 +22,17 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: +9rTitUBsLdg1Nl+WGow/o12gGqrunfwM7SgYE9pigNYE3BgNrkS5ZH6NeTieRrnphtAmLfajwARjWUDeKVmmCaET7KIbKkdEjgZW27toHuZRdYe3ljn0fh6I25LnsNl0h6ZDlBfo3duYuY/kr8atnFWilrstdtJJjCsXJFbZTvNuwyW4aYvSdxRvvZArjISFQvrgKxwXFYv0OPjJ6wKF/M2rC9qkxWAixAvfzjDIEUkR3QNs+khML9IIifW/eqTgPygOTXpHyjCDqaGIKYQxP2abWQiWm5bgk07XGHSI3RaT/a1QiaPexLGnljTg3tBcpcyqTf6euTW60/zGCvSNLdAdZ5uFb4LFWdBT6+6fAnduOUZw7gPiiQSquNsFVU4
         selected: false
-        status: Unchecked
-      - offset: 682
-        length: 10
+        status: Solved
+      - offset: 1108
+        length: 28
         placeholder_text: /* TODO */
         initial_state:
           length: 10
           offset: 682
         initialized_from_dependency: false
         encrypted_possible_answer: dpR4iqJFdhFXuY9YqgQ0UaDMVjOqqjYk315gS0neUSo=
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: Cargo.toml
     visible: false
@@ -46,5 +46,8 @@ files:
   - name: src/data.rs
     visible: true
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 25 Nov 2025 14:51:29 UTC"
 record: -1

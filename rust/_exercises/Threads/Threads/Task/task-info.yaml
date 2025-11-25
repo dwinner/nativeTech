@@ -3,8 +3,8 @@ files:
   - name: src/lib.rs
     visible: true
     placeholders:
-      - offset: 737
-        length: 10
+      - offset: 424
+        length: 0
         placeholder_text: /* TODO */
         initial_state:
           length: 10
@@ -12,7 +12,7 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: SqDIh/cfQ8qNahU41HUQNPCN1MXuLm2JBWyuCZnP4+FtWGMcFz8UqTWX6HS18OGYsgwmlEugWu36K57BJfkwEKLBENLpEI6X5V43h1s5JtUajgNybw6j4poyRB70qQKD2+cUcGLFqfBgcqegZDnzF/t5ScoPlaPeb81krY0OwU2PYH6pvme2LYqUUEXUQZ2U12PrhXvz4pftC+jt7Rn4ylDtcE+EKXpH1kKYhSvg4+/CU9Emi1yav8P41hxCtlLDzbo5Azeuv915W69zkTkc6x9Fa4NBBE4prcs7N3Lphg5+eavAjAC+I4HWJ6SnROxSKYD/lQB1ObkeLPyoAW1amBrGu5xou3/aPT1qO94+8Pf26ZM87qsila4jCQiTAvRkytFXyiIffBgwzztOZ3J0F1JreOWuo9/K8SN+6/T8g7w=
         selected: false
-        status: Unchecked
+        status: Solved
     learner_created: false
   - name: Cargo.toml
     visible: false
@@ -20,5 +20,8 @@ files:
   - name: tests/tests.rs
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 24 Nov 2025 07:19:04 UTC"
 record: -1
