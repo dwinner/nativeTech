@@ -9,16 +9,16 @@ files:
   - name: tests/tests.rs
     visible: true
     placeholders:
-      - offset: 255
-        length: 7
+      - offset: 254
+        length: 42
         placeholder_text: todo!()
         initial_state:
           length: 7
           offset: 255
         initialized_from_dependency: false
         encrypted_possible_answer: oJtOeUxOJpYtpRX3nyigvZXa5u49lOrJ3kKP+PLkkK5mOf+gRO8jNS/V9nlPmd07
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: src/store.rs
     visible: true
@@ -26,5 +26,8 @@ files:
   - name: src/data.rs
     visible: true
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 26 Nov 2025 13:59:55 UTC"
 record: -1

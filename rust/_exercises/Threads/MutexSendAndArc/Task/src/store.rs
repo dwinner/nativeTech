@@ -6,35 +6,41 @@ use std::sync::{Arc, Mutex};
 pub struct TicketId(u64);
 
 #[derive(Clone)]
-pub struct TicketStore {
-    tickets: BTreeMap<TicketId, Arc<Mutex<Ticket>>>,
-    counter: u64,
+pub struct TicketStore
+{
+   tickets: BTreeMap<TicketId, Arc<Mutex<Ticket>>>,
+   counter: u64,
 }
 
-impl TicketStore {
-    pub fn new() -> Self {
-        Self {
-            tickets: BTreeMap::new(),
-            counter: 0,
-        }
-    }
+impl TicketStore
+{
+   pub fn new() -> Self
+   {
+      Self {
+         tickets: BTreeMap::new(),
+         counter: 0,
+      }
+   }
 
-    pub fn add_ticket(&mut self, ticket: TicketDraft) -> TicketId {
-        let id = TicketId(self.counter);
-        self.counter += 1;
-        let ticket = Ticket {
-            id,
-            title: ticket.title,
-            description: ticket.description,
-            status: Status::ToDo,
-        };
-        /* TODO */
-        id
-    }
+   pub fn add_ticket(&mut self, ticket: TicketDraft) -> TicketId
+   {
+      let id = TicketId(self.counter);
+      self.counter += 1;
+      let ticket = Ticket {
+         id,
+         title: ticket.title,
+         description: ticket.description,
+         status: Status::ToDo,
+      };
 
-    // The `get` method should return a handle to the ticket
-    // which allows the caller to either read or modify the ticket.
-    pub fn get(&self, id: TicketId) -> Option</* TODO */> {
-        /* TODO */
-    }
+      self.tickets.insert(id, Arc::new(Mutex::new(ticket)));
+      id
+   }
+
+   // The `get` method should return a handle to the ticket
+   // which allows the caller to either read or modify the ticket.
+   pub fn get(&self, id: TicketId) -> Option<Arc<Mutex<Ticket>>>
+   {
+      self.tickets.get(&id).cloned()
+   }
 }

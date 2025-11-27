@@ -9,7 +9,7 @@ C, C++, Rust, Zig, Assembly.
 - [The Windows socket 2](https://www.winsocketdotnetworkprogramming.com/winsock2programming/winsock2advancedmulticast9chap.html);
 - [GStreamer](https://gstreamer.freedesktop.org/data/doc/gstreamer/head/manual/manual.pdf);
 - [Serialization via TPL](http://troydhanson.github.io/tpl/index.html);
-- [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Ri-raw);
+- [The Algorithm Design Manual](https://algorist.com/);
 
 **See also for C++ programming language**
 - [C++ Reference](https://en.cppreference.com/w/);
@@ -17,11 +17,11 @@ C, C++, Rust, Zig, Assembly.
 - [CMake tutorial](https://riptutorial.com/Download/cmake.pdf), [Mastering CMake](https://lrita.github.io/images/posts/cplusplus/mastering-cmake.pdf);
 - [CMake in Visual Studio](https://github.com/MicrosoftDocs/cpp-docs/blob/master/docs/build/cmake-projects-in-visual-studio.md);
 - [C/C++ linkage](https://habr.com/ru/company/jugru/blog/506104/);
-
-**Protobuf C++**
+- [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Ri-raw);
 - [Protobuf on GitHub](https://github.com/protocolbuffers/protobuf);
 - [Protobuf manual for C++](https://developers.google.com/protocol-buffers/docs/cpptutorial);
 - [How to manually build C++ Protobuf via CMake](https://www.youtube.com/watch?v=ZKMCe3DNXh4);
+- [Oat++](https://github.com/oatpp);
 
 **Ecosystem**
 - [Xmake](https://xmake.io/).
