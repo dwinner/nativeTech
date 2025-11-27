@@ -39,3 +39,5 @@ C, C++, Rust, Zig, Assembly.
 - [Embedded Rust](https://docs.rust-embedded.org/book/).
 - [Rust by example](https://doc.rust-lang.org/rust-by-example/).
 - [Testing masterclass](https://github.com/mainmatter/rust-advanced-testing-workshop).
+- [Rust telemetry](https://rust-exercises.com/telemetry/).
+- [Advanced testing](https://rust-exercises.com/advanced-testing/).

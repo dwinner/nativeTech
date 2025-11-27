@@ -3,8 +3,8 @@ files:
   - name: src/lib.rs
     visible: true
     placeholders:
-      - offset: 513
-        length: 165
+      - offset: 751
+        length: 0
         placeholder_text: |-
           /* TODO */
                   socket.set_nonblocking(false)?;
@@ -16,8 +16,8 @@ files:
           offset: 513
         initialized_from_dependency: false
         encrypted_possible_answer: dTjux5qA9w5RIm3pvVoT/dimhM3CVBk7HElGYBk0N2hzFMUqLxwnVfsbk5Z5mJJy2yplfigwY0Em8yhHmjLp/WP0QaceZdi0o1mUP3a4Q2qB5/RzmaPOz1nRnGNF1KISUh/6NwrC3BGzUYfAat+7EY5Ce3qdWBnaQl+GDwmMW24pdPevCL7gVGtyFkf1bga4IFotXSMUp3QsL0YbtEGhA7hsn3S0B0JLWniCHxhAn9xgPXKFFjqnpHB/LVCE6ciFFohh+H0ixtdNsZVbfeDP+4eWjdWwZonWOvjnLtLWzKwt7FynIRgOig6ZMlKG3MzE3wp3Y/SxaraA7a1JE7tt/A==
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: Cargo.toml
     visible: false
@@ -25,5 +25,8 @@ files:
   - name: tests/tests.rs
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 27 Nov 2025 18:31:23 UTC"
 record: -1

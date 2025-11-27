@@ -3,8 +3,8 @@ files:
   - name: src/main.rs
     visible: true
     placeholders:
-      - offset: 378
-        length: 94
+      - offset: 379
+        length: 209
         placeholder_text: |-
           /* TODO */
               let non_send = Rc::new(1);
@@ -15,8 +15,8 @@ files:
           offset: 378
         initialized_from_dependency: false
         encrypted_possible_answer: 73g84K5gPda8HpVbnoXuP59zudqjn5IM+lMerfG5trdJTzrlbV9D4fhYE/+qKkyfRB/FJ3aHTfJfs79iFEEygY6dnOrpEwScXVPqMSL40MKre3sFqKbL4Rh+TBoC4YVAoD9mLLtGWsnffIF93x9Egg==
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: Cargo.toml
     visible: false
@@ -27,5 +27,8 @@ files:
   - name: tests/input.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 27 Nov 2025 14:18:30 UTC"
 record: -1

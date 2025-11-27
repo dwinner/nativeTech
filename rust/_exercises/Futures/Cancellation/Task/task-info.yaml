@@ -9,16 +9,19 @@ files:
   - name: tests/tests.rs
     visible: true
     placeholders:
-      - offset: 1295
-        length: 33
+      - offset: 1251
+        length: 41
         placeholder_text: "assert_eq!(buffered, \"\"); // TODO"
         initial_state:
           length: 33
           offset: 1295
         initialized_from_dependency: false
         encrypted_possible_answer: FJfR8sp2U5qcnwDLRxeQgP3NSrA4iY3dg2gOAyR9rFdu/hw0dAx/AgQ6Uwz73c5I
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 27 Nov 2025 19:29:41 UTC"
 record: -1
