@@ -12,7 +12,7 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: Blad3CVX9/VtPb/nLXRbOMb10W2j5Hju77bU+fpB/7WBio+6arjKRyoKvlWmLloiX+y+ISvenxE9MSRKga34wA25/EQRFDuiV1FFl6ra6rW+VSsvxZeo3hCPGBsYLa2+iz2vr/m1gbEm5blNkYDuoseNYACHNV6hmyAeSyExGtLquEU8ce+xOPEExMBEsHY4FnEOfZZFeWMgPFDtDHLPplo7eUtOkkL4UDs05u/RYFPjXktP7skEA7i4ygRM6xsZ
         selected: true
-        status: Failed
+        status: Solved
     learner_created: false
   - name: Cargo.toml
     visible: false
@@ -20,8 +20,8 @@ files:
   - name: tests/tests.rs
     visible: false
     learner_created: false
-status: Failed
+status: Solved
 feedback:
-  message: Compilation Failed
-  time: "Thu, 27 Nov 2025 05:54:05 UTC"
+  message: Congratulations!
+  time: "Thu, 27 Nov 2025 06:01:26 UTC"
 record: -1
