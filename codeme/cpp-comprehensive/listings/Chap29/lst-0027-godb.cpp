@@ -1,0 +1,13 @@
+//#(execute) c++; compiler:g132; options:-O3 -std=c++23; libs:-
+// https://godbolt.org/z/1boeTMMvf 
+MxStack<int> mxs{};
+// …
+// more code
+// …
+if( ! mxs.isEmpty()) {            // (ERR) not safe
+    const auto value = mxs.top(); // (ERR) not safe
+    mxs.pop();                    // (ERR) not safe
+    // …
+    // more code
+    // …
+}

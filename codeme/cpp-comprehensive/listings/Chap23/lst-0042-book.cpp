@@ -1,0 +1,5 @@
+
+// https://godbolt.org/z/PebG9bn9K
+set<Dwarf,ByYear> dwarves2{begin(dwarves), end(dwarves)};
+for(const auto& z : dwarves2) // differently sorted output
+    cout << z.year_ << " ";

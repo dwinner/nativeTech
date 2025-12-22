@@ -1,0 +1,40 @@
+//    #!cpp filename=46mxStackIntDataRace.cpp
+    #include <vector>
+    #include <thread>
+    #include <mutex>
+    #include <iostream>
+    #include <numeric>  // iota
+    using std::mutex; using std::lock_guard;
+    class MxStackInt {
+        std::vector<int> data_;
+        std::mutex mx_;
+    public:
+        explicit MxStackInt(std::vector<int> data) : data_{data} {}
+        bool isEmpty() const { return data_.size() == 0; }
+        void pop() { lock_guard<mutex> g{mx_}; data_.pop_back(); }
+        int top() const { return data_.back(); }
+    };
+    int main() {
+        // prepare stack
+        std::vector<int> million(1'000'000);
+        std::iota(million.begin(), million.end(), 1); // 1..1'000'000
+        MxStackInt  mxs{million};
+        // define calculation
+        auto sumIt = [&mxs] (long &sum) {
+            while( ! (?mxs.isEmpty()?)) {
+                sum += (?mxs.top()?);
+                (?mxs.pop()?);
+            }
+        };
+        // calculate
+        long sum1 = 0;
+        std::thread th1{sumIt, std::ref(sum1)};
+        long sum2 = 0;
+        std::thread th2{sumIt, std::ref(sum2)};
+        // result
+        std::cout << "Expected: " << (1'000'000L*1'000'001)/2 << '\n'; // (+Output:+) 500000500000
+        //= Expected: 500000500000
+        th1.join(); th2.join();
+        std::cout << "Actual: " << sum1+sum2 << '\n'; // (+For Example:+) 489540753812
+        //= Actual: 500001025033
+    }

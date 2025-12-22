@@ -1,0 +1,11 @@
+
+// https://godbolt.org/z/TK6n4dG37 
+const string scoreKeyword = R"(^score\s+)";
+const string numberOfPoints = R"((\d+))";
+const string forKeyword = R"(\s+for\s+)";
+const string numberOfNights = R"((\d+))";
+const string nightsAtKeyword = R"(\s+nights?\s+at\s+)";
+const string hotelName = R"((.*))";
+const regex pattern{ scoreKeyword + numberOfPoints +
+    forKeyword + numberOfNights + nightsAtKeyword + hotelName };
+}
