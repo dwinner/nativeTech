@@ -1,0 +1,9 @@
+[package]
+name = "page-aligned-allocator"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+lazy_static = "1.*"
+libc = "1.0.0-alpha.1"
+winapi = "0.3.*"
