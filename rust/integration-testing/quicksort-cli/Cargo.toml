@@ -1,0 +1,11 @@
+[package]
+name = "quicksort-cli"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+quicksort-proptest = { version = "0.1", path = "../quicksort-proptest" }
+
+[dev-dependencies]
+assert_cmd = "2.*"
+assert_fs = "1.*"
