@@ -1,0 +1,31 @@
+Reading file 'pg40185.txt'...
+Read 219 entries.
+Now enter query strings, end with ^D (or ^Z on Windows).
+? Gold
+=    Festmoscheen, Goldfasanen,
+? Brüste
+=    Überschwenglich zog an alle Brüste!)
+? Pld
+= 
+? d
+= Der Eintretende:
+? aa
+= 
+? aufwi
+= Chor der Kaufleute:
+? aufzuw
+=    Droht uns wieder aufzuwiegeln --
+? rote
+=    Aus den roten Ozeanen,
+? aus deinen rot
+=    Aus den roten Ozeanen,
+? poszt und kust
+=    Will Freund und Feind sein, Erde, Hur und Kind;
+? moscher
+=    Festmoscheen, Goldfasanen,
+? spiegelen
+=    O der Glanz auf allen Spiegeln
+? getra
+=    Doch nun reicht die Mischung der Getränke,
+? getraenge
+=    O wo im Raume sind wir hingetrieben,
