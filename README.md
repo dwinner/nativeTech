@@ -1,7 +1,7 @@
 # CppAppDev
 C, C++, Rust, Zig, Assembly.
 
-**See also for C programming language**
+**C programming language**
 - [CURL](https://curl.haxx.se/libcurl/c/libcurl-tutorial.html);
 - [Networking guide](https://masandilov.ru/network/guide_to_network_programming);
 - [IBM Knowledge Center](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/rzab6/xacceptboth.htm);
@@ -11,7 +11,7 @@ C, C++, Rust, Zig, Assembly.
 - [Serialization via TPL](http://troydhanson.github.io/tpl/index.html);
 - [The Algorithm Design Manual](https://algorist.com/);
 
-**See also for C++ programming language**
+**C++ programming language**
 - [C++ Reference](https://en.cppreference.com/w/);
 - [Dependency injection via Boost](https://habr.com/ru/company/infopulse/blog/248879/);
 - [CMake tutorial](https://riptutorial.com/Download/cmake.pdf), [Mastering CMake](https://lrita.github.io/images/posts/cplusplus/mastering-cmake.pdf);
@@ -26,6 +26,7 @@ C, C++, Rust, Zig, Assembly.
 **Ecosystem**
 - [Xmake](https://xmake.io/).
 - [vcpkg](https://learn.microsoft.com/en-us/vcpkg/get_started/overview).
+- [cmake](https://github.com/stygian-phrygian/cmake-guide).
 
 **Zig**
 - [Introduction to Zig](https://pedropark99.github.io/zig-book/)
