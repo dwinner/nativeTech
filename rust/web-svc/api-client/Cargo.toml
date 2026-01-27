@@ -1,0 +1,18 @@
+[package]
+name = "api-client"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+clap = { version = "4.3.10", features = ["derive"] }
+colored_json = "5.0.0"
+hyper = { version = "0.14.27", features = ["client", "http1", "tcp", "stream"] }
+serde = "1.0.166"
+serde_json = "1.0"
+tokio = { version = "1.49", features = [
+    "macros",
+    "rt-multi-thread",
+    "io-util",
+    "io-std",
+] }
+yansi = "0.5.1"
