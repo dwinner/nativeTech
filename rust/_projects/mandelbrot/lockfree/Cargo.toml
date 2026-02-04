@@ -1,0 +1,10 @@
+[package]
+name = "lockfree"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+num = "0.4"
+image = "0.13.0"
+crossbeam = "0.2.9"
+atomic_chunks_mut = { git = "https://github.com/jimblandy/atomic-chunks-mut.git" }
