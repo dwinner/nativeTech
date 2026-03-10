@@ -1,0 +1,8 @@
+[package]
+name = "fingertips"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+argparse = "0.2.1"
+byteorder = "0.5.3"
