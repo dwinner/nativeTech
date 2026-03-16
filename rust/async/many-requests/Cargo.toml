@@ -1,0 +1,8 @@
+[package]
+name = "many-requests"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# We need the 'unstable' feature to get 'spawn_local'.
+async-std = { version = "1.7", features = ["unstable"] }
