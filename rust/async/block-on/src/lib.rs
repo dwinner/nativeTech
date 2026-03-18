@@ -1,17 +1,14 @@
 use crossbeam::sync::Parker;
-// Cargo.toml: crossbeam = "0.8"
 use futures_lite::pin;
-// Cargo.toml: futures-lite = "1.11"
 use std::future::Future;
 use std::task::{Context, Poll};
 use waker_fn::waker_fn;
-// Cargo.toml: waker-fn = "1.1"
 
 pub fn block_on<F: Future>(future: F) -> F::Output
 {
    let parker = Parker::new();
-   let unparker = parker.unparker().clone();
-   let waker = waker_fn(move || unparker.unpark());
+   let un_parker = parker.unparker().clone();
+   let waker = waker_fn(move || un_parker.unpark());
    let mut context = Context::from_waker(&waker);
 
    pin!(future);
@@ -45,6 +42,7 @@ fn test()
             sleep(Duration::from_millis(500)).await;
             44
          };
+         
          spawn(one_sec.race(half_sec))
       }),
       44
