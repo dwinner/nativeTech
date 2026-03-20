@@ -15,10 +15,11 @@ mod my_ascii
       /// characters.
       pub fn from_bytes(bytes: Vec<u8>) -> Result<Ascii, NotAsciiError>
       {
-         if bytes.iter().any(|&byte| !byte.is_ascii())
+         if bytes.iter().any(|&byte_item| !byte_item.is_ascii())
          {
             return Err(NotAsciiError(bytes));
          }
+
          Ok(Ascii(bytes))
       }
    }
