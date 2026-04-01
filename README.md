@@ -42,3 +42,4 @@ C, C++, Rust, Zig, Assembly.
 - [Testing masterclass](https://github.com/mainmatter/rust-advanced-testing-workshop).
 - [Rust telemetry](https://rust-exercises.com/telemetry/).
 - [Advanced testing](https://rust-exercises.com/advanced-testing/).
+- [Awesome Rust Books](https://github.com/sger/RustBooks?tab=readme-ov-file)
