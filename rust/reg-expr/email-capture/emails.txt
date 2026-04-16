@@ -1,0 +1,3 @@
+Contact: user1@example.com
+Invalid: not-an-email
+Support: support@domain.co.uk, sales@domain.com
