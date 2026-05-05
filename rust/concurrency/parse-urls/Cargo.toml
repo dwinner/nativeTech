@@ -1,0 +1,8 @@
+[package]
+name = "parse-urls"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version =  "1.52.2", features = ["full"] }
+reqwest = "0.13.3"
