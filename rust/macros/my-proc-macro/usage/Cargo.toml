@@ -1,0 +1,7 @@
+[package]
+name = "usage"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+my_proc_macro={path = "../../my-proc-macro"}
