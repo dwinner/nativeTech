@@ -7,10 +7,12 @@ import (
 )
 
 func main() {
+
 	if len(os.Args) != 2 {
 		fmt.Println("Please provide a command line argument")
 		return
 	}
+
 	argument := os.Args[1]
 
 	// With expression after switch

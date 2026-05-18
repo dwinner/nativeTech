@@ -16,12 +16,19 @@ func main() {
 		fmt.Println(err)
 		return
 	}
-	defer f.Close()
+
+	defer func(f *os.File) {
+		err := f.Close()
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+	}(f)
 
 	// initial values for the standard logger
 	// log.Lshortfile does the job of printing the line number
-	LstdFlags := log.Ldate | log.Lshortfile
-	iLog := log.New(f, "LNum ", LstdFlags)
+	LtdFlags := log.Ldate | log.Lshortfile
+	iLog := log.New(f, "LNum ", LtdFlags)
 	iLog.Println("Mastering Go, 4th edition!")
 
 	iLog.SetFlags(log.Lshortfile | log.LstdFlags)

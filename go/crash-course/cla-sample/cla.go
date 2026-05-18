@@ -13,8 +13,8 @@ func main() {
 		return
 	}
 
-	var min, max float64
-    var initialized = 0
+	var fMin, fMax float64
+	var initialized = 0
 	for i := 1; i < len(arguments); i++ {
 		n, err := strconv.ParseFloat(arguments[i], 64)
 		if err != nil {
@@ -22,20 +22,21 @@ func main() {
 		}
 
 		if initialized == 0 {
-			min = n
-			max = n
-            initialized = 1
+			fMin = n
+			fMax = n
+			initialized = 1
 			continue
 		}
 
-		if n < min {
-			min = n
+		if n < fMin {
+			fMin = n
 		}
-		if n > max {
-			max = n
+
+		if n > fMax {
+			fMax = n
 		}
 	}
 
-	fmt.Println("Min:", min)
-	fmt.Println("Max:", max)
+	fmt.Println("Min:", fMin)
+	fmt.Println("Max:", fMax)
 }

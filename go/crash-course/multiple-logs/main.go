@@ -14,6 +14,7 @@ func main() {
 		fmt.Println(err)
 		os.Exit(0)
 	}
+
 	defer file.Close()
 
 	w := io.MultiWriter(file, os.Stderr)
