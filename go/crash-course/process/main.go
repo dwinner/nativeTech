@@ -23,6 +23,7 @@ func main() {
 			nInts++
 			continue
 		}
+
 		// Is it a float
 		_, err = strconv.ParseFloat(k, 64)
 		if err == nil {
@@ -30,6 +31,7 @@ func main() {
 			nFloats++
 			continue
 		}
+
 		// Then it is invalid
 		invalid = append(invalid, k)
 	}

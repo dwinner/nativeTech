@@ -16,6 +16,7 @@ func main() {
 		fmt.Println(err)
 		return
 	}
+
 	defer f.Close()
 
 	iLog := log.New(f, "iLog ", log.LstdFlags)

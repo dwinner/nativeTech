@@ -14,7 +14,7 @@ func main() {
 		return
 	}
 
-	var min, max float64
+	var fMin, fMax float64
 	var initialized = 0
 
 	nValues := 0
@@ -29,28 +29,30 @@ func main() {
 		sum = sum + n
 
 		if initialized == 0 {
-			min = n
-			max = n
+			fMin = n
+			fMax = n
 			initialized = 1
 			continue
 		}
 
-		if n < min {
-			min = n
+		if n < fMin {
+			fMin = n
 		}
-		if n > max {
-			max = n
+
+		if n > fMax {
+			fMax = n
 		}
 	}
 
 	fmt.Println("Number of values:", nValues)
-	fmt.Println("Min:", min)
-	fmt.Println("Max:", max)
+	fmt.Println("Min:", fMin)
+	fmt.Println("Max:", fMax)
 
 	// Mean value
 	if nValues == 0 {
 		return
 	}
+
 	meanValue := sum / float64(nValues)
 	fmt.Printf("Mean value: %.5f\n", meanValue)
 
@@ -63,7 +65,7 @@ func main() {
 			continue
 		}
 
-		squared = squared + math.Pow((n-meanValue), 2)
+		squared = squared + math.Pow(n-meanValue, 2)
 	}
 
 	standardDeviation := math.Sqrt(squared / float64(nValues))
