@@ -1,9 +1,0 @@
-[requires]
-paho-mqtt-cpp/1.5.3
-
-[generators]
-CMakeDeps
-CMakeToolchain
-
-[layout]
-cmake_layout
