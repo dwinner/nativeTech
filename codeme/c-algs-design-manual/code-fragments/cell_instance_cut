@@ -1,1 +1,0 @@
-cell m[MAXLEN+1][MAXLEN+1];    /* dynamic programming table */

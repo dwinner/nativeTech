@@ -1,3 +1,0 @@
-void unmake_move(int a[], int k, boardtype *board) {
-    free_square(board->move[k], board);
-}

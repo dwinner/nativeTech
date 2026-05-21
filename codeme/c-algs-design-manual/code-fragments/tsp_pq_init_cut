@@ -1,3 +1,0 @@
-void pq_init(priority_queue *q) {
-    q->n = 0;
-}

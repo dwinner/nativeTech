@@ -1,1 +1,0 @@
-./criterion_test

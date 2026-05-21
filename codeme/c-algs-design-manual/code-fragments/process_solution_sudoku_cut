@@ -1,5 +1,0 @@
-void process_solution(int a[], int k, boardtype *board) {
-    finished = true;
-    printf("process solution\n");
-    print_board(board);
-}

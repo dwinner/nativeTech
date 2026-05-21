@@ -1,5 +1,0 @@
-    for (i = 0; i < n+m-1; i++) {
-        for (j = max(0,i-(n-1)); j <= min(m-1,i); j++) {
-	    c[i] = c[i] + a[j] * b[i-j];
-	}
-    }

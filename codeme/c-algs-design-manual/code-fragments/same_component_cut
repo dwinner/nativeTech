@@ -1,3 +1,0 @@
-bool same_component(union_find *s, int s1, int s2) {
-    return (find(s, s1) == find(s, s2));
-}

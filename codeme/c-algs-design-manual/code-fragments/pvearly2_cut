@@ -1,4 +1,0 @@
-
-void process_vertex_early(int v) {        /* vertex to process */
-    printf(" %d", v);
-}

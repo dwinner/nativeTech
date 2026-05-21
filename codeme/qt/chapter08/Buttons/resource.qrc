@@ -1,5 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file alias = "ChordsMaestro.png">ChordsMaestro64x64.png</file>
-    </qresource>
-</RCC>
