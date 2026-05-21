@@ -1,0 +1,29 @@
+services:
+  front_proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile-front_proxy
+    networks:
+      - example_network
+    ports:
+      - "12345:12345"
+      - "9901:9901"
+
+  example_service:
+    image: hashicorp/http-echo
+    networks:
+      - example_network
+    command: -text "It works!"
+
+  opentelemetry-collector:
+    image: otel/opentelemetry-collector-contrib:0.141.0
+    networks:
+      - example_network
+    ports:
+      - "4317:4317"
+      - "4318:4318"
+      - "55679:55679"
+    volumes:
+      - ./collector-config.yaml:/etc/otelcol/config.yaml
+networks:
+  example_network: {}

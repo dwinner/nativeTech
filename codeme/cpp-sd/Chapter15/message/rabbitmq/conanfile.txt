@@ -1,0 +1,11 @@
+[requires]
+amqp-cpp/4.3.27
+libevent/2.1.12
+openssl/3.6.0
+
+[generators]
+CMakeDeps
+CMakeToolchain
+
+[layout]
+cmake_layout
