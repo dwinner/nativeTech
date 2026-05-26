@@ -1,6 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>main.qml</file>
-        <file>Snowman.qml</file>
-    </qresource>
-</RCC>

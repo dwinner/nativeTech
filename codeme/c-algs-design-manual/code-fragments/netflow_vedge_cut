@@ -1,3 +1,0 @@
-bool valid_edge(edgenode *e) {
-    return (e->residual > 0);
-}

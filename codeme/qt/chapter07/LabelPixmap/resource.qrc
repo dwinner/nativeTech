@@ -1,5 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file alias = "mira.jpg">mira.jpg</file>
-    </qresource>
-</RCC>

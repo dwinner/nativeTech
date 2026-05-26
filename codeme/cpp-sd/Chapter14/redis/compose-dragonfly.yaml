@@ -1,6 +1,0 @@
-services:
-  dragonfly:
-    image: docker.dragonflydb.io/dragonflydb/dragonfly:v1.35.1
-    hostname: dragonfly
-    ports:
-      - "6379:6379"

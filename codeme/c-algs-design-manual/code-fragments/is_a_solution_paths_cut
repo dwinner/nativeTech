@@ -1,3 +1,0 @@
-int is_a_solution(int a[], int k, paths_data *g) {
-    return (a[k] == g->t);
-}

@@ -1,4 +1,0 @@
-typedef struct {
-    item_type q[PQ_SIZE+1];     /* body of queue */
-    int n;                      /* number of queue elements */
-} priority_queue;

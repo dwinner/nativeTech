@@ -1,3 +1,0 @@
-void process_edge(int x, int y) {
-    nedges = nedges + 1;
-}

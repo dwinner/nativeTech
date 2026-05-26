@@ -1,4 +1,0 @@
-typedef struct {
-    int cost;               /* cost of reaching this cell */
-    int parent;             /* parent cell */
-} cell;
