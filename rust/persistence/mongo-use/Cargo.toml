@@ -1,0 +1,8 @@
+[package]
+name = "mongo-use"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+mongodb = "3.7.0"
+tokio = { version = "1.52.3", features = ["full"] }
