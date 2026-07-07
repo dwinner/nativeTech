@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebAssembly Counter</title>
+</head>
+<body>
+<h1>Counter</h1>
+<p>
+    Value:<span id="counter-value">0</span>
+</p>
+<button id="increment">Increment</button>
+<button id="decrement">Decrement</button>
+<script type="module">
+    import init, {Counter, log_message} from './pkg/wasm_counter.js';
+
+    async function run() {
+        await init(); // Инициализация WebAssembly
+        const counter = new Counter();
+        const valueDisplay = document.getElementById('counter-value');
+        const incrementBtn = document.getElementById('increment');
+        const decrementBtn = document.getElementById('decrement');
+
+        // Обновление значения на странице
+        function updateDisplay() {
+            valueDisplay.textContent = counter.get_value();
+        }
+
+        // Обработчики кнопок
+        incrementBtn.addEventListener('click', () => {
+            counter.increment();
+            updateDisplay();
+            log_message("Incremented!");
+        });
+
+        decrementBtn.addEventListener('click', () => {
+            counter.decrement();
+            updateDisplay();
+            log_message("Decremented!");
+        });
+
+        updateDisplay(); // Начальное значение
+    }
+
+    run();
+</script>
+</body>
+</html>
