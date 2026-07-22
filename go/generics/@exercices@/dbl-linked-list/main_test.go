@@ -3,15 +3,15 @@ package main
 import "testing"
 
 func TestSingleNodeHead(t *testing.T) {
-   dll := NewDoublyLinkedList()
-   node := newNode(1)
+   dll := NewDoublyLinkedList[int]()
+   node := newNode /*[int]*/ (1)
 
    dll.setHead(node)
    expectingSingleNode(t, dll, node)
 }
 
 func TestSingleNodeTail(t *testing.T) {
-   dll := NewDoublyLinkedList()
+   dll := NewDoublyLinkedList[int]()
    node := newNode(1)
 
    dll.setTail(node)
@@ -19,7 +19,7 @@ func TestSingleNodeTail(t *testing.T) {
 }
 
 func TestRemoveHead(t *testing.T) {
-   dll := NewDoublyLinkedList()
+   dll := NewDoublyLinkedList[int]()
    node := newNode(1)
 
    dll.setHead(node)
@@ -28,7 +28,7 @@ func TestRemoveHead(t *testing.T) {
 }
 
 func TestRemoveTail(t *testing.T) {
-   dll := NewDoublyLinkedList()
+   dll := NewDoublyLinkedList[int]()
    node := newNode(1)
 
    dll.setTail(node)
@@ -37,7 +37,7 @@ func TestRemoveTail(t *testing.T) {
 }
 
 func TestRemoveNodesWithValueHead(t *testing.T) {
-   dll := NewDoublyLinkedList()
+   dll := NewDoublyLinkedList[int]()
    node := newNode(1)
 
    dll.setHead(node)
@@ -46,7 +46,7 @@ func TestRemoveNodesWithValueHead(t *testing.T) {
 }
 
 func TestRemoveNodesWithValueTail(t *testing.T) {
-   dll := NewDoublyLinkedList()
+   dll := NewDoublyLinkedList[int]()
    node := newNode(1)
 
    dll.setTail(node)
@@ -55,7 +55,7 @@ func TestRemoveNodesWithValueTail(t *testing.T) {
 }
 
 func TestInsertAtPosition(t *testing.T) {
-   dll := NewDoublyLinkedList()
+   dll := NewDoublyLinkedList[int]()
    node := newNode(1)
 
    dll.insertAtPosition(1, node)
@@ -63,7 +63,7 @@ func TestInsertAtPosition(t *testing.T) {
 }
 
 func TestSetHeadAndTail(t *testing.T) {
-   dll := NewDoublyLinkedList()
+   dll := NewDoublyLinkedList[int]()
    first := newNode(1)
    second := newNode(2)
 
@@ -73,7 +73,7 @@ func TestSetHeadAndTail(t *testing.T) {
 }
 
 func TestInsertAfterHead(t *testing.T) {
-   dll := NewDoublyLinkedList()
+   dll := NewDoublyLinkedList[int]()
    first := newNode(1)
    second := newNode(2)
 
@@ -83,7 +83,7 @@ func TestInsertAfterHead(t *testing.T) {
 }
 
 func TestInsertBeforeHead(t *testing.T) {
-   dll := NewDoublyLinkedList()
+   dll := NewDoublyLinkedList[int]()
    first := newNode(1)
    second := newNode(2)
 
@@ -93,7 +93,7 @@ func TestInsertBeforeHead(t *testing.T) {
 }
 
 func TestInsertAfterTail(t *testing.T) {
-   dll := NewDoublyLinkedList()
+   dll := NewDoublyLinkedList[int]()
    first := newNode(1)
    second := newNode(2)
 
@@ -103,7 +103,7 @@ func TestInsertAfterTail(t *testing.T) {
 }
 
 func TestInsertBeforeTail(t *testing.T) {
-   dll := NewDoublyLinkedList()
+   dll := NewDoublyLinkedList[int]()
    first := newNode(1)
    second := newNode(2)
 
@@ -113,7 +113,7 @@ func TestInsertBeforeTail(t *testing.T) {
 }
 
 func TestInsertAtPositionHeadTail(t *testing.T) {
-   dll := NewDoublyLinkedList()
+   dll := NewDoublyLinkedList[int]()
    first := newNode(1)
    second := newNode(2)
 
@@ -123,7 +123,7 @@ func TestInsertAtPositionHeadTail(t *testing.T) {
 }
 
 func TestContainsNodeWithValueHead(t *testing.T) {
-   dll := NewDoublyLinkedList()
+   dll := NewDoublyLinkedList[int]()
    node := newNode(1)
 
    dll.setHead(node)
@@ -133,7 +133,7 @@ func TestContainsNodeWithValueHead(t *testing.T) {
 }
 
 func TestContainsNodeWithValueTail(t *testing.T) {
-   dll := NewDoublyLinkedList()
+   dll := NewDoublyLinkedList[int]()
    node := newNode(1)
 
    dll.setTail(node)
@@ -143,7 +143,7 @@ func TestContainsNodeWithValueTail(t *testing.T) {
 }
 
 func TestContainsNodeWithValue(t *testing.T) {
-   dll := NewDoublyLinkedList()
+   dll := NewDoublyLinkedList[int]()
    first := newNode(1)
    second := newNode(2)
    third := newNode(3)
@@ -157,13 +157,13 @@ func TestContainsNodeWithValue(t *testing.T) {
    }
 }
 
-func newNode(value int) *Node {
-   return &Node{
+func newNode(value int) *Node[int] {
+   return &Node[int]{
       value: value,
    }
 }
 
-func expectingSingleNode(t *testing.T, dll *DoublyLinkedList, node *Node) {
+func expectingSingleNode(t *testing.T, dll *DoublyLinkedList[int], node *Node[int]) {
    if dll.head != node {
       t.Fail()
    }
@@ -172,7 +172,7 @@ func expectingSingleNode(t *testing.T, dll *DoublyLinkedList, node *Node) {
    }
 }
 
-func expectingEmpty(t *testing.T, dll *DoublyLinkedList) {
+func expectingEmpty(t *testing.T, dll *DoublyLinkedList[int]) {
    if dll.head != nil {
       t.Fail()
    }
@@ -181,7 +181,7 @@ func expectingEmpty(t *testing.T, dll *DoublyLinkedList) {
    }
 }
 
-func expectingHeadTail(t *testing.T, dll *DoublyLinkedList, head *Node, tail *Node) {
+func expectingHeadTail(t *testing.T, dll *DoublyLinkedList[int], head *Node[int], tail *Node[int]) {
    if dll.head != head {
       t.Fail()
    }

@@ -1,130 +1,147 @@
 package main
 
+type AllInts interface {
+   ~int
+}
+
 // Node is linked node struct
-type Node struct {
-   value      int
-   prev, next *Node
+type Node[T AllInts] struct {
+   value      T
+   prev, next *Node[T]
 }
 
 // DoublyLinkedList is struct for doubly linked list
-type DoublyLinkedList struct {
-   head, tail *Node
+type DoublyLinkedList[T AllInts] struct {
+   head, tail *Node[T]
 }
 
 // NewDoublyLinkedList creates new doubly linked list
-func NewDoublyLinkedList() *DoublyLinkedList {
-   return &DoublyLinkedList{}
+func NewDoublyLinkedList[T AllInts]() *DoublyLinkedList[T] {
+   return &DoublyLinkedList[T]{}
 }
 
 // O(1) time | O(1) space
-func (dll *DoublyLinkedList) setHead(node *Node) {
-   if dll.head == nil {
-      dll.head = node
-      dll.tail = node
+func (aLinkedList *DoublyLinkedList[T]) setHead(node *Node[T]) {
+   if aLinkedList.head == nil {
+      aLinkedList.head = node
+      aLinkedList.tail = node
       return
    }
-   dll.insertBefore(dll.head, node)
+
+   aLinkedList.insertBefore(aLinkedList.head, node)
 }
 
 // O(1) time | O(1) space
-func (dll *DoublyLinkedList) setTail(node *Node) {
-   if dll.tail == nil {
-      dll.setHead(node)
+func (aLinkedList *DoublyLinkedList[T]) setTail(node *Node[T]) {
+   if aLinkedList.tail == nil {
+      aLinkedList.setHead(node)
       return
    }
-   dll.insertAfter(dll.tail, node)
+
+   aLinkedList.insertAfter(aLinkedList.tail, node)
 }
 
 // O(1) time | O(1) space
-func (dll *DoublyLinkedList) insertBefore(node, nodeToInsert *Node) {
-   if nodeToInsert == dll.head && nodeToInsert == dll.tail {
+func (aLinkedList *DoublyLinkedList[T]) insertBefore(node, nodeToInsert *Node[T]) {
+   if nodeToInsert == aLinkedList.head && nodeToInsert == aLinkedList.tail {
       return
    }
-   dll.remove(nodeToInsert)
+
+   aLinkedList.remove(nodeToInsert)
    nodeToInsert.prev = node.prev
    nodeToInsert.next = node
    if node.prev == nil {
-      dll.head = nodeToInsert
+      aLinkedList.head = nodeToInsert
    } else {
       node.prev.next = nodeToInsert
    }
+
    node.prev = nodeToInsert
 }
 
 // O(1) time | O(1) space
-func (dll *DoublyLinkedList) insertAfter(node, nodeToInsert *Node) {
-   if nodeToInsert == dll.head && nodeToInsert == dll.tail {
+func (aLinkedList *DoublyLinkedList[T]) insertAfter(node, nodeToInsert *Node[T]) {
+   if nodeToInsert == aLinkedList.head && nodeToInsert == aLinkedList.tail {
       return
    }
-   dll.remove(nodeToInsert)
+
+   aLinkedList.remove(nodeToInsert)
    nodeToInsert.prev = node
    nodeToInsert.next = node.next
    if node.next == nil {
-      dll.tail = nodeToInsert
+      aLinkedList.tail = nodeToInsert
    } else {
       node.next.prev = nodeToInsert
    }
+
    node.next = nodeToInsert
 }
 
 // O(p) time | O(1) space
-func (dll *DoublyLinkedList) insertAtPosition(position int, nodeToInsert *Node) {
+func (aLinkedList *DoublyLinkedList[T]) insertAtPosition(position int, nodeToInsert *Node[T]) {
    if position == 1 {
-      dll.setHead(nodeToInsert)
+      aLinkedList.setHead(nodeToInsert)
       return
    }
-   node := dll.head
-   currnetPosition := 1
-   for node != nil && currnetPosition != position {
+
+   node := aLinkedList.head
+   currentPosition := 1
+   for node != nil && currentPosition != position {
       node = node.next
-      currnetPosition++
+      currentPosition++
    }
+
    if node != nil {
-      dll.insertBefore(node, nodeToInsert)
+      aLinkedList.insertBefore(node, nodeToInsert)
    } else {
-      dll.setTail(nodeToInsert)
+      aLinkedList.setTail(nodeToInsert)
    }
 }
 
 // O(n) time | O(1) space
-func (dll *DoublyLinkedList) removeNodesWithValue(value int) {
-   node := dll.head
+func (aLinkedList *DoublyLinkedList[T]) removeNodesWithValue(value T) {
+   node := aLinkedList.head
    for node != nil {
       nodeToRemove := node
       node = node.next
       if nodeToRemove.value == value {
-         dll.remove(nodeToRemove)
+         aLinkedList.remove(nodeToRemove)
       }
    }
 }
 
 // O(1) time | O(1) space
-func (dll *DoublyLinkedList) remove(node *Node) {
-   if node == dll.head {
-      dll.head = dll.head.next
+func (aLinkedList *DoublyLinkedList[T]) remove(node *Node[T]) {
+   if node == aLinkedList.head {
+      aLinkedList.head = aLinkedList.head.next
    }
-   if node == dll.tail {
-      dll.tail = dll.tail.prev
+
+   if node == aLinkedList.tail {
+      aLinkedList.tail = aLinkedList.tail.prev
    }
-   dll.removeNodeBindings(node)
+
+   aLinkedList.removeNodeBindings(node)
 }
 
 // O(n) time | O(1) space
-func (dll *DoublyLinkedList) containsNodeWithValue(value int) bool {
-   node := dll.head
+func (aLinkedList *DoublyLinkedList[T]) containsNodeWithValue(value T) bool {
+   node := aLinkedList.head
    for node != nil && node.value != value {
       node = node.next
    }
+
    return node != nil
 }
 
-func (dll *DoublyLinkedList) removeNodeBindings(node *Node) {
+func (aLinkedList *DoublyLinkedList[T]) removeNodeBindings(node *Node[T]) {
    if node.prev != nil {
       node.prev.next = node.next
    }
+
    if node.next != nil {
       node.next.prev = node.prev
    }
+
    node.prev = nil
    node.next = nil
 }
