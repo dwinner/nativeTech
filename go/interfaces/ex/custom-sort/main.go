@@ -1,20 +1,45 @@
 package main
 
 import (
-	"fmt"
+   "fmt"
+   "sort"
+   "time"
 )
 
-//TIP <p>To run your code, right-click the code and select <b>Run</b>.</p> <p>Alternatively, click
-// the <icon src="AllIcons.Actions.Execute"/> icon in the gutter and select the <b>Run</b> menu item from here.</p>
-func main() {
-	//TIP <p>Press <shortcut actionId="ShowIntentionActions"/> when your caret is at the underlined text
-	// to see how GoLand suggests fixing the warning.</p><p>Alternatively, if available, click the lightbulb to view possible fixes.</p>
-	s := "gopher"
-	fmt.Println("Hello and welcome, %s!", s)
+type Person struct {
+   Id          int
+   Name        string
+   SirName     string
+   DateOfBirth time.Time
+}
 
-	for i := 1; i <= 5; i++ {
-		//TIP <p>To start your debugging session, right-click your code in the editor and select the Debug option.</p> <p>We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-		// for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.</p>
-		fmt.Println("i =", 100/i)
-	}
+type PersonCollection []Person
+
+func (aPersonColl PersonCollection) Len() int {
+   return len(aPersonColl)
+}
+
+func (aPersonColl PersonCollection) Less(i, j int) bool {
+   cmpRes := aPersonColl[i].DateOfBirth.Compare(aPersonColl[j].DateOfBirth)
+   if cmpRes == -1 || cmpRes == 0 {
+      return true
+   }
+
+   return false
+}
+
+func (aPersonColl PersonCollection) Swap(i, j int) {
+   aPersonColl[i], aPersonColl[j] = aPersonColl[j], aPersonColl[i]
+}
+
+func main() {
+   personColl := []Person{
+      {1, "Den", "Winner", time.Date(1985, 3, 21, 0, 0, 0, 0, time.Local)},
+      {1, "Vladimir", "Lankin", time.Date(1975, 7, 23, 0, 0, 0, 0, time.Local)},
+      {1, "Constantin", "Radugin", time.Date(1995, 8, 2, 0, 0, 0, 0, time.Local)},
+   }
+
+   fmt.Println("Before: ", personColl)
+   sort.Sort(PersonCollection(personColl))
+   fmt.Println("After: ", personColl)
 }
