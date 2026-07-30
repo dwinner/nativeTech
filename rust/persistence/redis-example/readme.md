@@ -1,0 +1,2 @@
+- Run docker-compose up -d
+- Now can connect like redis://man:3680251am@localhost:6380/0

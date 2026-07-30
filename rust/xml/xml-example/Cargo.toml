@@ -1,0 +1,7 @@
+[package]
+name = "xml-example"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+xml-rs = "1.0"
