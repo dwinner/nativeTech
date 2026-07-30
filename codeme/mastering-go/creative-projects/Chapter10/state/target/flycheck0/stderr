@@ -1,0 +1,956 @@
+   0.131403400s  INFO prepare_target{force=false package_id=state v0.1.0 (C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state) target="state"}: cargo::core::compiler::fingerprint: fingerprint error for state v0.1.0 (C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("state", ["staticlib"], "C:\\gitHub\\native-tech\\codeme\\mastering-go\\creative-projects\\Chapter10\\state\\src\\lib.rs", Edition2018) }
+   0.131470100s  INFO prepare_target{force=false package_id=state v0.1.0 (C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state) target="state"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\state-98f209d7d0257b91\test-lib-state`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_libgit2_prerelease
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: git_midx_writer_dump
+  16: git_filter_source_repo
+  17: git_midx_writer_dump
+  18: BaseThreadInitThunk
+  19: RtlUserThreadStart
+   0.144981400s  INFO prepare_target{force=false package_id=linux-kernel-module v0.1.0 (C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\linux-fw) target="linux_kernel_module"}: cargo::core::compiler::fingerprint: fingerprint error for linux-kernel-module v0.1.0 (C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\linux-fw)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("linux_kernel_module", ["lib"], "C:\\gitHub\\native-tech\\codeme\\mastering-go\\creative-projects\\Chapter10\\linux-fw\\src\\lib.rs", Edition2018) }
+   0.145017800s  INFO prepare_target{force=false package_id=linux-kernel-module v0.1.0 (C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\linux-fw) target="linux_kernel_module"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\linux-kernel-module-a218f63bf0843262\lib-linux_kernel_module`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.146060500s  INFO prepare_target{force=false package_id=linux-kernel-module v0.1.0 (C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\linux-fw) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for linux-kernel-module v0.1.0 (C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\linux-fw)/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\gitHub\\native-tech\\codeme\\mastering-go\\creative-projects\\Chapter10\\linux-fw\\build.rs", Edition2018) }
+   0.146088800s  INFO prepare_target{force=false package_id=linux-kernel-module v0.1.0 (C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\linux-fw) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\linux-kernel-module-3b8694e39716b011\run-build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.146412700s  INFO prepare_target{force=false package_id=linux-kernel-module v0.1.0 (C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\linux-fw) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for linux-kernel-module v0.1.0 (C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\linux-fw)/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\gitHub\\native-tech\\codeme\\mastering-go\\creative-projects\\Chapter10\\linux-fw\\build.rs", Edition2018) }
+   0.146437600s  INFO prepare_target{force=false package_id=linux-kernel-module v0.1.0 (C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\linux-fw) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\linux-kernel-module-c33370535c15b244\build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.146997900s  INFO prepare_target{force=false package_id=bindgen v0.43.2 target="bindgen"}: cargo::core::compiler::fingerprint: fingerprint error for bindgen v0.43.2/Build/TargetInner { name_inferred: true, ..: lib_target("bindgen", ["lib"], "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bindgen-0.43.2\\src\\lib.rs", Edition2015) }
+   0.147020400s  INFO prepare_target{force=false package_id=bindgen v0.43.2 target="bindgen"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\bindgen-2a7df053f493ade8\lib-bindgen`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.147939400s  INFO prepare_target{force=false package_id=bindgen v0.43.2 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for bindgen v0.43.2/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bindgen-0.43.2\\build.rs", Edition2015) }
+   0.147961400s  INFO prepare_target{force=false package_id=bindgen v0.43.2 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\bindgen-0ee370c088fd5797\run-build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.148165600s  INFO prepare_target{force=false package_id=bindgen v0.43.2 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for bindgen v0.43.2/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bindgen-0.43.2\\build.rs", Edition2015) }
+   0.148186000s  INFO prepare_target{force=false package_id=bindgen v0.43.2 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\bindgen-8e24f3c2f94a88a0\build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.149209800s  INFO prepare_target{force=false package_id=clang-sys v0.26.4 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for clang-sys v0.26.4/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\clang-sys-0.26.4\\build.rs", Edition2015) }
+   0.149232700s  INFO prepare_target{force=false package_id=clang-sys v0.26.4 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\clang-sys-33c1d10ba978b2a1\run-build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_libgit2_prerelease
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: git_midx_writer_dump
+  23: git_filter_source_repo
+  24: git_midx_writer_dump
+  25: BaseThreadInitThunk
+  26: RtlUserThreadStart
+   0.149464600s  INFO prepare_target{force=false package_id=clang-sys v0.26.4 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for clang-sys v0.26.4/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\clang-sys-0.26.4\\build.rs", Edition2015) }
+   0.149486300s  INFO prepare_target{force=false package_id=clang-sys v0.26.4 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\clang-sys-12047ae097887195\build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_libgit2_prerelease
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: git_midx_writer_dump
+  23: git_filter_source_repo
+  24: git_midx_writer_dump
+  25: BaseThreadInitThunk
+  26: RtlUserThreadStart
+   0.150621400s  INFO prepare_target{force=false package_id=cexpr v0.3.6 target="cexpr"}: cargo::core::compiler::fingerprint: fingerprint error for cexpr v0.3.6/Build/TargetInner { name_inferred: true, ..: lib_target("cexpr", ["lib"], "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cexpr-0.3.6\\src\\lib.rs", Edition2015) }
+   0.150657500s  INFO prepare_target{force=false package_id=cexpr v0.3.6 target="cexpr"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\cexpr-0cbe1ff566644ba8\lib-cexpr`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.151301200s  INFO prepare_target{force=false package_id=nom v4.2.3 target="nom"}: cargo::core::compiler::fingerprint: fingerprint error for nom v4.2.3/Build/TargetInner { name_inferred: true, ..: lib_target("nom", ["lib"], "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\nom-4.2.3\\src\\lib.rs", Edition2015) }
+   0.151334100s  INFO prepare_target{force=false package_id=nom v4.2.3 target="nom"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\nom-14c994934410268d\lib-nom`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.152807900s  INFO prepare_target{force=false package_id=nom v4.2.3 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for nom v4.2.3/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\nom-4.2.3\\build.rs", Edition2015) }
+   0.152840500s  INFO prepare_target{force=false package_id=nom v4.2.3 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\nom-d16f4c0f79dbcf9e\run-build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_libgit2_prerelease
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: git_midx_writer_dump
+  24: git_filter_source_repo
+  25: git_midx_writer_dump
+  26: BaseThreadInitThunk
+  27: RtlUserThreadStart
+   0.153202700s  INFO prepare_target{force=false package_id=nom v4.2.3 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for nom v4.2.3/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\nom-4.2.3\\build.rs", Edition2015) }
+   0.153233900s  INFO prepare_target{force=false package_id=nom v4.2.3 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\nom-6fe5bcfc086a2688\build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_libgit2_prerelease
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: git_midx_writer_dump
+  24: git_filter_source_repo
+  25: git_midx_writer_dump
+  26: BaseThreadInitThunk
+  27: RtlUserThreadStart
+   0.154460600s  INFO prepare_target{force=false package_id=clang-sys v0.26.4 target="clang_sys"}: cargo::core::compiler::fingerprint: fingerprint error for clang-sys v0.26.4/Build/TargetInner { name_inferred: true, ..: lib_target("clang_sys", ["lib"], "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\clang-sys-0.26.4\\src\\lib.rs", Edition2015) }
+   0.154494800s  INFO prepare_target{force=false package_id=clang-sys v0.26.4 target="clang_sys"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\clang-sys-848a16b440be3ce4\lib-clang_sys`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.155244100s  INFO prepare_target{force=false package_id=libc v0.2.189 target="libc"}: cargo::core::compiler::fingerprint: fingerprint error for libc v0.2.189/Build/TargetInner { ..: lib_target("libc", ["lib"], "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libc-0.2.189\\src\\lib.rs", Edition2021) }
+   0.155277400s  INFO prepare_target{force=false package_id=libc v0.2.189 target="libc"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\libc-1e02c048946252bd\lib-libc`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.156530200s  INFO prepare_target{force=false package_id=libc v0.2.189 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for libc v0.2.189/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libc-0.2.189\\build.rs", Edition2021) }
+   0.156561800s  INFO prepare_target{force=false package_id=libc v0.2.189 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\libc-a2d28613d92c6dff\run-build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_libgit2_prerelease
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: git_midx_writer_dump
+  24: git_filter_source_repo
+  25: git_midx_writer_dump
+  26: BaseThreadInitThunk
+  27: RtlUserThreadStart
+   0.156902900s  INFO prepare_target{force=false package_id=libc v0.2.189 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for libc v0.2.189/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libc-0.2.189\\build.rs", Edition2021) }
+   0.156934800s  INFO prepare_target{force=false package_id=libc v0.2.189 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\libc-3f31b83b8e4cb90b\build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_libgit2_prerelease
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: git_midx_writer_dump
+  24: git_filter_source_repo
+  25: git_midx_writer_dump
+  26: BaseThreadInitThunk
+  27: RtlUserThreadStart
+   0.157742600s  INFO prepare_target{force=false package_id=libloading v0.5.2 target="libloading"}: cargo::core::compiler::fingerprint: fingerprint error for libloading v0.5.2/Build/TargetInner { name_inferred: true, ..: lib_target("libloading", ["lib"], "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libloading-0.5.2\\src\\lib.rs", Edition2015) }
+   0.157776000s  INFO prepare_target{force=false package_id=libloading v0.5.2 target="libloading"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\libloading-102288bd5d4a48cf\lib-libloading`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.159036900s  INFO prepare_target{force=false package_id=libloading v0.5.2 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for libloading v0.5.2/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libloading-0.5.2\\build.rs", Edition2015) }
+   0.159068200s  INFO prepare_target{force=false package_id=libloading v0.5.2 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\libloading-bafe6e12d687aa48\run-build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_libgit2_prerelease
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: git_midx_writer_dump
+  24: git_filter_source_repo
+  25: git_midx_writer_dump
+  26: BaseThreadInitThunk
+  27: RtlUserThreadStart
+   0.159417700s  INFO prepare_target{force=false package_id=libloading v0.5.2 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for libloading v0.5.2/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libloading-0.5.2\\build.rs", Edition2015) }
+   0.159448700s  INFO prepare_target{force=false package_id=libloading v0.5.2 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\libloading-7958f2d477e5f448\build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_libgit2_prerelease
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: git_midx_writer_dump
+  24: git_filter_source_repo
+  25: git_midx_writer_dump
+  26: BaseThreadInitThunk
+  27: RtlUserThreadStart
+   0.160832700s  INFO prepare_target{force=false package_id=winapi v0.3.9 target="winapi"}: cargo::core::compiler::fingerprint: fingerprint error for winapi v0.3.9/Build/TargetInner { name_inferred: true, ..: lib_target("winapi", ["lib"], "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\winapi-0.3.9\\src\\lib.rs", Edition2015) }
+   0.160878400s  INFO prepare_target{force=false package_id=winapi v0.3.9 target="winapi"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\winapi-f9ad248c5c9c366e\lib-winapi`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_libgit2_prerelease
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: git_midx_writer_dump
+  23: git_filter_source_repo
+  24: git_midx_writer_dump
+  25: BaseThreadInitThunk
+  26: RtlUserThreadStart
+   0.162340300s  INFO prepare_target{force=false package_id=winapi v0.3.9 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for winapi v0.3.9/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\winapi-0.3.9\\build.rs", Edition2015) }
+   0.162376100s  INFO prepare_target{force=false package_id=winapi v0.3.9 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\winapi-537fa61a74d133ae\run-build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_filter_source_repo
+  19: git_libgit2_prerelease
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: <unknown>
+  24: git_midx_writer_dump
+  25: git_filter_source_repo
+  26: git_midx_writer_dump
+  27: BaseThreadInitThunk
+  28: RtlUserThreadStart
+   0.162736900s  INFO prepare_target{force=false package_id=winapi v0.3.9 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for winapi v0.3.9/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\winapi-0.3.9\\build.rs", Edition2015) }
+   0.162768800s  INFO prepare_target{force=false package_id=winapi v0.3.9 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\winapi-35b2e980077eb428\build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_filter_source_repo
+  19: git_libgit2_prerelease
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: <unknown>
+  24: git_midx_writer_dump
+  25: git_filter_source_repo
+  26: git_midx_writer_dump
+  27: BaseThreadInitThunk
+  28: RtlUserThreadStart
+   0.163708900s  INFO prepare_target{force=false package_id=clap v2.34.0 target="clap"}: cargo::core::compiler::fingerprint: fingerprint error for clap v2.34.0/Build/TargetInner { name_inferred: true, ..: lib_target("clap", ["lib"], "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\clap-2.34.0\\src\\lib.rs", Edition2018) }
+   0.163742900s  INFO prepare_target{force=false package_id=clap v2.34.0 target="clap"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\clap-3640a5fb0c8b1b48\lib-clap`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.164480700s  INFO prepare_target{force=false package_id=atty v0.2.14 target="atty"}: cargo::core::compiler::fingerprint: fingerprint error for atty v0.2.14/Build/TargetInner { name_inferred: true, ..: lib_target("atty", ["lib"], "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\atty-0.2.14\\src\\lib.rs", Edition2015) }
+   0.164515300s  INFO prepare_target{force=false package_id=atty v0.2.14 target="atty"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\atty-884c9292a8f11ab2\lib-atty`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.166010200s  INFO prepare_target{force=false package_id=env_logger v0.6.2 target="env_logger"}: cargo::core::compiler::fingerprint: fingerprint error for env_logger v0.6.2/Build/TargetInner { name_inferred: true, ..: lib_target("env_logger", ["lib"], "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\env_logger-0.6.2\\src\\lib.rs", Edition2015) }
+   0.166044900s  INFO prepare_target{force=false package_id=env_logger v0.6.2 target="env_logger"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\env_logger-9e06cb9753b7c546\lib-env_logger`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.170000300s  INFO prepare_target{force=false package_id=which v1.0.5 target="which"}: cargo::core::compiler::fingerprint: fingerprint error for which v1.0.5/Build/TargetInner { name_inferred: true, ..: lib_target("which", ["lib"], "C:\\Users\\Man\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\which-1.0.5\\src\\lib.rs", Edition2015) }
+   0.170039100s  INFO prepare_target{force=false package_id=which v1.0.5 target="which"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\which-f7a1103ebc16302d\lib-which`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.171128600s  INFO prepare_target{force=false package_id=state v0.1.0 (C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state) target="state"}: cargo::core::compiler::fingerprint: fingerprint error for state v0.1.0 (C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("state", ["staticlib"], "C:\\gitHub\\native-tech\\codeme\\mastering-go\\creative-projects\\Chapter10\\state\\src\\lib.rs", Edition2018) }
+   0.171175900s  INFO prepare_target{force=false package_id=state v0.1.0 (C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state) target="state"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\state-f3e593eff7638619\lib-state`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_libgit2_prerelease
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: git_midx_writer_dump
+  16: git_filter_source_repo
+  17: git_midx_writer_dump
+  18: BaseThreadInitThunk
+  19: RtlUserThreadStart
+   0.172278400s  INFO prepare_target{force=false package_id=linux-kernel-module v0.1.0 (C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\linux-fw) target="linux_kernel_module"}: cargo::core::compiler::fingerprint: fingerprint error for linux-kernel-module v0.1.0 (C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\linux-fw)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("linux_kernel_module", ["lib"], "C:\\gitHub\\native-tech\\codeme\\mastering-go\\creative-projects\\Chapter10\\linux-fw\\src\\lib.rs", Edition2018) }
+   0.172331600s  INFO prepare_target{force=false package_id=linux-kernel-module v0.1.0 (C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\linux-fw) target="linux_kernel_module"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\gitHub\native-tech\codeme\mastering-go\creative-projects\Chapter10\state\target\debug\.fingerprint\linux-kernel-module-f48bd67c7a6e9c80\lib-linux_kernel_module`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   Compiling winapi v0.3.9
+   Compiling libc v0.2.189
+   Compiling nom v4.2.3
+   Compiling clang-sys v0.26.4
+   Compiling libloading v0.5.2
+   Compiling bindgen v0.43.2
+error: could not compile `nom` (build script) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `libloading` (build script) due to 1 previous error
+error: could not compile `clang-sys` (build script) due to 1 previous error
+error: could not compile `bindgen` (build script) due to 1 previous error
+error: could not compile `libc` (build script) due to 1 previous error
+error: could not compile `winapi` (build script) due to 1 previous error
