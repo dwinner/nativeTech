@@ -18,12 +18,12 @@
 # vendor/
 
 # Go workspace file
-go.work
+# go.work
 
 # CH06
 sqlite06/
 
-go.mod
+# go.mod
 go.sum
 
 grafana_data
