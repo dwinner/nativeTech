@@ -1,0 +1,47 @@
+package main
+
+import (
+   "fmt"
+
+   "github.com/spf13/pflag"
+   "github.com/spf13/viper"
+)
+
+func aliasNormalizeFunc(aFlagSet *pflag.FlagSet, aFlagName string) pflag.NormalizedName {
+   switch aFlagName {
+   case "pass":
+      aFlagName = "password"
+      break
+   case "ps":
+      aFlagName = "password"
+      break
+   }
+
+   return pflag.NormalizedName(aFlagName)
+}
+
+func main() {
+   pflag.StringP("name", "n", "Mike", "Name parameter")
+   pflag.StringP("password", "p", "hardToGuess", "Password")
+   pflag.CommandLine.SetNormalizeFunc(aliasNormalizeFunc)
+
+   pflag.Parse()
+   _ = viper.BindPFlags(pflag.CommandLine)
+
+   name := viper.GetString("name")
+   password := viper.GetString("password")
+
+   fmt.Println(name, password)
+
+   // Reading an Environment variable
+   _ = viper.BindEnv("GOMAXPROCS")
+   val := viper.Get("GOMAXPROCS")
+   if val != nil {
+      fmt.Println("GOMAXPROCS:", val)
+   }
+
+   // Setting an Environment variable
+   viper.Set("GOMAXPROCS", 16)
+   val = viper.Get("GOMAXPROCS")
+   fmt.Println("GOMAXPROCS:", val)
+}
