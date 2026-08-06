@@ -3,7 +3,6 @@ package main
 import (
    "bufio"
    "fmt"
-   "io"
    "os"
 )
 
@@ -20,23 +19,15 @@ func lineByLine(aFile string) error {
       }
    }(fileD)
 
-   reader := bufio.NewReader(fileD)
-   for {
-      line, err := reader.ReadString('\n')
-      if err == io.EOF {
-         if len(line) != 0 {
-            fmt.Println(line)
-         }
+   scanner := bufio.NewScanner(fileD)
+   for scanner.Scan() {
+      text := scanner.Text()
+      fmt.Println(text)
+   }
 
-         break
-      }
-
-      if err != nil {
-         fmt.Printf("error reading file %s", err)
-         return err
-      }
-
-      fmt.Print(line)
+   if err := scanner.Err(); err != nil {
+      _, err = fmt.Fprintln(os.Stderr, "reading standard input:", err)
+      return err
    }
 
    return nil
