@@ -96,7 +96,7 @@ fn main()
    );
 
    tera_engine
-      .add_template_file("templates/templ_id.txt", Some("id_file_template"))
+      .add_template_file("../templates/templ_id.tera", Some("id_file_template"))
       .unwrap();
 
    println!(
@@ -104,16 +104,16 @@ fn main()
       tera_engine.render("id_file_template", &numeric_id.clone()).unwrap()
    );
 
-   tera_engine.add_template_file("templates/templ_id.txt", None).unwrap();
+   tera_engine.add_template_file("../templates/templ_id.tera", None).unwrap();
 
    println!(
-      "templates/templ_id.txt with numeric_id: [{}]",
-      tera_engine.render("templates/templ_id.txt", &numeric_id).unwrap()
+      "templates/templ_id.tera with numeric_id: [{}]",
+      tera_engine.render("templates/templ_id.tera", &numeric_id).unwrap()
    );
 
    println!(
-      "templates/templ_names.txt with numeric_id: [{}]",
-      TERA.render("templ_names.txt", &three_persons).unwrap()
+      "templates/templ_names.tera with numeric_id: [{}]",
+      TERA.render("templ_names.tera", &three_persons).unwrap()
    );
 }
 
