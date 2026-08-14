@@ -5,7 +5,7 @@ The client can send two possible kinds of messages:
 */
 function sendCommand(method, uri, body, success, failure) {
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
+    xhttp.onreadystatechange = function () {
         if (this.readyState == 4)
             if (this.status == 200) success();
             else failure();
@@ -16,7 +16,7 @@ function sendCommand(method, uri, body, success, failure) {
 
 function getPage(uri) {
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
+    xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById('body')
                 .innerHTML = xhttp.responseText;
@@ -34,26 +34,30 @@ function delete_selected_persons() {
             else items = '' + item.id;
     if (items)
         sendCommand('DELETE', '/persons?id_list=' + items, '',
-            function() { getPage('/page/persons'); },
-            function() { alert('Failed deletion.'); });
+            function () {
+                getPage('/page/persons');
+            },
+            function () {
+                alert('Failed deletion.');
+            });
 }
 
 function savePerson(method) {
     sendCommand(method,
         '/one_person?'
         + (method === 'POST' ? '' :
-        'id='
-        + document.getElementById('person_id').value
-        + '&')
+            'id='
+            + document.getElementById('person_id').value
+            + '&')
         + 'name='
         + encodeURIComponent(
             document.getElementById('person_name')
-            .value),
+                .value),
         '',
-        function() {
+        function () {
             getPage('/page/persons');
         },
-        function() {
+        function () {
             alert('Failed command.');
         });
 }
