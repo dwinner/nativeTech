@@ -2,6 +2,7 @@ package main
 
 import (
    "fmt"
+   "io"
    "net/http"
    "net/http/httputil"
    "net/url"
@@ -38,6 +39,13 @@ func main() {
       fmt.Println("Error in Do():", err)
       return
    }
+
+   defer func(aBody io.ReadCloser) {
+      err := aBody.Close()
+      if err != nil {
+         os.Exit(-1)
+      }
+   }(httpData.Body)
 
    fmt.Println("Status code:", httpData.Status)
    header, _ := httputil.DumpResponse(httpData, false)
