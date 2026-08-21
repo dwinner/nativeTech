@@ -4,6 +4,7 @@ import (
    "fmt"
    "log"
    "net/http"
+   "pdo"
    "strconv"
    "strings"
 )
@@ -30,7 +31,7 @@ func deleteHandler(aResponseWriter http.ResponseWriter, aRequest *http.Request) 
    log.Println("Serving:", aRequest.URL.Path, "from", aRequest.Host)
 
    dataset := paramStr[2]
-   err := deleteEntry(dataset)
+   err := deleteByKey(dataset)
    if err != nil {
       fmt.Println(err)
       Body := err.Error() + "\n"
@@ -54,7 +55,7 @@ func listHandler(aResponseWriter http.ResponseWriter, aRequest *http.Request) {
 func statusHandler(aResponseWriter http.ResponseWriter, aRequest *http.Request) {
    log.Println("Serving:", aRequest.URL.Path, "from", aRequest.Host)
    aResponseWriter.WriteHeader(http.StatusOK)
-   body := fmt.Sprintf("Total entries: %d\n", len(phoneBook))
+   body := fmt.Sprintf("Total entries: %d\n", entryCollection.Len())
    _, _ = fmt.Fprintf(aResponseWriter, "%s", body)
 }
 
@@ -81,7 +82,7 @@ func insertHandler(aResponseWriter http.ResponseWriter, aRequest *http.Request) 
       }
    }
 
-   entry := process(dataset, data)
+   entry := pdo.Process(dataset, data)
    err := insert(&entry)
 
    if err != nil {

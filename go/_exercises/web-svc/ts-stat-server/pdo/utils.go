@@ -1,65 +1,11 @@
-package main
+package pdo
 
 import (
    "encoding/json"
    "io"
    "math"
-   "os"
    "slices"
 )
-
-func readJsonFile(aFilepath string) error {
-   _, err := os.Stat(aFilepath)
-   if err != nil {
-      if os.IsNotExist(err) {
-         return nil
-      }
-
-      return err
-   }
-
-   file, err := os.Open(aFilepath)
-   if err != nil {
-      return err
-   }
-
-   defer func(aFile *os.File) {
-      _ = aFile.Close()
-   }(file)
-
-   err = DeSerialize(&phoneBook, file)
-   if err != nil {
-      return err
-   }
-
-   return nil
-}
-
-func createIndex() {
-   index = make(map[string]int)
-   for idx, entry := range phoneBook {
-      key := entry.Name
-      index[key] = idx
-   }
-}
-
-func saveJsonFile(aFilepath string) error {
-   file, err := os.Create(aFilepath)
-   if err != nil {
-      return err
-   }
-
-   defer func(file *os.File) {
-      _ = file.Close()
-   }(file)
-
-   err = Serialize(&phoneBook, file)
-   if err != nil {
-      return err
-   }
-
-   return nil
-}
 
 // Serialize serializes a slice with JSON records
 func Serialize(aSlice any, aWriter io.Writer) error {
@@ -73,7 +19,7 @@ func DeSerialize(aSlice any, aReader io.Reader) error {
    return decoder.Decode(aSlice)
 }
 
-func process(aFilename string, values []float64) Entry {
+func Process(aFilename string, values []float64) Entry {
    currentEntry := Entry{}
    currentEntry.Name = aFilename
    currentEntry.Len = len(values)

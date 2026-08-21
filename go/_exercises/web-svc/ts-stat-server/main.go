@@ -8,14 +8,20 @@ import (
    "time"
 )
 
+const defaultJsonFile = "./data.json"
+
+var entryCollection = pdo.NewEntryCollection()
+var entryIndex = pdo.NewEntryIndex()
+var jsonDb = pdo.NewJsonDb(defaultJsonFile)
+
 func main() {
-   err := readJsonFile(pdo.Jsonfile)
+   err := jsonDb.Load(entryCollection)
    if err != nil && err != io.EOF {
       fmt.Println("Error:", err)
       return
    }
 
-   createIndex()
+   entryIndex.CreateIndex(entryCollection)
    serveMux := http.NewServeMux()
    httpServer := &http.Server{
       Addr:         PORT,
