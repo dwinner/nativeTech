@@ -29,3 +29,13 @@ func benchUri(aTimeoutSec int32, aUriToTest string) (duration time.Duration, err
 
    return duration, nil
 }
+
+func meanTime(aDurationSlice []time.Duration) time.Duration {
+   sum := time.Duration(0)
+   for _, duration := range aDurationSlice {
+      sum = sum + duration
+   }
+
+   avg := sum / time.Duration(len(aDurationSlice))
+   return avg
+}

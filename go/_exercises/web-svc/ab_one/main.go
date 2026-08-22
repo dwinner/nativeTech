@@ -6,6 +6,7 @@ package main
 
 import (
    "fmt"
+   "time"
 
    "github.com/spf13/pflag"
    "github.com/spf13/viper"
@@ -35,12 +36,17 @@ func main() {
    timeoutInSec := viper.GetInt32(NumTimeoutKey)
    uriToTest := viper.GetString(UriToTestKey)
 
+   allDurations := make([]time.Duration, 0)
    for range reqNum {
       accessDuration, err := benchUri(timeoutInSec, uriToTest)
       if err != nil {
          fmt.Println(err)
+         continue
       } else {
-         fmt.Printf("Page took '%v'\n", accessDuration)
+         allDurations = append(allDurations, accessDuration)
       }
    }
+
+   meanDuration := meanTime(allDurations)
+   fmt.Printf("Mean duration: '%v'\n", meanDuration)
 }
