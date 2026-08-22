@@ -37,26 +37,26 @@ func main() {
    timeoutInSec := viper.GetInt32(NumTimeoutKey)
    uriToTest := viper.GetString(UriToTestKey)
 
+   var waitGrp sync.WaitGroup
+   var guard = sync.Mutex{}
    allDurations := make([]time.Duration, 0)
    for i := int32(0); i < reqNum; i = i + concurrencyNum {
-      var waitGrp sync.WaitGroup
-      var guard = sync.Mutex{}
       for range concurrencyNum {
          waitGrp.Go(func() {
             accessDuration, err := benchUri(timeoutInSec, uriToTest)
             if err != nil {
                fmt.Println(err)
-            } else {
-               guard.Lock()
-               allDurations = append(allDurations, accessDuration)
-               guard.Unlock()
+               return
             }
+
+            guard.Lock()
+            allDurations = append(allDurations, accessDuration)
+            guard.Unlock()
          })
       }
-
-      waitGrp.Wait()
    }
 
+   waitGrp.Wait()
    meanDuration := meanTime(allDurations)
    fmt.Printf("Mean duration: '%v'\n", meanDuration)
 }
