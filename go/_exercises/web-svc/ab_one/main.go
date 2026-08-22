@@ -6,6 +6,7 @@ package main
 
 import (
    "fmt"
+   "sync"
    "time"
 
    "github.com/spf13/pflag"
@@ -32,19 +33,28 @@ func main() {
    _ = viper.BindPFlags(pflag.CommandLine)
 
    reqNum := viper.GetInt32(NumReqKey)
-   //concurrencyNum := viper.GetInt32(NumConcurrencyKey)
+   concurrencyNum := viper.GetInt32(NumConcurrencyKey)
    timeoutInSec := viper.GetInt32(NumTimeoutKey)
    uriToTest := viper.GetString(UriToTestKey)
 
    allDurations := make([]time.Duration, 0)
-   for range reqNum {
-      accessDuration, err := benchUri(timeoutInSec, uriToTest)
-      if err != nil {
-         fmt.Println(err)
-         continue
-      } else {
-         allDurations = append(allDurations, accessDuration)
+   for i := int32(0); i < reqNum; i = i + concurrencyNum {
+      var waitGrp sync.WaitGroup
+      var guard = sync.Mutex{}
+      for range concurrencyNum {
+         waitGrp.Go(func() {
+            accessDuration, err := benchUri(timeoutInSec, uriToTest)
+            if err != nil {
+               fmt.Println(err)
+            } else {
+               guard.Lock()
+               allDurations = append(allDurations, accessDuration)
+               guard.Unlock()
+            }
+         })
       }
+
+      waitGrp.Wait()
    }
 
    meanDuration := meanTime(allDurations)

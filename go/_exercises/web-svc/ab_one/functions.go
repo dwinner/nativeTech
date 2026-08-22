@@ -36,6 +36,13 @@ func meanTime(aDurationSlice []time.Duration) time.Duration {
       sum = sum + duration
    }
 
-   avg := sum / time.Duration(len(aDurationSlice))
+   var avg time.Duration
+   durationLen := len(aDurationSlice)
+   if durationLen == 0 {
+      avg = time.Duration(0)
+   } else {
+      avg = sum / time.Duration(durationLen)
+   }
+
    return avg
 }
