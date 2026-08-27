@@ -62,7 +62,7 @@ func NewServer(anAddress string) *RndServer {
    return server
 }
 
-func (aRndServer *RndServer) Stop() {
+func (aRndServer *RndServer) Stop() error {
    log.Println("Received shutdown signal, stopping server...")
 
    // Close the channel, it's the signal that all goroutines should be stopped
@@ -71,14 +71,12 @@ func (aRndServer *RndServer) Stop() {
    // Close the listener
    err := aRndServer.listener.Close()
    if err != nil {
-      log.Fatal("Error while closing the listener")
-      return
+      return err
    }
 
    // Waiting all handlers are done
    aRndServer.waitGroup.Wait()
-
-   log.Println("Server stopped gracefully")
+   return nil
 }
 
 // Handle new incoming connection
