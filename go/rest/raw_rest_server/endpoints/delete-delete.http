@@ -1,0 +1,8 @@
+###
+DELETE http://localhost:1234/delete
+Content-Type: application/json
+
+{
+  "user": "denis",
+  "password": "winner"
+}

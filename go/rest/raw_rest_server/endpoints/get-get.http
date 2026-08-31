@@ -1,0 +1,8 @@
+###
+GET http://localhost:1234/get
+Content-Type: application/json
+
+{
+  "user": "denis",
+  "password": "winner"
+}
