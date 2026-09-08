@@ -1,12 +1,11 @@
 [package]
 name = "adder"
 version = "0.1.0"
-authors = []
-edition = "2018"
+edition = "2024"
 
 [dependencies]
-yew = "0.17.4"
-wasm-bindgen = "0.2.67"
+yew = "0.23.0"
+wasm-bindgen = "0.2.127"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
