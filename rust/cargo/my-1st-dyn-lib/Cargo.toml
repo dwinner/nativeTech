@@ -1,0 +1,13 @@
+[package]
+name = "my-1st-dyn-lib"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "mymain"
+path = "src/mymain.rs"
+
+[lib]
+crate-type = ["dylib"]
+
+[dependencies]
