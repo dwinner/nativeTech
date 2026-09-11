@@ -1,0 +1,14 @@
+[package]
+name = "multiply-entry-points"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "new-first"
+path = "src/first.rs"
+
+[[bin]]
+name = "new-second"
+path = "src/second.rs"
+
+[dependencies]
