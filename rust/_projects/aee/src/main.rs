@@ -1,4 +1,5 @@
-/// This is the main command-line application for arithmetic expression evaluator
+/// This is the main command-line application for arithmetic expression
+/// evaluator
 // Standard library
 use std::io;
 
@@ -9,7 +10,8 @@ use parsemath::ast;
 use parsemath::parser::{ParseError, Parser};
 
 // Function to invoke Parser and evaluate expression
-fn evaluate(expr: String) -> Result<f64, ParseError> {
+fn evaluate(expr: String) -> Result<f64, ParseError>
+{
    let expr = expr.split_whitespace().collect::<String>(); // remove whitespace chars
    let mut math_parser = Parser::new(&expr)?;
    let ast = math_parser.parse()?;
@@ -18,22 +20,28 @@ fn evaluate(expr: String) -> Result<f64, ParseError> {
    Ok(ast::eval(ast)?)
 }
 
-// Main function reads aritnmetic expression from command-line and displays result and error.
-// It calls the evaluate function to perform computation.
+// Main function reads arithmetic expression from command-line and displays
+// result and error. It calls the evaluate function to perform computation.
 
-fn main() {
+fn main()
+{
    println!("Hello! Welcome to Arithmetic expression evaluator.");
    println!("You can calculate value for expression such as 2*3+(4-5)+2^3/4. ");
    println!("Allowed numbers: positive, negative and decimals.");
    println!("Supported operations: Add, Subtract, Multiply, Divide, PowerOf(^). ");
    println!("Enter your arithmetic expression below:");
-   loop {
+   loop
+   {
       let mut input = String::new();
-      match io::stdin().read_line(&mut input) {
-         Ok(_) => {
-            match evaluate(input) {
+      match io::stdin().read_line(&mut input)
+      {
+         Ok(_) =>
+         {
+            match evaluate(input)
+            {
                Ok(val) => println!("The computed number is {}\n", val),
-               Err(_) => {
+               Err(_) =>
+               {
                   println!("Error in evaluating expression. Please enter valid expression\n");
                }
             };
