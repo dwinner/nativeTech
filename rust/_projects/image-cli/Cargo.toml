@@ -1,0 +1,16 @@
+[package]
+name = "image-cli"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "imagix"
+path = "src/imagix/mod.rs"
+
+[[bin]]
+name = "image-cli"
+path = "src/image-cli.rs"
+
+[dependencies]
+image = "0.25.10"
+structopt = "0.3.15"
