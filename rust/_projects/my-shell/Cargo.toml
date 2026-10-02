@@ -1,0 +1,19 @@
+[package]
+name = "my-shell"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "iter1"
+path = "src/iter1.rs"
+
+[[bin]]
+name = "iter2"
+path = "src/iter2.rs"
+
+[[bin]]
+name = "iter3"
+path = "src/iter3.rs"
+
+[dependencies]
+# signal-hook = "0.4.4"
