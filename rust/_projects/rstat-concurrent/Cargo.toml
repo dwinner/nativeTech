@@ -1,0 +1,14 @@
+[package]
+name = "rstat-concurrent"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "message-passing"
+path = "src/message_passing.rs"
+
+[[bin]]
+name = "shared-state"
+path = "src/shared_state.rs"
+
+[dependencies]
