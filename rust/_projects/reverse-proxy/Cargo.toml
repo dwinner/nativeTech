@@ -1,0 +1,14 @@
+[package]
+name = "reverse-proxy"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "origin"
+path = "src/origin.rs"
+
+[[bin]]
+name = "proxy"
+path = "src/proxy.rs"
+
+[dependencies]
