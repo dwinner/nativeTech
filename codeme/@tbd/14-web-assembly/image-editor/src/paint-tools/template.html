@@ -1,0 +1,145 @@
+<div class="brush-tools">
+    <div class="tool-group selection">
+        <label class="tool-btn" title="Добавить изображение (Ctrl+O)">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <rect x="3" y="3" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                <line x1="3" y1="9" x2="21" y2="9" stroke="currentColor" stroke-width="2"/>
+                <line x1="9" y1="3" x2="9" y2="17" stroke="currentColor" stroke-width="2"/>
+                <circle cx="16" cy="12" r="3" fill="currentColor"/>
+                <path d="M16 10 L16 14 M14 12 L18 12" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+
+            <input type="file" id="insert-file" class="insert-file">
+        </label>
+    </div>
+
+    <div class="tool-group selection">
+        <button class="tool-btn" title="Гауссово сглаживание Wasm (Blur)" data-tool="useGaussianWasmBlur">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <defs>
+                    <radialGradient id="blurGrad" cx="50%" cy="50%" r="70%">
+                        <stop offset="0%" stop-color="currentColor" stop-opacity="1"/>
+                        <stop offset="100%" stop-color="currentColor" stop-opacity="0.1"/>
+                    </radialGradient>
+                </defs>
+                <circle cx="12" cy="12" r="8" fill="url(#blurGrad)" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
+        </button>
+
+        <button class="tool-btn" title="Гауссово сглаживание Wasm (Blur)" data-tool="useGaussianWasmBlur2">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <defs>
+                    <radialGradient id="blurGrad" cx="50%" cy="50%" r="70%">
+                        <stop offset="0%" stop-color="currentColor" stop-opacity="1"/>
+                        <stop offset="100%" stop-color="currentColor" stop-opacity="0.1"/>
+                    </radialGradient>
+                </defs>
+                <circle cx="12" cy="12" r="8" fill="url(#blurGrad)" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
+        </button>
+
+        <button class="tool-btn" title="Гауссово сглаживание JS (Blur)" data-tool="useGaussianJSBlur">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <defs>
+                    <radialGradient id="blurGrad" cx="50%" cy="50%" r="70%">
+                        <stop offset="0%" stop-color="currentColor" stop-opacity="1"/>
+                        <stop offset="100%" stop-color="currentColor" stop-opacity="0.1"/>
+                    </radialGradient>
+                </defs>
+                <circle cx="12" cy="12" r="8" fill="url(#blurGrad)" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
+        </button>
+    </div>
+
+    <div class="tool-group selection">
+        <button class="tool-btn" title="Прямоугольное выделение (S)" data-tool="useRectSelect">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <rect x="4" y="4" width="16" height="16" rx="1" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            </svg>
+        </button>
+
+        <!--<button class="tool-btn" title="Свободное выделение (L)" data-tool="lasso">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M5 19 L8 10 L12 7 L17 8 L19 12 L18 17 L14 20 L9 19 Z" fill="none" stroke="currentColor"
+                      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+
+        <button class="tool-btn" title="Волшебная палочка (W)" data-tool="magic-wand">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M13 3l3 7h7l-5.5 5 2 7-6.5-4.5L7.5 22l2-7L4 10h7z" fill="currentColor"/>
+            </svg>
+        </button>
+
+        <button class="tool-btn" title="Перемещение пикселей (M)" data-tool="move-pixels">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M12 4l8 8-8 8-8-8z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M12 2v4m0 12v4m-10-10h4m12 0h4" stroke="currentColor" stroke-width="2"/>
+            </svg>
+        </button>-->
+    </div>
+
+    <div class="tool-group drawing">
+        <button class="tool-btn" title="Кисть (B)" data-tool="useBrush">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M3 21l7-7 11-11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                      stroke-linejoin="round"/>
+                <circle cx="18" cy="6" r="2" fill="currentColor"/>
+            </svg>
+        </button>
+
+        <button class="tool-btn" title="Карандаш (P)" data-tool="usePencil">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M17 3l4 4L10 18H6v-4z" fill="none" stroke="currentColor" stroke-width="2.5"
+                      stroke-linejoin="round"/>
+                <path d="M14 6l4 4" stroke="currentColor" stroke-width="2.5"/>
+            </svg>
+        </button>
+
+        <button class="tool-btn" title="Ластик (E)" data-tool="useEraser">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M4 20h16v-4l-6-6 6-6V4H4z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M10 10l4 4" stroke="currentColor" stroke-width="2.5"/>
+            </svg>
+        </button>
+
+        <button class="tool-btn" title="Заливка (F)" data-tool="useFill">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M18 8l-6-6-6 6 6 6z" fill="currentColor"/>
+                <path d="M12 14l-8 6h16z" fill="currentColor"/>
+            </svg>
+        </button>
+    </div>
+
+    <div class="tool-group shapes">
+        <button class="tool-btn" title="Прямоугольник" data-tool="useRectangle">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <rect x="5" y="5" width="14" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            </svg>
+        </button>
+
+        <button class="tool-btn" title="Эллипс" data-tool="useEllipse">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <ellipse cx="12" cy="12" rx="9" ry="6" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            </svg>
+        </button>
+
+        <button class="tool-btn" title="Линия" data-tool="useLine">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <line x1="4" y1="20" x2="20" y2="4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+        </button>
+    </div>
+
+    <div class="tool-group bottom">
+        <div class="color-preview">
+            <input type="color" id="fg-color" class="color fg-color" value="#000">
+            <input type="color" id="bg-color" class="color bg-color" value="#FFF">
+        </div>
+    </div>
+    <div class="tool-group bottom">
+    </div>
+</div>
