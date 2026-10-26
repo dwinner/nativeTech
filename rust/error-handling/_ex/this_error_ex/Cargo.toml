@@ -1,0 +1,9 @@
+[package]
+name = "this_error_ex"
+version = "0.1.0"
+edition = "2024"
+
+[dev-dependencies]
+
+[dependencies]
+thiserror = "2.*"

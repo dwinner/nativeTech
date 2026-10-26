@@ -1,0 +1,10 @@
+[package]
+name = "error_trait"
+version = "0.1.0"
+edition = "2024"
+
+[dev-dependencies]
+static_assertions = "1.1.0"
+common = { path = "../../../_helpers/common" }
+
+[dependencies]
