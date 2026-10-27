@@ -1,2 +1,0 @@
-This task is to implement the `PartialEq` trait for the `Ticket` struct. 
-The `TODO` comment in the code will guide you on where to add the necessary logic for comparing two `Ticket` instances for equality.
