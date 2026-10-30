@@ -1,0 +1,8 @@
+[package]
+name = "bounded-channels"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+ticket_fields = { path = "../../../_helpers/ticket_fields" }
+thiserror = "2.0.21"
