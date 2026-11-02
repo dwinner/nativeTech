@@ -1,5 +1,6 @@
-// TODO: Use `Rc` and `RefCell` to implement `DropTracker<T>`, a wrapper around a value of type `T`
-//  that increments a shared `usize` counter every time the wrapped value is dropped.
+// Use `Rc` and `RefCell` to implement `DropTracker<T>`, a wrapper around a
+// value of type `T` that increments a shared `usize` counter every time the
+// wrapped value is dropped.
 
 use std::cell::RefCell;
 use std::rc::Rc;
