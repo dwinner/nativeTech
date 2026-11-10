@@ -1,0 +1,139 @@
+/*
+ * Copyright 2022-2024 openDAQ d.o.o.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#pragma once
+
+#include <iterator>
+#include <memory>
+#include <queue>
+#include <type_traits>
+#include <unordered_map>
+#include <vector>
+
+#include "common.h"
+#include "packet.h"
+
+BEGIN_NAMESPACE_ASAM_CMP
+    struct DataContext
+    {
+        size_t minBytesPerMessage{0};
+        size_t maxBytesPerMessage{1500};
+    };
+
+    class Encoder final
+    {
+    private:
+        using SegmentType = MessageHeader::SegmentType;
+
+    public:
+        Encoder() = default;
+
+        template <typename ForwardIterator,
+                  std::enable_if_t<std::is_same_v<typename std::iterator_traits<ForwardIterator>::value_type, Packet>, bool> = true>
+        std::vector<std::vector<uint8_t>> encode(ForwardIterator begin, ForwardIterator end, const DataContext& dataContext);
+
+        template <typename ForwardPtrIterator,
+                  std::enable_if_t<std::is_same_v<typename std::iterator_traits<ForwardPtrIterator>::value_type, std::shared_ptr<Packet>>,
+                                   bool> = true>
+        std::vector<std::vector<uint8_t>> encode(ForwardPtrIterator begin, ForwardPtrIterator end, const DataContext& dataContext);
+
+        std::vector<std::vector<uint8_t>> encode(const Packet& packet, const DataContext& dataContext);
+
+        void setDeviceId(uint16_t deviceId);
+
+        void setStreamId(uint8_t streamId);
+
+        void restart();
+
+        uint16_t getDeviceId() const;
+
+        uint8_t getStreamId() const;
+
+        uint16_t getSequenceCounter() const;
+
+    private:
+        void init(const DataContext& bytesPerMessage);
+
+        void putPacket(const Packet& packet);
+
+        std::vector<std::vector<uint8_t>> getEncodedData();
+
+        bool checkIfSegmented(const Packet& packet);
+
+        SegmentType buildSegmentationFlag(
+            bool isSegmented,
+            int segmentInd,
+            uint16_t bytesToAdd,
+            size_t payloadSize,
+            size_t currentPayloadPos) const;
+
+        void clearEncodingMetadata(bool clearSequenceCounter = false);
+
+        void setMessageType(const Packet& packet);
+
+        void addNewCMPFrame(const Packet& packet);
+
+        void addNewDataHeader(const Packet& packet, uint16_t bytesToAdd, SegmentType segmentationFlag);
+
+        void createCmpFrameTemplate(const Packet& packet);
+
+    private:
+        size_t minBytesPerMessage{0};
+        size_t maxBytesPerMessage{0};
+        uint16_t deviceId{0};
+        uint8_t streamId{0};
+        std::vector<uint8_t> cmpFrameTemplate;
+
+        size_t bytesLeft{0};
+        uint16_t sequenceCounter{0};
+
+        CmpHeader::MessageType messageType{CmpHeader::MessageType::undefined};
+        std::vector<std::vector<uint8_t>> cmpFrames;
+    };
+
+    template <typename ForwardIterator,
+              std::enable_if_t<std::is_same_v<typename std::iterator_traits<ForwardIterator>::value_type, Packet>, bool>>
+    std::vector<std::vector<uint8_t>> Encoder::encode(ForwardIterator begin, ForwardIterator end, const DataContext& dataContext)
+    {
+        static_assert(std::is_base_of<std::forward_iterator_tag, typename std::iterator_traits<ForwardIterator>::iterator_category>::value,
+                      "ForwardIterator must be a forward iterator.");
+
+        init(dataContext);
+
+        for (auto it = begin; it != end; ++it)
+            putPacket(*it);
+
+        return getEncodedData();
+    }
+
+    template <typename ForwardPtrIterator,
+              std::enable_if_t<std::is_same_v<typename std::iterator_traits<ForwardPtrIterator>::value_type, std::shared_ptr<Packet>>,
+                               bool>>
+    std::vector<std::vector<uint8_t>> Encoder::encode(ForwardPtrIterator begin, ForwardPtrIterator end, const DataContext& dataContext)
+    {
+        static_assert(
+            std::is_base_of<std::forward_iterator_tag, typename std::iterator_traits<ForwardPtrIterator>::iterator_category>::value,
+            "ForwardIterator must be a forward iterator.");
+
+        init(dataContext);
+
+        for (auto it = begin; it != end; ++it)
+            putPacket(*(*it));
+
+        return getEncodedData();
+    }
+
+END_NAMESPACE_ASAM_CMP

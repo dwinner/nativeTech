@@ -1,0 +1,38 @@
+#include "pch.h"
+#include "can_payload.h"
+
+#include "common.h"
+#include "payload_type.h"
+
+BEGIN_NAMESPACE_ASAM_CMP
+    CanPayload::CanPayload(const uint8_t* data, const size_t size)
+        : CanPayloadBase(PayloadType::can, data, size)
+    {
+    }
+
+    CanPayload::CanPayload()
+        : CanPayloadBase(PayloadType::can, sizeof(Header))
+    {
+    }
+
+    bool CanPayload::getRtr() const
+    {
+        return getHeader()->getRtrRrs();
+    }
+
+    void CanPayload::setRtr(const bool rtr)
+    {
+        getHeader()->setRtrRrs(rtr);
+    }
+
+    uint16_t CanPayload::getCrc() const
+    {
+        return getHeader()->getCrc();
+    }
+
+    void CanPayload::setCrc(const uint16_t crc)
+    {
+        getHeader()->setCrc(crc);
+    }
+
+END_NAMESPACE_ASAM_CMP
