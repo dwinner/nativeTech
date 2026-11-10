@@ -1,0 +1,41 @@
+# 16_02_multistage_build
+
+# ----- Stage 1: Builder -----
+# We use the official Rust image to compile the application.
+FROM rust:1.78 AS builder
+
+WORKDIR /usr/src/app
+
+# Copy manifests first to leverage Docker cache for dependencies.
+COPY Cargo.toml Cargo.lock ./
+
+# Create a dummy main.rs to build dependencies.
+# This ensures we don't re-download/re-build crates unless Cargo.toml changes.
+RUN mkdir src && echo "fn main() {println!(\"dummy\")}" > src/main.rs
+RUN cargo build --release --bin my_rust_cli
+
+# Clean up the dummy main.
+RUN rm -f src/main.rs
+
+# Now copy the actual source code.
+COPY src ./src
+
+# Build the application release binary.
+# The previous dependency build layer is cached, so this only compiles your code.
+RUN cargo build --release --bin my_rust_cli
+
+# ----- Stage 2: Runtime -----
+# We use a minimal base image (Debian Slim) for the final artifact.
+# This significantly reduces the image size compared to the "builder" image.
+FROM debian:buster-slim AS runtime
+
+WORKDIR /app
+
+# Copy *only* the compiled binary from the "builder" stage.
+COPY --from=builder /usr/src/app/target/release/my_rust_cli /usr/local/bin/my_rust_cli
+
+# (Optional) Install system dependencies (e.g. OpenSSL) if your app needs them.
+# RUN apt-get update && apt-get install -y libssl1.1 ca-certificates && rm -rf /var/lib/apt/lists/*
+
+# Run the binary.
+CMD ["my_rust_cli"]

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rust Fullstack Todo (Axum + Wasm)</title>
+    <style>
+        body { font-family: sans-serif; margin: 2em; background: #f4f4f4; }
+        h1 { color: #333; }
+        ul { list-style: none; padding: 0; }
+        li { background: #fff; padding: 10px; margin-bottom: 5px; border-radius: 4px; }
+        li.completed { text-decoration: line-through; color: #888; }
+        input { padding: 10px; width: 300px; }
+        button { padding: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Rust Fullstack Todo List (Axum + Wasm)</h1>
+    <ul id="todo-list">
+        <li>Loading...</li>
+    </ul>
+
+    <div>
+        <input type="text" id="new-todo-title" placeholder="What needs to be done?">
+        <button id="add-todo-btn">Add Todo</button>
+    </div>
+
+    <script type="module">
+        // 1. Import Wasm functions from the generated 'pkg' directory
+        import init, { fetch_todos, add_todo } from './pkg/wasm_client.js';
+
+        const todoList = document.getElementById('todo-list');
+        const titleInput = document.getElementById('new-todo-title');
+        const addButton = document.getElementById('add-todo-btn');
+
+        // --- Function to refresh the list of todos from the backend ---
+        async function refreshTodos() {
+            todoList.innerHTML = '<li>Loading...</li>';
+            try {
+                // Call our async Rust Wasm function! Returns a JSON string.
+                const todos_json_string = await fetch_todos();
+                
+                // Parse the JSON string received from Wasm
+                const todos = JSON.parse(todos_json_string);
+                
+                todoList.innerHTML = ''; // Clear list
+                
+                todos.forEach(todo => {
+                    const li = document.createElement('li');
+                    li.textContent = `[ID ${todo.id}] ${todo.title}`;
+                    li.className = todo.completed ? 'completed' : '';
+                    todoList.appendChild(li);
+                });
+            } catch (e) {
+                console.error("Error fetching todos:", e);
+                todoList.innerHTML = '<li>Error loading todos. See console.</li>';
+            }
+        }
+
+        // --- Function to add a new todo ---
+        async function addNewTodo() {
+            const title = titleInput.value;
+            if (title.trim() === "") return;
+
+            try {
+                // Call our async Rust Wasm function!
+                await add_todo(title);
+                titleInput.value = ''; // Clear input
+                await refreshTodos(); // Refresh the list
+            } catch (e) {
+                console.error("Error adding todo:", e);
+                alert("Error adding todo. See console.");
+            }
+        }
+
+        // --- Main function to run the app ---
+        async function run() {
+            // Initialize the Wasm module
+            await init();
+            
+            // Load the initial list of todos
+            await refreshTodos();
+            
+            // Wire up the "Add" button
+            addButton.addEventListener('click', addNewTodo);
+        }
+
+        // Start the application
+        run();
+    </script>
+</body>
+</html>

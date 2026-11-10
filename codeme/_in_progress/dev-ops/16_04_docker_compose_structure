@@ -1,0 +1,23 @@
+# 16_04_docker_compose_structure
+
+# NOTE: This is a simplified, incomplete example to illustrate the structure
+# of a Docker Compose file. Real-world setups may require volumes, networks,
+# and health checks.
+
+services:
+  my_rust_backend:
+    # Path to the directory containing the Dockerfile for the Rust backend
+    build: ./backend_app
+    ports:
+      - "8000:8000" # Map host port 8000 to container port 8000
+    environment:
+      - RUST_LOG=info
+      # The service name 'db_service' acts as the hostname within the network
+      - DATABASE_HOST=db_service
+
+  db_service:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      # ... other db configurations ...

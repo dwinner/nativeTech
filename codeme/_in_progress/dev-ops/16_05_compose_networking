@@ -1,0 +1,19 @@
+# 16_05_compose_networking
+
+services:
+  api:
+    build: ./api_service
+    ports:
+      - "3000:3000"
+    environment:
+      # The 'api' service can reach the 'database' service using the service name 'database'
+      # which resolves to the container's IP address within the internal network.
+      DATABASE_CONNECTION_STRING: "user:pass@database:5432/appdb"
+    depends_on:
+      - database
+
+  database:
+    image: some_database_image:latest
+    # No 'ports' exposed to the host here means the database is only accessible
+    # by other services on the same Docker Compose network (like 'api'),
+    # not from outside the host machine.

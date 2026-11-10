@@ -1,0 +1,42 @@
+# 16_09_full_compose_example
+
+services:
+  # Service for our Rust Web Application
+  rust_app:
+    build:
+      context: . # Assumes Dockerfile is in the current directory
+      # If your Rust project was in a subdirectory:
+      # context: ./my_web_app
+    ports:
+      - "8080:8080" # Map host port 8080 to container port 8080
+    environment:
+      # 'db' is the hostname of the postgres service on the internal network.
+      DATABASE_URL: "postgres://app_user:app_password@db:5432/app_db"
+      RUST_LOG: "info,my_rust_app=debug"
+    depends_on:
+      # Tells Compose to start the 'db' service before 'rust_app'.
+      # Note: This only waits for the container to start, not for the DB to be ready.
+      db:
+        condition: service_started
+    restart: unless-stopped
+
+  # Service for the PostgreSQL Database
+  db:
+    image: postgres:15-alpine
+    ports:
+      # Expose the DB to the host on a different port (54321) for local tools
+      # like psql or pgAdmin, while keeping internal traffic on 5432.
+      - "54321:5432"
+    environment:
+      POSTGRES_USER: "app_user"
+      POSTGRES_PASSWORD: "app_password" # In production, use a .env file or secrets!
+      POSTGRES_DB: "app_db"
+    volumes:
+      # Mount a named volume to persist data across container restarts.
+      - postgres_app_data:/var/lib/postgresql/data
+    restart: always
+
+# Define the named volume for persistence
+volumes:
+  postgres_app_data:
+    driver: local

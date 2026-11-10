@@ -1,0 +1,38 @@
+# 16_03_optimized_layer_caching
+
+# ----- Stage 1: Builder -----
+FROM rust:1.78 AS builder
+
+WORKDIR /usr/src/app
+
+# 1. Copy only the manifest files first.
+COPY Cargo.toml Cargo.lock ./
+
+# 2. Build dependencies.
+# This step creates a dummy main.rs just to build dependencies.
+# If Cargo.toml/Cargo.lock haven't changed, this layer will be cached.
+RUN mkdir src && \
+    echo "fn main() {println!(\"Building dependencies...\");}" > src/main.rs && \
+    cargo build --release --bin my_rust_cli && \
+    rm -rf src
+
+# 3. Copy your actual source code.
+COPY src ./src
+
+# 4. Build your application.
+# This will now use the cached dependencies from the previous RUN step
+# and only compile the actual source code if it changed.
+RUN cargo build --release --bin my_rust_cli
+
+# ----- Stage 2: Runtime -----
+FROM debian:buster-slim AS runtime
+
+WORKDIR /app
+
+# Copy the binary from the builder stage.
+COPY --from=builder /usr/src/app/target/release/my_rust_cli /usr/local/bin/my_rust_cli
+
+# (Optional) Install runtime dependencies if needed.
+# RUN apt-get update && apt-get install -y libssl1.1 ca-certificates && rm -rf /var/lib/apt/lists/*
+
+CMD ["my_rust_cli"]
