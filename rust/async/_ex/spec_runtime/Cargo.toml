@@ -1,0 +1,8 @@
+[package]
+name = "spec_runtime"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.83"
+tokio = { version = "1", features = ["full"] }

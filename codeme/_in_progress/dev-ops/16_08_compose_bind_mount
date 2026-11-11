@@ -1,0 +1,10 @@
+# 16_08_compose_bind_mount
+
+services:
+  webapp:
+    build: .
+    volumes:
+      # Bind mount the local ./src directory to the container's source directory.
+      # This allows changes made on the host to be immediately visible inside the container,
+      # enabling live-reloading scenarios (e.g., if the container runs `cargo watch`).
+      - ./src:/usr/src/app/src

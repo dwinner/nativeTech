@@ -1,0 +1,29 @@
+# 16_06_docker_compose_env_vars
+
+# -----------------------------------------------------------------------------
+# PREREQUISITE: Create a file named `.env` in the same directory.
+# Docker Compose automatically reads this file for variable substitution.
+#
+# Content of .env:
+# POSTGRES_USER=dev_user
+# POSTGRES_PASSWORD=dev_secret
+# RUST_APP_PORT=8080
+# -----------------------------------------------------------------------------
+
+services:
+  rust_app:
+    build: .
+    ports:
+      # Variable substitution: ${RUST_APP_PORT} is read from the .env file
+      - "${RUST_APP_PORT}:8080"
+    environment:
+      # We pass the values from .env into the container's environment variables
+      APP_DB_USER: ${POSTGRES_USER}
+      APP_DB_PASS: ${POSTGRES_PASSWORD}
+
+  db:
+    image: postgres:15
+    environment:
+      # These specific variables are required by the official Postgres image
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}

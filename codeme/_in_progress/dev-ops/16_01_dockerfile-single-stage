@@ -1,0 +1,24 @@
+# 16_01_dockerfile-single-stage
+
+# Use an official Rust image as the base.
+# We stick to a specific version (1.78) for reproducibility.
+FROM rust:1.78
+
+# Set the working directory inside the container.
+WORKDIR /usr/src/app
+
+# Copy the Cargo.toml and Cargo.lock files first.
+# We do this separately to leverage Docker's layer caching for dependencies.
+COPY Cargo.toml Cargo.lock ./
+
+# Copy the rest of the source code into the working directory.
+COPY src ./src
+
+# Build the application in release mode.
+# The executable will be located in /usr/src/app/target/release/
+RUN cargo build --release
+
+# For this single-stage build, the final image contains the full Rust toolchain
+# and build artifacts, making the image larger than necessary.
+# We set the command to run the compiled binary directly.
+CMD ["./target/release/my_rust_cli"]

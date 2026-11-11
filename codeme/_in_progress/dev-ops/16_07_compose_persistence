@@ -1,0 +1,13 @@
+# 16_07_compose_persistence
+
+services:
+  database:
+    image: postgres:15
+    volumes:
+      # Mount the named volume 'my_db_data' into the container's Postgres data directory.
+      # This ensures that even if the container is removed, the data remains.
+      - my_db_data:/var/lib/postgresql/data
+
+# Top-level volumes declaration
+volumes:
+  my_db_data: {} # Defines the named volume (empty {} means use the default local driver)
