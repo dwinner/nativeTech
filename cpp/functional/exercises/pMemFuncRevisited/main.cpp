@@ -10,7 +10,7 @@ void findMatches(span<const int> values1,
                  Matcher matcher,
                  MatchHandler handler)
 {
-   // Must be same size.
+   // Must be the same size.
    if (values1.size() != values2.size())
    {
       return;
