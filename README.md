@@ -23,13 +23,12 @@ C, C++, Rust, Zig, Assembly.
 - [How to manually build C++ Protobuf via CMake](https://www.youtube.com/watch?v=ZKMCe3DNXh4);
 - [Oat++](https://github.com/oatpp);
 
-**Ecosystem**
-- [Xmake](https://xmake.io/).
-- [vcpkg](https://learn.microsoft.com/en-us/vcpkg/get_started/overview).
-- [cmake](https://github.com/stygian-phrygian/cmake-guide).
-
 **Zig**
 - [Introduction to Zig](https://pedropark99.github.io/zig-book/)
+
+**GO**
+- [Awesome Go](https://github.com/dariubs/gobooks)
+- [Go docs.](https://go.dev/doc/)
 
 **Rust**
 - [Rust Documentation](https://doc.rust-lang.org/stable/).
@@ -42,4 +41,19 @@ C, C++, Rust, Zig, Assembly.
 - [Testing masterclass](https://github.com/mainmatter/rust-advanced-testing-workshop).
 - [Rust telemetry](https://rust-exercises.com/telemetry/).
 - [Advanced testing](https://rust-exercises.com/advanced-testing/).
-- [Awesome Rust Books](https://github.com/sger/RustBooks?tab=readme-ov-file)
+- [Awesome Rust Books](https://github.com/sger/RustBooks)
+- [Dependency injection](https://chesedo.me/blog/manual-dependency-injection-rust/)
+- [Rust - from the ground up](https://rust.nizeclub.ru/index.html)
+
+**Common**
+- [Xmake](https://xmake.io/).
+- [vcpkg](https://learn.microsoft.com/en-us/vcpkg/get_started/overview).
+- [cmake](https://github.com/stygian-phrygian/cmake-guide).
+- [Code forge](https://thecodeforge.io/tracks/#google_vignette).
+- [RIP tutorial](https://riptutorial.com/)
+- [Goal kicker](https://books.goalkicker.com/)
+- [Goose](https://aardappel.github.io/goose/docs/reference.html)
+- [C3](https://github.com/c3lang/c3-learn)
+- [Tutorials point](https://www.tutorialspoint.com/index.htm)
+- [Code libs](https://codelibs.ru/)
+- [Geeks for geeks](https://www.geeksforgeeks.org/)
